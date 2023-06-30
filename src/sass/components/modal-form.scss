@@ -1,0 +1,73 @@
+ .modal-form__container {
+     @extend .modal-container;
+     justify-content: center;
+     padding-left: 20px;
+     padding-right: 20px;
+
+
+     @media screen and (min-width: $breakpoint-tablet) {
+         width: 527px;
+         min-height: 350px;
+         padding: 0;
+     }
+
+     @media screen and (min-width: $breakpoint-desktop) {
+         width: 700px;
+         min-height: 470px;
+         padding: 0;
+     }
+ }
+
+
+
+ .modal-form__container--form {
+     @media screen and (min-width: $breakpoint-tablet) {
+
+         padding: 26px 30px 16px 30px
+     }
+
+     @media screen and (min-width: $breakpoint-desktop) {
+
+         padding: 38px 60px 40px 60px
+     }
+ }
+
+ .modal-form__title {
+     @extend .modal__title;
+     font-weight: 500;
+     font-size: 18px;
+     line-height: 1.22;
+     text-align: center;
+
+     @media screen and (min-width: $breakpoint-tablet) {
+         font-size: 26px;
+         margin-bottom: 7px;
+         font-weight: 600;
+     }
+
+     @media screen and (min-width: $breakpoint-desktop) {
+         font-size: 32px;
+
+     }
+ }
+
+ .modal-form__descr {
+     font-weight: 400;
+     font-size: 12px;
+     line-height: 1.25;
+     text-align: center;
+     color: $textcolor;
+     margin-bottom: 25px;
+
+     @media screen and (min-width: $breakpoint-tablet) {
+         font-size: 14px;
+         margin-bottom: 14px;
+     }
+
+     @media screen and (min-width: $breakpoint-desktop) {
+         font-size: 16px;
+         margin-bottom: 30px;
+
+     }
+
+ }

@@ -1,0 +1,1 @@
+export { svgHrefMaker } from "./svgHrefMaker";

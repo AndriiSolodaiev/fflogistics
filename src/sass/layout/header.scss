@@ -1,0 +1,132 @@
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
+}
+.header__main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 18px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-top: 19px;
+    padding-bottom: 23px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-bottom: 35px;
+  }
+}
+.header__socials-email-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+.logo {
+  width: 65px;
+  height: 40px;
+  margin-left: 0;
+  margin-right: auto;
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 85px;
+    height: 49px;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 133px;
+    height: 75px;
+  }
+}
+.header_contact__link {
+  @extend .contact__link;
+  align-items: center;
+  gap: 5px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 18px;
+    gap: 10px;
+  }
+}
+.header__icon-email--tablet {
+  width: 18px;
+  height: 13px;
+  fill: $button-color;
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 21px;
+    height: 17px;
+  }
+}
+
+.header__contacts-list {
+  margin-right: 11px;
+  display: flex;
+  gap: 7px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.phone-icon {
+  width: 17px;
+  height: 17px;
+  fill: $button-color;
+}
+
+.email-icon {
+  width: 20px;
+  height: 17px;
+  fill: $button-color;
+}
+
+.language-btn-wrapper {
+  margin-right: 11px;
+  display: flex;
+}
+.language-btn {
+  background: transparent;
+  text-transform: uppercase;
+  color: $placeholder-color;
+  font-size: 12px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 14px;
+  }
+}
+.button__btw-line {
+  color: $placeholder-color;
+  @media screen and (min-width: $breakpoint-tablet) {
+    color: $textcolor;
+  }
+}
+.language-btn--active {
+  color: $accent-color;
+  @media screen and (min-width: $breakpoint-tablet) {
+    color: $button-color;
+  }
+}
+.header__icon-phone--tablet {
+  width: 15px;
+  height: 17px;
+  fill: $button-color;
+}
+.header__burger-menu {
+  padding: 0;
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+.header__menu-icon {
+  width: 30px;
+  height: 20px;
+}
+
+.nav__bg {
+  background-color: $card-bg-color;
+  width: 100%;
+  padding-left: 22px;
+  padding-right: 22px;
+}

@@ -1,0 +1,180 @@
+.form__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 16px;
+    }
+}
+
+.form__input {
+    border: 1px solid $accent-color;
+    background-color: transparent;
+    width: 193px;
+    height: 28px;
+    border-radius: 10px;
+    padding-left: 5px;
+
+    color: $textcolor;
+
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 10px;
+        color: $placeholder-color;
+
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 334px;
+        height: 28px;
+
+        &::placeholder {
+            font-size: 12px;
+
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 443px;
+        height: 39px;
+
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+}
+
+.form__textarea {
+    @extend .form__input;
+    height: 56px;
+    padding-top: 7px;
+    resize: none;
+
+}
+
+.form__button {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 16px;
+    box-shadow: $button-box-shadow;
+    margin-top: 53px;
+
+    &:hover,
+    :focus {
+        padding: 5px 24px;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 5px 70px;
+        margin-top: 3px;
+
+        &:hover,
+        :focus {
+            padding: 5px 75px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding: 8px 108px;
+
+        margin-top: 19px;
+
+        &:hover,
+        :focus {
+            padding: 8px 115px;
+        }
+
+    }
+}
+
+.form__container--light {
+    @extend .form__container;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        gap: 9px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 13px
+    }
+}
+
+.form__input--light {
+    @extend .form__input;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 275px;
+        height: 25px;
+        border: none;
+        background-color: $card-bg-color;
+        padding-left: 14px;
+        font-size: 14px;
+        color: $primary-font-color;
+
+
+        &::placeholder {
+            color: $placeholder-color--light;
+        }
+
+        &:focus {
+            outline: 2px solid $accent-color
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 398px;
+        height: 36px;
+    }
+}
+
+.form__textarea--light {
+    @extend .form__input--light;
+    height: 56px;
+    padding-top: 7px;
+    resize: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 4px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 9px;
+    }
+
+}
+
+.form__button--light {
+    @extend .form__button;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 7px 24px;
+    margin-top: 13px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 10px 55px;
+        font-size: 16px;
+        color: $primary-font-color;
+        margin-top: 16px;
+        box-shadow: none;
+        font-weight: 600;
+
+        &:hover,
+        :focus {
+            padding: 10px 60px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding: 13px 165px;
+
+        &:hover,
+        :focus {
+            padding: 13px 149px;
+        }
+    }
+}

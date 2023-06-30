@@ -1,0 +1,49 @@
+.modal-container {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 500px;
+  z-index: 10;
+  transform: translateY(-200%) translateX(-50%) scale(0.8);
+  padding-top: 40px;
+  padding-bottom: 33px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $background-color;
+  overflow: auto;
+  border-radius: 5px;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 1000ms ease, opacity 1000ms ease;
+
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-color: $modal-window-bg-color;
+  }
+}
+
+.modal__title {
+  background: $gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.23;
+  margin-bottom: 27px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 14.71px;
+  right: 13.53px;
+}
+
+.modal__icon-close {
+  width: 11.76px;
+  height: 11.76px;
+  fill: $textcolor;
+}

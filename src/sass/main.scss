@@ -1,0 +1,30 @@
+@import "./utils/variables";
+@import "./base/common";
+@import "./base/container";
+
+@import "./components/button.scss";
+@import "./components/navigation.scss";
+@import "./components/modal-menu.scss";
+@import "./components/modal-form.scss";
+@import "./components/form-submitted.scss";
+@import "./components/backdrop.scss";
+@import "./components/socials.scss";
+@import "./components/form.scss";
+@import "./components/page-title.scss";
+
+
+@import "./layout/header.scss";
+@import "./layout/hero";
+@import "./layout/services.scss";
+@import "./layout/delivery.scss";
+@import "./layout/roadmap.scss";
+@import "./layout/payment.scss";
+@import "./layout/advantages.scss";
+@import "./layout/blog.scss";
+@import "./layout/client-form.scss";
+@import"./layout/partners.scss";
+@import "./layout/footer.scss";
+@import"./layout/conditions.scss";
+@import "./layout/air-trans.scss";
+@import "./layout/rail-trans.scss";
+@import "./layout/sea-trans.scss";

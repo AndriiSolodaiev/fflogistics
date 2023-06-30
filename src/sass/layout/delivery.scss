@@ -1,0 +1,282 @@
+.delivery-section {
+  padding-top: 75px;
+  padding-bottom: 84px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 106px;
+    padding-bottom: 150px;
+    text-align: center;
+
+  }
+}
+
+.delivery__title {
+  @extend .card__title;
+  color: $textcolor;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.23;
+  text-align: center;
+  margin-bottom: 50px;
+
+  &::after {
+    content: "";
+    width: 93px;
+    height: 3px;
+    background: $button-color;
+    bottom: -15px;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 40px;
+    margin-bottom: 86px;
+  }
+}
+
+.delivery__subtitle {
+  display: none;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: $textcolor;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 26px;
+    margin-bottom: 24px;
+
+  }
+}
+
+.subtitle-span {
+  color: $button-color;
+}
+
+.delivery__descr {
+  display: none;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: $textcolor;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    text-align: start;
+    font-size: 20px;
+    margin-bottom: 80px;
+
+  }
+}
+
+.delivery__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 60px
+  }
+}
+
+.delivery__list--is-expanded {
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: column;
+    height: 400px;
+
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 488px;
+    gap: 25px;
+  }
+}
+
+.delivery__card {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 153px;
+  overflow: hidden;
+  transition: box-shadow $transition-props, max-height $transition-props,
+    background-color $transition-props, transform $transition-props;
+  background-color: $textcolor;
+  border-radius: 10px;
+  padding: 25px 10px 40px 10px;
+
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $box-shadow-hover;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 325px;
+    max-height: 99px;
+    transition: max-height 0ms;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 464px;
+    max-height: 146px;
+    padding: 20px 27px 20px 20px;
+    justify-content: start;
+  }
+
+}
+
+.card__is-expanded {
+  max-height: 1000px;
+  background-color: $card-extended-color;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    order: -1;
+
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 488px;
+
+
+  }
+}
+
+.card__number {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 37px;
+  background-color: $button-color;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 90%;
+  color: $textcolor;
+}
+
+.delivery__card-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+
+    gap: 28px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+.delivery-card__title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.23;
+  width: 184px;
+  color: $button-color;
+  text-align: center;
+  margin-bottom: 28px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+    text-align: start;
+    line-height: 0.9;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 32px;
+    width: 234px;
+
+  }
+}
+
+.delivery-card__title--span {
+  font-weight: 500;
+  font-size: 20px;
+  color: $background-color;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 26px;
+
+
+  }
+}
+
+.card__datails {
+  opacity: 0;
+  transition: opacity 800ms ease;
+  color: $textcolor;
+
+  &::before {
+    content: "\2713";
+    margin-right: 6px;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 6px;
+  }
+}
+
+.delivery__icon {
+  width: 60px;
+  height: 50px;
+  transition: fill 1500ms ease-in-out;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 85px;
+    height: 85px;
+
+  }
+}
+
+.card__is-expanded .delivery__icon {
+  fill: $button-color;
+}
+
+.card__is-expanded .delivery-card__title,
+.card__is-expanded .delivery-card__title--span {
+  color: $textcolor;
+  font-weight: 600;
+  font-size: 20px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 26px;
+
+  }
+}
+
+.card__is-expanded .card__datails {
+
+  opacity: 1;
+}

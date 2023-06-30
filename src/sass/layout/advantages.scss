@@ -1,0 +1,137 @@
+.advantages-section {
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 60px;
+        padding-bottom: 83px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 75px;
+        padding-bottom: 190px;
+    }
+}
+
+.advantages__title {
+    @extend .delivery__title;
+    margin-bottom: 67px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        margin-bottom: 80px;
+
+        &::before {
+            width: 156px
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-bottom: 110px;
+        font-size: 48px;
+        font-weight: 700;
+
+        &::before {
+            width: 220px
+        }
+    }
+}
+
+.advantages__list {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        gap: 80px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 100px
+    }
+
+}
+
+.advantages__item {
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}
+
+.advantages__item:nth-child(even) {
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.advantage__text-wrapper {
+    @media screen and (min-width: $breakpoint-tablet) {
+        background-color: $card-bg-color;
+        border-radius: 40px;
+        max-width: 446px;
+        padding: 25px 17px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding: 32px 35px;
+        max-width: 579px;
+    }
+}
+
+.advantages__item-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: $accent-color;
+    margin-bottom: 9px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        color: $button-color;
+        font-size: 26px;
+        margin-bottom: 12px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        color: $accent-color;
+        font-size: 32px;
+        margin-bottom: 22px;
+    }
+}
+
+.advantages__descr {
+    color: $textcolor;
+    font-weight: 400;
+    font-size: 14px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        color: $primary-font-color;
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+
+        font-weight: 500;
+    }
+}
+
+.advantage__img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 27px;
+
+
+}
+
+.advantage__img {
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 340px;
+        height: 329px;
+    }
+}

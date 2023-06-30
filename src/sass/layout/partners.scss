@@ -1,0 +1,29 @@
+.partner-slide {
+    height: 40px;
+    padding-right: 20px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 48px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 83px;
+
+    }
+}
+
+.partners__img {
+    height: 40px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 48px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 83px;
+
+    }
+}

@@ -1,0 +1,115 @@
+.page-hero__wrapper {
+    padding: 20px 0 16px 0;
+    background-color: $background-color;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
+
+.page-title {
+    background: $gradient-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    max-height: 53px;
+    overflow: hidden;
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 32px;
+        max-height: 300px;
+        font-weight: 600;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 48px;
+        font-weight: 700;
+    }
+}
+
+.page-hero__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-hero__form-wrap {
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 62px;
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        align-self: flex-end;
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {}
+}
+
+.page-hero__form-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: $button-color;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 26px;
+        font-weight: 600;
+        color: $textcolor;
+        background-color: $button-color;
+        width: 350px;
+        text-align: center;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 452px
+    }
+}
+
+.page-hero__form-descr {
+    font-size: 12px;
+    color: $textcolor;
+    font-weight: 400;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+        width: 350px;
+        text-align: center;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 450px;
+
+    }
+}
+
+.page-hero__close-btn {
+    top: 130px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        top: 120px;
+        right: 60px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        top: 150px;
+        right: 90px;
+
+    }
+}

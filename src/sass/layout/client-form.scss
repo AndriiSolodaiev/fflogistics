@@ -1,0 +1,246 @@
+.client-form-section {
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+}
+
+.client-form__container {
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+
+        align-items: end;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        justify-content: space-between;
+    }
+}
+
+.client-form__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none;
+    }
+
+
+}
+
+.client-form__form-space-tablet {
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 22px 20px 16px 20px;
+        background-color: $form-space-color;
+        border-radius: 10px;
+        width: 432px;
+        height: 300px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding: 45px 118px;
+        width: 626px;
+        height: 377px;
+    }
+}
+
+.space__btn-close {
+    @extend .modal__icon-close;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        fill: $primary-font-color;
+
+    }
+
+}
+
+.client-form__content-wrapper {
+    padding-left: 55px;
+    padding-right: 8px;
+    padding-top: 25px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 0;
+
+
+    }
+
+}
+
+.client-form__title {
+    font-weight: 400;
+    font-size: 18px;
+    color: $button-color;
+    margin-bottom: 5px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 26px;
+        color: $primary-font-color;
+        font-weight: 600;
+        text-align: center;
+
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 32px;
+
+    }
+}
+
+.client-form__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $textcolor;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+        color: $primary-font-color;
+        width: 292px;
+        text-align: center;
+        max-height: 16px;
+        overflow: hidden;
+
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 16px;
+        width: 350px;
+        max-height: 20px;
+    }
+}
+
+
+
+.contacts__title {
+    @media screen and (min-width: $breakpoint-tablet) {
+        color: $accent-color;
+        font-size: 32px;
+        margin-bottom: 28px;
+        font-weight: 600;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 63px;
+
+    }
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        flex-direction: column-reverse;
+        margin-bottom: 38px;
+        gap: 26px
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 20px;
+
+    }
+}
+
+.contact__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: $textcolor;
+    display: flex;
+
+
+    &:hover svg {
+        fill: $accent-color;
+        box-shadow: $box-shadow-hover;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 18px;
+
+        line-height: 1.4;
+    }
+}
+
+.contact__link--schedule {
+    @extend .contact__link;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+    }
+}
+
+.schedule {
+    line-height: 2;
+    max-width: 160px;
+}
+
+.contact__icon--phone {
+    width: 16px;
+    height: 16px;
+    margin-right: 14px;
+    fill: $button-color;
+    transition: fill $transition-props;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 24px;
+        height: 24px;
+
+    }
+}
+
+.contact__icon--email {
+    @extend .contact__icon--phone;
+    width: 18px;
+    height: 13px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 24px;
+        height: 24px;
+
+    }
+
+}
+
+.contact__icon--location {
+    @extend .contact__icon--phone;
+    width: 20px;
+    height: 20px;
+    margin-right: 17px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 24px;
+        height: 24px;
+
+    }
+}

@@ -1,0 +1,185 @@
+.hero__container {
+  padding-top: 68px;
+  padding-bottom: 71px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-top: 110px;
+    padding-bottom: 84px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 118px;
+    padding-bottom: 82px;
+  }
+}
+
+.hero__title {
+  background: $gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 1.2;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
+
+.hero__title--ru {
+  font-size: 28px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
+
+.hero__subtitle {
+  font-size: 20px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 153px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 71px;
+  }
+}
+
+.hero__advantages-wrapper {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 50px;
+
+
+}
+
+.hero__advantages-list {
+  display: flex;
+
+  flex-direction: column;
+  gap: 17px;
+}
+
+.hero__advantages-item {
+  display: block;
+  display: flex;
+  gap: 7px;
+}
+
+.hero__advantages-icon {
+  fill: $button-color;
+  width: 12px;
+  height: 17px;
+}
+
+.hero__advantages-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: $textcolor;
+  width: 355px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 20px;
+    font-weight: 500;
+    width: 520px;
+  }
+}
+
+.hero__button-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero__button {
+  @extend .button-common;
+  background: $accent-color;
+  box-shadow: $button-box-shadow;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 14px 30px;
+    font-size: 16px;
+
+    &:hover,
+    &:focus {
+      padding: 14px 35px;
+    }
+  }
+}
+
+// desktop/hero-bg/bg3-desktop
+.hero__bgimg {
+  width: 100%;
+  background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+  url("#{$public-url}mobile/hero-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),
+    linear-gradient(#393939fd, #393939a1, #393939fd),
+    url("#{$public-url}tablet/bg-plane-tablet.png");
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    background-image: linear-gradient(#393939fd, #39393998, #393939fd),
+    url("#{$public-url}desktop/bg-desktop.png");
+  }
+}
+
+.slide__container {
+  height: 566px;
+  padding-top: 50px;
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 634px;
+  }
+}
+
+.slide__social {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 35px;
+  margin-top: 250px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-top: 270px;
+  }
+}
+
+.slide__title {
+  color: $textcolor;
+  font-size: 36px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+    font-weight: 700;
+  }
+}

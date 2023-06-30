@@ -1,0 +1,13 @@
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { Services } from "./Services";
+export { Delivery } from "./Delivery";
+export { RoadMap } from "./RoadMap";
+export { PaymentHelp } from "./PaymentHelp";
+export { Advantages } from "./Advantages";
+export { BlogSection } from "./BlogSection";
+export { ClientForm } from "./ClientForm";
+export { Partners } from "./Partners";
+export { Footer } from "./Footer";
+export { ModalMenu } from "../components/ModalMenu";
+export { ModalForm } from "../components/ModalForm";

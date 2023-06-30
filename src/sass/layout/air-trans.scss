@@ -1,0 +1,24 @@
+.air-trans__bg {
+    background-image: linear-gradient(#393939, #393939ea, #393939),
+
+
+    url("#{$public-url}mobile/hero-bg-mobile.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        background-image: linear-gradient(#393939, #3939399d, #393939),
+        url("#{$public-url}tablet/bg-plane-tablet.png");
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        background-image: linear-gradient(#393939, #3939398f, #393939),
+        linear-gradient(to left, #393939, #39393934),
+        url("#{$public-url}desktop/bg-desktop.png");
+
+    }
+
+}

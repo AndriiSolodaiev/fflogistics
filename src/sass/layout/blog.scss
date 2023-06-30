@@ -1,0 +1,222 @@
+.blog-section {
+    background-color: $secondary-background-color;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.blog__title {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.23;
+    color: $textcolor;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        color: $button-color;
+        font-size: 26px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 33px;
+    }
+
+}
+
+.blog__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    color: $button-color;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.articles__list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    overflow: auto;
+    max-height: 300px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        overflow: hidden;
+        margin-bottom: 80px;
+        max-height: 220px;
+        transition: max-height 1000ms ease;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 50px;
+        margin-bottom: 33px;
+        max-height: 260px;
+    }
+}
+
+.article__list--all {
+    @media screen and (min-width: $breakpoint-tablet) {
+        max-height: 2000px;
+    }
+}
+
+
+.article__wrapper {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: $card-bg-color;
+    box-sizing: border-box;
+
+    width: 245px;
+    height: 252px;
+    border-radius: 10px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: auto;
+        height: auto;
+    }
+}
+
+.article__container {
+    padding: 25px 15px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 0;
+        display: flex;
+    }
+}
+
+.article__text-section {
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 189px;
+        padding: 20px 16px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 240px;
+        padding: 27px 25px 20px 25px;
+    }
+}
+
+.article__title {
+    display: none;
+}
+
+.article__content {
+    max-height: 163px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    color: $primary-font-color;
+    font-size: 16px;
+    text-align: start;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        margin-bottom: 35px;
+        max-height: 116px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-bottom: 46px;
+        max-height: 144px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.article__date-wrapper {
+    display: flex;
+    gap: 4px;
+
+}
+
+.article__date-icon {
+    width: 24px;
+    height: 24px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 20px;
+        height: 20px;
+        display: flex;
+    }
+
+}
+
+.article__img {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: block;
+        width: 150px;
+        height: 211px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        width: 272px;
+        height: 259px;
+    }
+}
+
+.article__date {
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+    }
+}
+
+.blog__loadmore-btn {
+    display: none;
+    @extend .button-common;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        display: block;
+        padding: 14px 48px;
+        color: $primary-font-color;
+
+        &:hover,
+        &:focus {
+            padding: 14px 40px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        background-color: $button-color;
+        padding: 11px 50px;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+            padding: 11px 55px;
+        }
+    }
+}

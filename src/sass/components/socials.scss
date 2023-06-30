@@ -1,0 +1,38 @@
+.socials__container {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    gap: 16px;
+  }
+}
+
+.socials__link {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50px;
+  background: $button-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image $transition-props, transform $transition-props;
+
+  &:hover,
+  &:focus {
+    background-image: $gradient-color;
+    transform: scale(1.2);
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.socials__icon {
+  width: 15px;
+  height: 15px;
+}

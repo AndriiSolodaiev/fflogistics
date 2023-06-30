@@ -1,0 +1,113 @@
+.form-submitted__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 127px;
+    padding-bottom: 121px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 72px;
+        padding-bottom: 62px;
+        padding-left: 66px;
+        padding-right: 66px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 100px;
+        padding-bottom: 115px;
+        padding-left: 90px;
+        padding-right: 90px;
+
+    }
+
+}
+
+.form-submitted__container--light {
+    @extend .form-submitted__container;
+    height: 350px;
+    padding: 0;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 0;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding: 0;
+    }
+}
+
+.form-submitted__title {
+    @extend .modal-form__title;
+    margin-bottom: 21px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 32px;
+
+        font-weight: 600;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 40px;
+
+    }
+}
+
+.form-submitted__title--light {
+    @extend .modal-form__title;
+    font-size: 18px;
+    margin-bottom: 21px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 26px;
+        margin-bottom: 10px;
+        -webkit-text-fill-color: $button-color;
+
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 32px;
+
+    }
+}
+
+.form-submitted__descr {
+    @extend .modal-form__descr;
+    margin-bottom: 62px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 18px;
+        max-width: 338px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+        margin-bottom: 65px;
+        max-width: 600px;
+    }
+}
+
+.form-submitted__descr--light {
+    @extend .form-submitted__descr;
+    font-size: 12px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+        max-width: 400px;
+        margin-bottom: 52px;
+        color: $primary-font-color;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 16px;
+        margin-bottom: 81px;
+        max-width: 600px;
+    }
+}

@@ -1,0 +1,201 @@
+.services__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    gap: 23px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 43px;
+  }
+}
+
+.services__card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 510px;
+  border-radius: 10px;
+
+  transition: box-shadow $transition-props;
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow-hover;
+  }
+
+  &:hover .services__text-wrapper,
+  &:focus .services__text-wrapper {
+    max-height: 440px;
+    background-color: #ffffffda;
+    transform: translateY(-361px);
+    border-radius: 10px;
+    padding-top: 33px;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet)and (max-width:$breakpoint-tablet-max) {
+    height: 354px;
+
+    &:hover .services__text-wrapper,
+    &:focus .services__text-wrapper {
+      transform: translateY(-220px);
+      max-height: 340px;
+      padding-top: 13px;
+      overflow: auto;
+
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f0f0f0;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $accent-color;
+        border-radius: 4px;
+      }
+    }
+  }
+
+}
+
+.services__img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 300px;
+  height: 361px;
+
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    height: 220px;
+    width: 200px;
+  }
+}
+
+.services__info-wrapper-static {
+  height: 150px;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: $card-bg-color;
+}
+
+.services__text-wrapper {
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+  background-color: $textcolor;
+  max-height: 50px;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 100px;
+
+  transition: all 1000ms ease;
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint-tablet)and (max-width:$breakpoint-tablet-max) {
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 68px;
+  }
+}
+
+.card__title {
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 31px;
+    height: 2px;
+    background: $gradient-color;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    font-size: 14px;
+    margin-bottom: 27px;
+  }
+}
+
+.services__btn-wrapper {
+  padding-top: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: $card-bg-color;
+  padding-bottom: 29px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    padding: 14px 25px;
+  }
+}
+
+.service__btn {
+  box-shadow: $button-box-shadow;
+
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    padding: 10px 24px;
+    font-size: 16px;
+    background-color: $button-color;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      padding: 10px 30px;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    background-color: $button-color;
+    padding: 14px 52px;
+    color: $primary-font-color;
+    font-size: 16px;
+    font-weight: 600;
+
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      padding: 14px 57px;
+    }
+  }
+}
+
+.card__descr {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    font-size: 14px;
+  }
+}
+
+.card__time {
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    font-size: 14px;
+  }
+}

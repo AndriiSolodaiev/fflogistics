@@ -1,0 +1,9 @@
+.rail-trans__bg {
+    background-image: linear-gradient(#393939, #393939ea, #393939),
+
+    url("#{$public-url}mobile/train-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
