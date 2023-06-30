@@ -7,7 +7,7 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
 
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    // await handleSubmit(event);
+    await handleSubmit(event);
     await submitHandler(true);
   };
 

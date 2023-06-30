@@ -106,7 +106,10 @@ export const ClientForm = () => {
               </a>
             </li>
             <li>
-              <a href="" className="contact__link ">
+              <a
+                href="https://www.google.com.ua/maps/place/Retroville/@50.503707,30.3974415,14z/data=!4m6!3m5!1s0x40d4cd6ec5a66665:0x7eb8d3c45222c2d5!8m2!3d50.5037077!4d30.4171677!16s%2Fg%2F11b5qqt72q?hl=ru&entry=ttu"
+                className="contact__link "
+              >
                 <svg className="contact__icon--location">
                   <use href={svgHrefMaker("icon-location")}></use>
                 </svg>

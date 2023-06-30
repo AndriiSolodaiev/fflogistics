@@ -1,4 +1,3 @@
-import { svgHrefMaker } from "../helpers";
 import { Socials } from "./Socials";
 import { useTranslation } from "react-i18next";
 export const FormSubmitted = ({ background }) => {

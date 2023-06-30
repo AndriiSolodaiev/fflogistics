@@ -85,7 +85,7 @@
 
     @media screen and (min-width: $breakpoint-tablet) {
         flex-direction: row;
-        align-items: start;
+        align-items: flex-start;
         gap: 15px;
         width: 100%;
     }
