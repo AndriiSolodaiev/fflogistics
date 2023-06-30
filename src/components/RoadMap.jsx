@@ -18,13 +18,13 @@ export const RoadMap = () => {
             />
 
             <source
-              srcSet={imgSrcMaker("/tablet/points-tablet.png")}
+              srcSet={imgSrcMaker("tablet/points-tablet.png")}
               media={`(min-width: ${breakpoints.tablet}px)`}
             />
 
             <img
               loading="lazy"
-              src={imgSrcMaker("/tablet/points-tablet.png")}
+              src={imgSrcMaker("tablet/points-tablet.png")}
               alt="points"
             />
           </picture>

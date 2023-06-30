@@ -6,9 +6,8 @@ const Layout = () => {
     <>
       <Header />
       <main>
-        {/* <Suspense> */}
         <Outlet />
-        {/* </Suspense> */}
+
         <Footer />
       </main>
     </>
