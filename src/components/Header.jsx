@@ -8,7 +8,7 @@ import { breakpoints } from "../constants/breakpoints";
 import { imgSrcMaker } from "../helpers/imgSrcMaker";
 import { Link } from "react-router-dom";
 export const Header = () => {
-  const { isOpen, open, close, toggle } = useToggle();
+  const { isOpen, open, close } = useToggle();
   const { i18n } = useTranslation();
 
   return (
