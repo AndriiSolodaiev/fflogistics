@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fflogistics/static/css/main.27841652.css",
-    "main.js": "/fflogistics/static/js/main.0fedb7bf.js",
+    "main.js": "/fflogistics/static/js/main.c6aaad2a.js",
     "static/js/310.548e8bc7.chunk.js": "/fflogistics/static/js/310.548e8bc7.chunk.js",
     "static/js/250.11c048bb.chunk.js": "/fflogistics/static/js/250.11c048bb.chunk.js",
     "static/js/640.1fb67da7.chunk.js": "/fflogistics/static/js/640.1fb67da7.chunk.js",
@@ -19,7 +19,7 @@
     "index.html": "/fflogistics/index.html",
     "static/media/getFetch.cjs": "/fflogistics/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.27841652.css.map": "/fflogistics/static/css/main.27841652.css.map",
-    "main.0fedb7bf.js.map": "/fflogistics/static/js/main.0fedb7bf.js.map",
+    "main.c6aaad2a.js.map": "/fflogistics/static/js/main.c6aaad2a.js.map",
     "310.548e8bc7.chunk.js.map": "/fflogistics/static/js/310.548e8bc7.chunk.js.map",
     "250.11c048bb.chunk.js.map": "/fflogistics/static/js/250.11c048bb.chunk.js.map",
     "640.1fb67da7.chunk.js.map": "/fflogistics/static/js/640.1fb67da7.chunk.js.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.27841652.css",
-    "static/js/main.0fedb7bf.js"
+    "static/js/main.c6aaad2a.js"
   ]
 }
