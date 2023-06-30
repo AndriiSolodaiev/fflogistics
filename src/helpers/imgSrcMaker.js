@@ -1,3 +1,3 @@
 export const imgSrcMaker = (img) => {
-  return `/images/${img}`;
+  return `public/images/${img}`;
 };
