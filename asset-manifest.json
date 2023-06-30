@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/fflogistics/static/css/main.27841652.css",
+    "main.js": "/fflogistics/static/js/main.7e0968c4.js",
+    "static/js/310.548e8bc7.chunk.js": "/fflogistics/static/js/310.548e8bc7.chunk.js",
+    "static/js/250.11c048bb.chunk.js": "/fflogistics/static/js/250.11c048bb.chunk.js",
+    "static/js/640.1fb67da7.chunk.js": "/fflogistics/static/js/640.1fb67da7.chunk.js",
+    "static/js/852.3e6082d8.chunk.js": "/fflogistics/static/js/852.3e6082d8.chunk.js",
+    "static/media/bg-desktop.png": "/fflogistics/static/media/bg-desktop.38aa0bb6b03fc7c1e392.png",
+    "static/media/train-mobile@2x.jpg": "/fflogistics/static/media/train-mobile@2x.f3fc89dba952000f59d9.jpg",
+    "static/media/bg-plane-tablet.png": "/fflogistics/static/media/bg-plane-tablet.6c6f1255049d57f77388.png",
+    "static/media/ship-mobile@2x.jpg": "/fflogistics/static/media/ship-mobile@2x.95b039a29c912c1c17c6.jpg",
+    "static/media/hero-bg-mobile.png": "/fflogistics/static/media/hero-bg-mobile.cd13eac1cca80458f627.png",
+    "static/media/bg-lines-tablet.png": "/fflogistics/static/media/bg-lines-tablet.9388d995080c8d090512.png",
+    "static/media/slick.svg": "/fflogistics/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/fflogistics/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/fflogistics/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/fflogistics/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/fflogistics/index.html",
+    "static/media/getFetch.cjs": "/fflogistics/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.27841652.css.map": "/fflogistics/static/css/main.27841652.css.map",
+    "main.7e0968c4.js.map": "/fflogistics/static/js/main.7e0968c4.js.map",
+    "310.548e8bc7.chunk.js.map": "/fflogistics/static/js/310.548e8bc7.chunk.js.map",
+    "250.11c048bb.chunk.js.map": "/fflogistics/static/js/250.11c048bb.chunk.js.map",
+    "640.1fb67da7.chunk.js.map": "/fflogistics/static/js/640.1fb67da7.chunk.js.map",
+    "852.3e6082d8.chunk.js.map": "/fflogistics/static/js/852.3e6082d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27841652.css",
+    "static/js/main.7e0968c4.js"
+  ]
+}
