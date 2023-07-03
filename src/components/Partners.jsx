@@ -15,20 +15,13 @@ export const Partners = () => {
   };
   return (
     <section id="partners">
-      <div className="container">
-        <Slider {...settings}>
-          {partnersLogos.map(({ id, src, alt }) => (
-            <div key={id} className="partner-slide">
-              <img
-                loading="lazy"
-                src={src}
-                alt={alt}
-                className="partners__img"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      <Slider {...settings}>
+        {partnersLogos.map(({ id, src, alt }) => (
+          <div key={id} className="partner-slide">
+            <img loading="lazy" src={src} alt={alt} className="partners__img" />
+          </div>
+        ))}
+      </Slider>
     </section>
   );
 };
