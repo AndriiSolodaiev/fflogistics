@@ -26,9 +26,9 @@ export const Home = () => {
       }
     }
   }, [location]);
- 
+
   return (
-    <div>
+    <>
       <Hero />
       <Services />
       <Delivery />
@@ -38,6 +38,6 @@ export const Home = () => {
       <BlogSection />
       <ClientForm />
       <Partners />
-    </div>
+    </>
   );
 };
