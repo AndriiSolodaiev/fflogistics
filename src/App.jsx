@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="transportation-requirements" element={<Conditions />} />
+        <Route path="/transportation-requirements" element={<Conditions />} />
         <Route path="delivery-from-Europe" element="DeliveryEurope" />
         <Route path="delivery-from-SthKorea" element="DeliverySthKorea" />
         <Route path="delivery-from-UAE" element="DeliveryUAE" />
@@ -20,7 +20,7 @@ function App() {
         <Route path="sea-transportation" element={<SeaTrans />} />
         <Route path="rail-transportation" element={<RailTrans />} />
         <Route path="blog" element="Blog" />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Home />} />
       </Route>
     </Routes>
   );
