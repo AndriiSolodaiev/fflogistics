@@ -28,8 +28,8 @@ export const Navigation = ({ onClose }) => {
         </li>
         <li className="navigation-item">
           <NavLink
-            className="navigation__link"
             to="/transportation-requirements"
+            className="navigation__link"
             onClick={onClose}
           >
             {t("header.nav.conditions")}
@@ -64,15 +64,6 @@ export const Navigation = ({ onClose }) => {
                 onClick={onClose}
               >
                 {t("header.countries.country2")}
-              </NavLink>
-            </li>
-            <li className="countries__item">
-              <NavLink
-                className="navigation__country-link"
-                to="13"
-                onClick={onClose}
-              >
-                {t("header.countries.country3")}
               </NavLink>
             </li>
           </ul>
