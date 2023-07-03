@@ -1,4 +1,38 @@
+  from = "/transportation-requirements"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
-  from = "/*"
+  from = "/delivery-from-Europe"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/delivery-from-SthKorea"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/delivery-from-UAE"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/air-transportation"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sea-transportation"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/rail-transportation"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
   to = "/index.html"
   status = 200
