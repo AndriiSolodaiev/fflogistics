@@ -26,8 +26,7 @@ export const Home = () => {
       }
     }
   }, [location]);
-  console.log(location.state);
-
+ 
   return (
     <div>
       <Hero />
