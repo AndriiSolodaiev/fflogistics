@@ -27,11 +27,7 @@ export const Navigation = ({ onClose }) => {
           </button>
         </li>
         <li className="navigation-item">
-          <NavLink
-            to="/transportation-requirements"
-            className="navigation__link"
-            onClick={onClose}
-          >
+          <NavLink to="/transportation" className="navigation__link">
             {t("header.nav.conditions")}
           </NavLink>
         </li>
