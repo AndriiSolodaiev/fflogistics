@@ -9,7 +9,7 @@
 
     @media screen and (min-width: $breakpoint-desktop) {
         padding-top: 50px;
-        padding-bottom: 49px;
+        padding-bottom: 69px;
     }
 }
 
@@ -77,6 +77,7 @@
 
 .roadmap__list {
     display: flex;
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -103,7 +104,34 @@
     flex-direction: column;
     gap: 17px;
     transition: transform $transition-props;
-    padding-bottom: 20px;
+
+    transition: all $transition-props;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.3);
+
+        .roadmap__item-descr {
+            color: $primary-font-color;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 110%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $form-space-color ;
+            z-index: -1;
+            border-radius: 10px;
+
+            box-shadow: $box-shadow-hover;
+        }
+
+    }
 
 
 }
