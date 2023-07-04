@@ -121,6 +121,17 @@
             animation: pulse 800ms infinite;
         }
 
+        .roadmap__item-title {
+            transform: scale(1.2);
+            animation: pulse 800ms infinite;
+        }
+
+        .roadmap__item-descr {
+            transform: scale(1.2);
+        }
+
+
+
 
         // .roadmap__item-descr {
         //     color: $primary-font-color;
@@ -208,6 +219,7 @@
     line-height: 1;
     text-align: center;
     color: $textcolor;
+    transition: transform $transition-props;
 
     @media screen and (min-width: $breakpoint-tablet) {
         max-width: 122px;
