@@ -75,7 +75,7 @@ export const ClientForm = () => {
               <Form
                 submitHandler={submitHandler}
                 buttonStyle="client-form__btn"
-                background="light"
+                background="--light"
               />
             </>
           )}

@@ -22,6 +22,11 @@ export const Services = () => {
               id,
             }) => (
               <li key={id} className="services__card">
+                {id === 3 && (
+                  <p className="service-card__disclaimer">
+                    {t("services.disclaimer")}
+                  </p>
+                )}
                 <picture>
                   <source
                     srcSet={`${imgDesktop} 1x, ${imgDesktop2x} 2x`}
@@ -54,9 +59,21 @@ export const Services = () => {
                     <p className="card__descr">
                       {t(`services.card${id}.descr`)}
                     </p>
-                    <p className="card__time ">
-                      <b>{t(`services.card${id}.time`)}</b>
-                    </p>
+                    {id === 1 && (
+                      <p className="card__descr">
+                        {t(`services.card1.descr--add`)}{" "}
+                      </p>
+                    )}
+
+                    <ul>
+                      {t(`services.card${id}.time`)
+                        .split("&")
+                        .map((item, index) => (
+                          <li key={index} className="card__time ">
+                            <b>{item}</b>
+                          </li>
+                        ))}
+                    </ul>
                   </div>
                   <div className="services__btn-wrapper">
                     <Link

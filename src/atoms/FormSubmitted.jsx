@@ -3,30 +3,12 @@ import { useTranslation } from "react-i18next";
 export const FormSubmitted = ({ background }) => {
   const { t } = useTranslation();
   return (
-    <div
-      className={
-        background === "light"
-          ? "form-submitted__container--light"
-          : "form-submitted__container"
-      }
-    >
-      <h2
-        className={
-          background === "light"
-            ? "form-submitted__title--light"
-            : "form-submitted__title"
-        }
-      >
+    <div className={`form-submitted__container${background}`}>
+      <h2 className={`form-submitted__title${background}`}>
         {t("modalform.thanks-title")}
       </h2>
 
-      <p
-        className={
-          background === "light"
-            ? "form-submitted__descr--light"
-            : "form-submitted__descr"
-        }
-      >
+      <p className={`form-submitted__descr${background}`}>
         {t("modalform.thanks-descr")}
       </p>
       <Socials />

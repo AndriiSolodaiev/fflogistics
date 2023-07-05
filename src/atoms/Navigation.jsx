@@ -51,7 +51,7 @@ export const Navigation = ({ onClose }) => {
             <li className="countries__item">
               <NavLink
                 className="navigation__country-link"
-                to="13"
+                to="/delivery-from-SthKorea"
                 onClick={onClose}
               >
                 {t("header.countries.country1")}
@@ -60,7 +60,7 @@ export const Navigation = ({ onClose }) => {
             <li className="countries__item">
               <NavLink
                 className="navigation__country-link"
-                to="13"
+                to="/delivery-from-Europe"
                 onClick={onClose}
               >
                 {t("header.countries.country2")}

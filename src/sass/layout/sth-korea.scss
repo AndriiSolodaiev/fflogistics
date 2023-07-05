@@ -1,0 +1,55 @@
+.sth-korea__bg {
+    @media screen and (min-width: $breakpoint-tablet) {
+        background-image: linear-gradient(to right, #393939 60%, #39393934),
+        url("#{$public-url}tablet/bg-sth-korea-tablet.jpg");
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        background-image: linear-gradient(to right, #393939 60%, #39393934),
+        url("#{$public-url}desktop/bg-sth-korea-desktop.jpg");
+    }
+}
+
+.content__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 400;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 16px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.korea__general {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.list-sea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.list-sea__item {
+    position: relative;
+
+    &::before {
+        content: "\2714";
+        position: absolute;
+        top: 0;
+        left: -20px;
+        color: rgb(34, 168, 34);
+    }
+}

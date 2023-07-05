@@ -7,15 +7,16 @@ const Conditions = lazy(() => import("./pages/Conditions"));
 const AirTrans = lazy(() => import("./pages/AirTrans"));
 const RailTrans = lazy(() => import("./pages/RailTrans"));
 const SeaTrans = lazy(() => import("./pages/SeaTrans"));
+const DeliverySthKorea = lazy(() => import("./pages/DeliverySthKorea"));
+const DeliveryEurope = lazy(() => import("./pages/DeliveryEurope"));
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/transportation-requirements" element={<Conditions />} />
-        <Route path="/delivery-from-Europe" element="DeliveryEurope" />
-        <Route path="/delivery-from-SthKorea" element="DeliverySthKorea" />
-        <Route path="/delivery-from-UAE" element="DeliveryUAE" />
+        <Route path="/delivery-from-Europe" element={<DeliveryEurope />} />
+        <Route path="/delivery-from-SthKorea" element={<DeliverySthKorea />} />
         <Route path="/air-transportation" element={<AirTrans />} />
         <Route path="/sea-transportation" element={<SeaTrans />} />
         <Route path="/rail-transportation" element={<RailTrans />} />

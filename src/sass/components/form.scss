@@ -53,6 +53,18 @@
     padding-top: 7px;
     resize: none;
 
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $accent-color;
+        border-radius: 4px;
+    }
 }
 
 .form__button {
@@ -137,6 +149,10 @@
     padding-top: 7px;
     resize: none;
 
+    &::-webkit-scrollbar-track {
+        background: $form-space-color;
+    }
+
     @media screen and (min-width: $breakpoint-tablet) {
         padding-top: 4px;
 
@@ -175,6 +191,57 @@
         &:hover,
         :focus {
             padding: 13px 149px;
+        }
+    }
+}
+
+.form__container--countries {
+    @extend .form__container;
+}
+
+.form__input--countries {
+    @extend .form__input;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        color: $primary-font-color;
+        width: 457px;
+        height: 39px;
+
+        &::placeholder {
+            color: $placeholder-color--light
+        }
+    }
+}
+
+.form__textarea--countries {
+    @extend .form__textarea;
+
+    &::-webkit-scrollbar-track {
+        background: $form-space-color;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 457px;
+        color: $primary-font-color;
+
+        &::placeholder {
+            color: $placeholder-color--light
+        }
+    }
+
+
+}
+
+.form__button--countries {
+    @extend .form__button;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        padding: 8px 101px;
+
+        &:hover,
+        &:focus {
+            padding: 8px 187px;
         }
     }
 }

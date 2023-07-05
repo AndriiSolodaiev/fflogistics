@@ -5,8 +5,87 @@
     @media screen and (min-width: $breakpoint-tablet) {
         padding-top: 60px;
         padding-bottom: 60px;
+
     }
 
+}
+
+.countries-hero__wrapper {
+    @media screen and (min-width: $breakpoint-tablet) {
+        background-color: $card-bg-color;
+
+    }
+}
+
+.page-hero__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.page-hero__container--countries {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $background-color;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        align-items: flex-start;
+        width: 100%;
+        position: relative;
+
+        padding-top: 9px;
+        padding-bottom: 26px;
+
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 16px;
+        padding-bottom: 45px;
+    }
+}
+
+.route-wrapper {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-bottom: 45px;
+    }
+}
+
+.route-text {
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 12px;
+        font-weight: 400;
+        color: $textcolor;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 14px;
+    }
+}
+
+.route-icon {
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 19px;
+        height: 6px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 .page-title {
@@ -18,12 +97,13 @@
     max-height: 53px;
     overflow: hidden;
     text-align: center;
+    max-width: 300px;
 
     @media screen and (min-width: $breakpoint-tablet) {
         font-size: 32px;
         max-height: 300px;
         font-weight: 600;
-
+        max-width: 1200px;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
@@ -32,11 +112,47 @@
     }
 }
 
-.page-hero__container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.page-title--countries {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        text-align: start;
+        max-width: 330px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        max-width: 477px;
+        line-height: 1.4;
+    }
+}
+
+.page-hero__info--countries {
+    color: $textcolor;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+
+    margin-bottom: 5px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        text-align: start;
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+
+    }
+}
+
+
+.page-hero__info-title--countries {
+
+    font-weight: 400;
+    padding-right: 5px;
+    color: $form-space-color;
 }
 
 .page-hero__form-wrap {
@@ -54,6 +170,18 @@
     }
 
     @media screen and (min-width: $breakpoint-desktop) {}
+}
+
+.countries__form-wrap {
+    @media screen and (min-width: $breakpoint-tablet) {
+        background-color: $card-bg-color;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
 }
 
 .page-hero__form-title {
@@ -79,6 +207,15 @@
     }
 }
 
+.page-hero__form-title--countries {
+    @extend .page-hero__form-title;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        margin-bottom: 5px;
+        width: 457px;
+    }
+}
+
 .page-hero__form-descr {
     font-size: 12px;
     color: $textcolor;
@@ -96,6 +233,13 @@
         width: 450px;
 
     }
+}
+
+.page-hero__form-descr--countries {
+    @extend .page-hero__form-descr;
+    margin-bottom: 9px;
+    color: $primary-font-color;
+    width: 457px;
 }
 
 .page-hero__close-btn {

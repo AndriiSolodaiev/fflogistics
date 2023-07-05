@@ -13,15 +13,11 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
 
   return (
     <form
-      className={
-        background === "light" ? "form__container--light" : "form__container"
-      }
+      className={`form__container${background}`}
       onSubmit={handleSubmitForm}
     >
       <input
-        className={
-          background === "light" ? "form__input--light" : "form__input"
-        }
+        className={`form__input${background}`}
         type="text"
         name="name"
         required
@@ -29,9 +25,7 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
       />
       <ValidationError prefix="Name" field="name" errors={state.errors} />
       <input
-        className={
-          background === "light" ? "form__input--light" : "form__input"
-        }
+        className={`form__input${background}`}
         type="text"
         name="phone"
         required
@@ -39,18 +33,16 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
       />
       <ValidationError prefix="Phone" field="phone" errors={state.errors} />
       <textarea
-        className={
-          background === "light" ? "form__textarea--light" : "form__textarea"
-        }
+        className={`form__textarea${background}`}
         type="text"
         name="message"
         placeholder={t("form.placeholders.message")}
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button
-        className={`button-common  ${buttonStyle ? buttonStyle : ""} ${
-          background === "light" ? "form__button--light" : "form__button"
-        }`}
+        className={`button-common  ${
+          buttonStyle ? buttonStyle : ""
+        } form__button${background}`}
         disabled={state.submitting}
       >
         {t("form.submitbutton")}

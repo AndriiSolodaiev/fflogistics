@@ -25,7 +25,7 @@ export const ModalForm = ({ isOpen, onClose }) => {
           <div className="modal-form__container--form">
             <h2 className="modal-form__title">{t("modalform.main-title")}</h2>
             <p className="modal-form__descr">{t("modalform.main-descr")}</p>
-            <Form submitHandler={submitHandler} />
+            <Form submitHandler={submitHandler} background={""} />
           </div>
         )}
       </div>

@@ -22,7 +22,7 @@ export const TransHeroTemplate = ({ title, classBg }) => {
                   <use href={svgHrefMaker("icon-cross")}></use>
                 </svg>
               </button>
-              <FormSubmitted />
+              <FormSubmitted background={""} />
             </>
           ) : (
             <>
@@ -32,7 +32,10 @@ export const TransHeroTemplate = ({ title, classBg }) => {
               <p className="page-hero__form-descr">
                 {t("transpages.formdescr")}
               </p>
-              <Form submitHandler={() => setFormSubmitted(true)} />
+              <Form
+                submitHandler={() => setFormSubmitted(true)}
+                background={""}
+              />
             </>
           )}
         </div>

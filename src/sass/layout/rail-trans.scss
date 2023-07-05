@@ -6,4 +6,21 @@
     background-size: cover;
     background-position: center;
 
+    @media screen and (min-width: $breakpoint-tablet) {
+        background-image: linear-gradient(to left, #393939 55%, #39393925),
+        url("#{$public-url}tablet/bg-rail-tablet.png");
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+
+
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        background-image: linear-gradient(#393939 2%, #3939390a, #393939 98%),
+        linear-gradient(to left, #393939 50%, #39393925),
+        url("#{$public-url}desktop/bg-rail-desktop.png");
+
+    }
 }

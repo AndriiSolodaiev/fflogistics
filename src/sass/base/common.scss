@@ -55,6 +55,19 @@ body {
     line-height: 1.2;
     color: $primary-font-color;
     background-color: $background-color;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $accent-color;
+        border-radius: 4px;
+    }
 }
 
 html {

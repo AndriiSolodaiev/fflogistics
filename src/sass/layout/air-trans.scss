@@ -9,14 +9,18 @@
     background-position: center;
 
     @media screen and (min-width: $breakpoint-tablet) {
-        background-image: linear-gradient(#393939, #3939399d, #393939),
+        background-image: linear-gradient(#393939, #39393949, #393939),
+        linear-gradient(to left, #393939 40%, #39393913),
         url("#{$public-url}tablet/bg-plane-tablet.png");
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
 
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         background-image: linear-gradient(#393939, #3939398f, #393939),
-        linear-gradient(to left, #393939, #39393934),
+        linear-gradient(to left, #393939 40%, #39393934),
         url("#{$public-url}desktop/bg-desktop.png");
 
     }
