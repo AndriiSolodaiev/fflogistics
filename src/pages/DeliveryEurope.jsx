@@ -9,7 +9,7 @@ const DeliveryEurope = () => {
     <>
       <CountryHeroTemplate
         title={t("countriespages.Europe.title")}
-        classBg="sth-korea__bg"
+        classBg="europe__bg"
         tariff={t("countriespages.Europe.tariff.value")}
         terms={t("countriespages.Europe.terms.value")}
         unit={t("countriespages.Europe.unit")}

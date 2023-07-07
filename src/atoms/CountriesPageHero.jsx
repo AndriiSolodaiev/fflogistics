@@ -43,15 +43,15 @@ export const CountryHeroTemplate = ({
         {formSubmitted ? (
           <>
             <button
-              className="modal__close-btn page-hero__close-btn"
+              className="countries__close-btn"
               type="button"
               onClick={() => setFormSubmitted(false)}
             >
-              <svg className="modal__icon-close">
+              <svg className="modal__icon-close contries__icon-close">
                 <use href={svgHrefMaker("icon-cross")}></use>
               </svg>
             </button>
-            <FormSubmitted />
+            <FormSubmitted background="--light" />
           </>
         ) : (
           <>

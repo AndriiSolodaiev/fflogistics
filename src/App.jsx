@@ -9,6 +9,8 @@ const RailTrans = lazy(() => import("./pages/RailTrans"));
 const SeaTrans = lazy(() => import("./pages/SeaTrans"));
 const DeliverySthKorea = lazy(() => import("./pages/DeliverySthKorea"));
 const DeliveryEurope = lazy(() => import("./pages/DeliveryEurope"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const ArticlePage = lazy(() => import("./pages/ArticlePage"));
 function App() {
   return (
     <Routes>
@@ -20,7 +22,8 @@ function App() {
         <Route path="/air-transportation" element={<AirTrans />} />
         <Route path="/sea-transportation" element={<SeaTrans />} />
         <Route path="/rail-transportation" element={<RailTrans />} />
-        <Route path="/blog" element="Blog" />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:articleId" element={<ArticlePage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

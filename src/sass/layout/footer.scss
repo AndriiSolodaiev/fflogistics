@@ -1,10 +1,10 @@
 .footer__container {
     text-align: center;
-    padding-top: 40px;
+
     padding-bottom: 40px;
 
     @media screen and (min-width: $breakpoint-desktop) {
-        padding-top: 90px;
+
         padding-bottom: 65px;
     }
 }

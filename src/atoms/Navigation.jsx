@@ -79,9 +79,9 @@ export const Navigation = ({ onClose }) => {
           </button>
         </li>
         <li className="navigation-item blog--desktop" onClick={onClose}>
-          <a href="#blog" className="navigation__link">
+          <NavLink to="/blog" className="navigation__link">
             {t("header.nav.blog")}
-          </a>
+          </NavLink>
         </li>
         <li className="navigation-item partners--tablet-m">
           <button

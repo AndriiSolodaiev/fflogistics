@@ -1,3 +1,13 @@
+.partners-section {
+
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        padding-bottom: 65px;
+    }
+}
+
 .partner-slide {
     height: 40px;
     padding-right: 20px;

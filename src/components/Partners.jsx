@@ -14,7 +14,7 @@ export const Partners = () => {
     pauseOnHover: false,
   };
   return (
-    <section id="partners">
+    <section id="partners" className="partners-section">
       <Slider {...settings}>
         {partnersLogos.map(({ id, src, alt }) => (
           <div key={id} className="partner-slide">

@@ -139,6 +139,7 @@
     @media screen and (min-width: $breakpoint-tablet) {
         text-align: start;
         font-size: 18px;
+        margin-bottom: 10px;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
@@ -179,6 +180,7 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        width: fit-content;
     }
 
 
@@ -243,6 +245,7 @@
 }
 
 .page-hero__close-btn {
+    @extend .modal__close-btn;
     top: 130px;
 
     @media screen and (min-width: $breakpoint-tablet) {
@@ -254,6 +257,25 @@
     @media screen and (min-width: $breakpoint-desktop) {
         top: 150px;
         right: 90px;
+
+    }
+}
+
+.countries__close-btn {
+    @extend .page-hero__close-btn;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        top: 120px;
+        right: 10px;
+
+    }
+
+
+}
+
+.contries__icon-close {
+    @media screen and (min-width: $breakpoint-tablet) {
+        fill: $primary-font-color;
 
     }
 }

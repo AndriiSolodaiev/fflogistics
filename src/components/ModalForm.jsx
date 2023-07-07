@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 export const ModalForm = ({ isOpen, onClose }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+
   const { t } = useTranslation();
 
   const submitHandler = (result) => {
@@ -12,7 +13,14 @@ export const ModalForm = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className={`backdrop ${isOpen && "backdrop-is-visible"}`}>
+    <div
+      className={`backdrop ${isOpen && "backdrop-is-visible"}`}
+      onClick={(evt) => {
+        if (evt.target === evt.currentTarget) {
+          onClose();
+        }
+      }}
+    >
       <div className="modal-form__container">
         <button className="modal__close-btn" type="button" onClick={onClose}>
           <svg className="modal__icon-close">

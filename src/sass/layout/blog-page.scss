@@ -1,0 +1,216 @@
+.blog-page__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+.blog-page__title {
+    @extend .hero__title;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+.blog-page__list-wrapper {
+    background-color: $card-bg-color;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 36px;
+        padding-bottom: 82px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
+
+.blog-page__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        gap: 68px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 76px;
+    }
+}
+
+.blog-page__item {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    background-color: $card-bg-color;
+
+    border-radius: 5px;
+    box-shadow: 0px 5px 17px $primary-font-color;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        flex-direction: row;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 20px;
+    }
+}
+
+.blog-page__item-img {
+    border-radius: 5px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 213px;
+        height: 237px;
+
+    }
+
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 270px;
+        height: 260px;
+    }
+
+}
+
+.article__descr-wrapper {
+
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 20px 10px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 237px;
+        padding-bottom: 10px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        height: 260px;
+    }
+}
+
+.blog-page__article-title {
+    margin-bottom: 10px;
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        text-align: start;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 26px;
+        font-weight: 600;
+    }
+}
+
+.blog-article__date-wrapper {
+    @extend .article__date-wrapper;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        margin-bottom: 23px;
+    }
+
+}
+
+.blog-article__date {
+    @extend .article__date;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.blog-article__intro {
+    font-size: 14px;
+    font-weight: 400;
+    max-height: 120px;
+    margin-bottom: auto;
+    overflow: hidden;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 16px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+        font-weight: 500;
+
+    }
+
+
+}
+
+@keyframes moveToTheRight {
+    50% {
+        transform: translateX(10px);
+        color: $link-color;
+    }
+}
+
+.blog-article__link {
+    color: $link-color;
+    transition: color $transition-props;
+    position: relative;
+    width: fit-content;
+
+    &:hover,
+    &:focus {
+        color: rgb(17, 85, 173);
+
+        &::after {
+            content: "\276F";
+            color: rgb(17, 85, 173);
+            position: absolute;
+            transform: scale(1.4);
+            top: 2px;
+            right: -15px;
+            animation: moveToTheRight 1s infinite;
+
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 24px;
+    }
+}

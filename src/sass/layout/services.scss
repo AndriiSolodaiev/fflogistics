@@ -135,7 +135,7 @@
   padding-top: 20px;
   padding-right: 25px;
   padding-left: 25px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
   overflow: hidden;
   transition: all 1000ms ease;
 
@@ -152,7 +152,7 @@
   text-transform: uppercase;
   margin-bottom: 39px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 
   &::after {
@@ -174,7 +174,7 @@
 }
 
 .services__btn-wrapper {
-  padding-top: 20px;
+  padding-top: 14px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: $card-bg-color;
@@ -194,6 +194,7 @@
 .service__btn {
   box-shadow: $button-box-shadow;
   background-color: $button-color;
+  color: $primary-font-color;
 
   @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
     padding: 10px 24px;
@@ -257,6 +258,7 @@
 
     &::before {
       left: -8px;
+
     }
   }
 }
