@@ -81,7 +81,7 @@ export const ClientForm = () => {
           )}
         </div>
         <div className="client-form__content-wrapper">
-          <h3 className="contacts__title">Наші контакти</h3>
+          <h3 className="contacts__title">{t("clientform.contactsTitle")}</h3>
           <ul className="contact-list">
             <li className="contact__link--schedule">
               <svg className="contact__icon--phone">

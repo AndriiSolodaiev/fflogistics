@@ -10,26 +10,28 @@ export const Article1 = () => {
           {t("blogpages.article1.title")}
         </h2>
       </div>
-      <ul className="container content__list">
-        <li>{t(`${contentPath}intro`)}</li>
-        <li className="article-content__list-title">
-          {t(`${contentPath}listTitle`)}
-        </li>
-        <li>
-          <ol className="list-sea">
-            {t(`${contentPath}listItems`)
-              .split("&")
-              .map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-          </ol>
-        </li>
-        <li>{t(`${contentPath}conclusions`)}</li>
-        <li className="article-content__list-title">
-          {t(`${contentPath}subtitle`)}
-        </li>
-        <li>{t(`${contentPath}advice`)}</li>
-      </ul>
+      <div className="article__list-wrapper">
+        <ul className="container content__list">
+          <li>{t(`${contentPath}intro`)}</li>
+          <li className="article-content__list-title">
+            {t(`${contentPath}listTitle`)}
+          </li>
+          <li>
+            <ol className="list-sea">
+              {t(`${contentPath}listItems`)
+                .split("&")
+                .map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+            </ol>
+          </li>
+          <li>{t(`${contentPath}conclusions`)}</li>
+          <li className="article-content__list-title">
+            {t(`${contentPath}subtitle`)}
+          </li>
+          <li>{t(`${contentPath}advice`)}</li>
+        </ul>
+      </div>
     </section>
   );
 };

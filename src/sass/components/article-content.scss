@@ -5,30 +5,72 @@
 }
 
 .article__hero-bg {
-    height: 400px;
+    height: 170px;
     width: 100%;
-    padding-top: 130px;
+    padding-top: 50px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, #fff, #ffffff00,
-        #fff),
-    linear-gradient(to left, #fff, #ffffff00,
-        #fff),
+    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+        #fff 100%),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+        #fff 98%),
     url("#{$public-url}/desktop/hero-bg/bg1-desktop.png");
 
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 250px;
 
+        padding-top: 96px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 400px;
+        padding-top: 130px;
+
+    }
 
 }
 
 .article-contet__title {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 20px;
+
     text-align: center;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 32px;
+
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        font-size: 48px;
+        font-weight: 700;
+
+    }
+
+}
+
+.article__list-wrapper {
+    position: relative;
+    top: -40px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        top: -50px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        top: 30px;
+
+
+    }
 }
 
 .article-content__list-title {
     font-weight: 700;
+
 
     @media screen and (min-width: $breakpoint-tablet) {
         font-size: 22px;

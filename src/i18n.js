@@ -8,7 +8,7 @@ i18n
   .init({
     debug: true,
     fallbackLng: "uk",
-    backend: { loadPath: "./locales/{{lng}}/translation.json" },
+    backend: { loadPath: "../locales/{{lng}}/translation.json" },
   });
 
 export default i18n;
