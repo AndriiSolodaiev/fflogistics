@@ -3,6 +3,12 @@ import { imgSrcMaker } from "../helpers/imgSrcMaker";
 export const advantagesCards = [
   {
     id: 1,
+    imgMobileWebp: imgSrcMaker("mobile/advantage1-mobile.webp"),
+    imgMobileWebp2x: imgSrcMaker("mobile/advantage1-mobile@2x.webp"),
+    imgTabletWebp: imgSrcMaker("tablet/advantage1-tablet.webp"),
+    imgTabletWebp2x: imgSrcMaker("tablet/advantage1-tablet@2x.webp"),
+    imgDesktopWebp: imgSrcMaker("desktop/advantage1-desktop.webp"),
+    imgDesktopWebp2x: imgSrcMaker("desktop/advantage1-desktop@2x.webp"),
     imgMobile: imgSrcMaker("mobile/advantage1-mobile.png"),
     imgMobile2x: imgSrcMaker("mobile/advantage1-mobile@2x.png"),
     imgTablet: imgSrcMaker("tablet/advantage1-tablet.png"),
@@ -13,6 +19,12 @@ export const advantagesCards = [
   },
   {
     id: 2,
+    imgMobileWebp: imgSrcMaker("mobile/advantage2-mobile.webp"),
+    imgMobileWebp2x: imgSrcMaker("mobile/advantage2-mobile@2x.webp"),
+    imgTabletWebp: imgSrcMaker("tablet/advantage2-tablet.webp"),
+    imgTabletWebp2x: imgSrcMaker("tablet/advantage2-tablet@2x.webp"),
+    imgDesktopWebp: imgSrcMaker("desktop/advantage2-desktop.webp"),
+    imgDesktopWebp2x: imgSrcMaker("desktop/advantage2-desktop@2x.webp"),
     imgMobile: imgSrcMaker("mobile/advantage2-mobile.png"),
     imgMobile2x: imgSrcMaker("mobile/advantage2-mobile@2x.png"),
     imgTablet: imgSrcMaker("tablet/advantage2-tablet.png"),
@@ -23,6 +35,12 @@ export const advantagesCards = [
   },
   {
     id: 3,
+    imgMobileWebp: imgSrcMaker("mobile/advantage3-mobile.webp"),
+    imgMobileWebp2x: imgSrcMaker("mobile/advantage3-mobile@2x.webp"),
+    imgTabletWebp: imgSrcMaker("tablet/advantage3-tablet.webp"),
+    imgTabletWebp2x: imgSrcMaker("tablet/advantage3-tablet@2x.webp"),
+    imgDesktopWebp: imgSrcMaker("desktop/advantage3-desktop.webp"),
+    imgDesktopWebp2x: imgSrcMaker("desktop/advantage3-desktop@2x.webp"),
     imgMobile: imgSrcMaker("mobile/advantage3-mobile.png"),
     imgMobile2x: imgSrcMaker("mobile/advantage3-mobile@2x.png"),
     imgTablet: imgSrcMaker("tablet/advantage3-tablet.png"),

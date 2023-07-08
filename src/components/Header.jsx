@@ -33,11 +33,26 @@ export const Header = () => {
             <picture>
               <source
                 srcSet={`${imgSrcMaker(
+                  "desktop/logo-desktop.webp"
+                )} 1x, ${imgSrcMaker("desktop/logo-desktop@2x.webp")} 2x`}
+                media={`(min-width: ${breakpoints.desktop}px)`}
+                type="image/webp"
+              />
+
+              <source
+                srcSet={`${imgSrcMaker(
                   "desktop/logo-desktop.png"
                 )} 1x, ${imgSrcMaker("desktop/logo-desktop@2x.png")} 2x`}
                 media={`(min-width: ${breakpoints.desktop}px)`}
               />
 
+              <source
+                srcSet={`${imgSrcMaker(
+                  "tablet/logo-tablet.webp"
+                )} 1x, ${imgSrcMaker("tablet/logo-tablet@2x.webp")} 2x`}
+                media={`(min-width: ${breakpoints.tablet}px)`}
+                type="image/webp"
+              />
               <source
                 srcSet={`${imgSrcMaker(
                   "tablet/logo-tablet.png"
@@ -47,11 +62,17 @@ export const Header = () => {
 
               <source
                 srcSet={`${imgSrcMaker(
+                  "mobile/logo-mobile.webp"
+                )} 1x, ${imgSrcMaker("mobile/logo-mobile@2x.webp")} 2x`}
+                media={`(min-width: ${breakpoints.mobile}px)`}
+                type="image/webp"
+              />
+              <source
+                srcSet={`${imgSrcMaker(
                   "mobile/logo-mobile.png"
                 )} 1x, ${imgSrcMaker("mobile/logo-mobile@2x.png")} 2x`}
                 media={`(min-width: ${breakpoints.mobile}px)`}
               />
-
               <img
                 loading="lazy"
                 src={imgSrcMaker("mobile/logo-mobile.png")}

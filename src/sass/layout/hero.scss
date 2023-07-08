@@ -139,10 +139,23 @@
   background-size: cover;
   background-position: center;
 
+
+  // @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+  //   url("#{$public-url}mobile/hero-bg-mobile.webp")) {
+  //   background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+  //   url("#{$public-url}mobile/hero-bg-mobile.webp");
+  // }
+
   @media screen and (min-width: $breakpoint-tablet) {
     background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),
     linear-gradient(#393939fd, #393939a1, #393939fd),
     url("#{$public-url}tablet/bg-plane-tablet.png");
+
+    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}tablet/bg-plane-tablet.webp")) {
+      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}tablet/bg-plane-tablet.webp");
+    }
   }
 
   @media screen and (min-width: $breakpoint-desktop) {

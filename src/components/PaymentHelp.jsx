@@ -12,6 +12,12 @@ export const PaymentHelp = () => {
         <ul className="payment__list">
           {paymenInfotCards.map(
             ({
+              imgMobileWebp,
+              imgMobileWebp2x,
+              imgTabletWebp,
+              imgTabletWebp2x,
+              imgDesktopWebp,
+              imgDesktopWebp2x,
               imgMobile,
               imgMobile2x,
               imgTablet,
@@ -25,15 +31,28 @@ export const PaymentHelp = () => {
                 <div className="payment__img-wrapper">
                   <picture>
                     <source
+                      srcSet={`${imgDesktopWebp} 1x, ${imgDesktopWebp2x} 2x`}
+                      media={`(min-width: ${breakpoints.desktop}px)`}
+                      type="image/webp"
+                    />
+                    <source
                       srcSet={`${imgDesktop} 1x, ${imgDesktop2x} 2x`}
                       media={`(min-width: ${breakpoints.desktop}px)`}
                     />
-
+                    <source
+                      srcSet={`${imgTabletWebp} 1x, ${imgTabletWebp2x} 2x`}
+                      media={`(min-width: ${breakpoints.tablet}px)`}
+                      type="image/webp"
+                    />
                     <source
                       srcSet={`${imgTablet} 1x, ${imgTablet2x} 2x`}
                       media={`(min-width: ${breakpoints.tablet}px)`}
                     />
-
+                    <source
+                      srcSet={`${imgMobileWebp} 1x, ${imgMobileWebp2x} 2x`}
+                      media={`(min-width: ${breakpoints.mobile}px)`}
+                      type="image/webp"
+                    />
                     <source
                       srcSet={`${imgMobile} 1x, ${imgMobile2x} 2x`}
                       media={`(min-width: ${breakpoints.mobile}px)`}

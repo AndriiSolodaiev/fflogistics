@@ -13,12 +13,22 @@ export const Partners = () => {
     variableWidth: true,
     pauseOnHover: false,
   };
+
   return (
     <section id="partners" className="partners-section">
       <Slider {...settings}>
-        {partnersLogos.map(({ id, src, alt }) => (
+        {partnersLogos.map(({ id, src, alt, srcWebp }) => (
           <div key={id} className="partner-slide">
-            <img loading="lazy" src={src} alt={alt} className="partners__img" />
+            <picture>
+              <source srcSet={srcWebp} type="image/webp" />
+
+              <img
+                loading="lazy"
+                src={src}
+                alt={alt}
+                className="partners__img"
+              />
+            </picture>
           </div>
         ))}
       </Slider>

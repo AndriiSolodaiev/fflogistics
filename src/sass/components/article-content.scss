@@ -17,6 +17,14 @@
         #fff 98%),
     url("#{$public-url}/desktop/hero-bg/bg1-desktop.png");
 
+    @supports (background-image: url("#{$public-url}desktop/hero-bg/bg1-desktop.webp")) {
+        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+            #fff 100%),
+        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+            #fff 98%),
+        url("#{$public-url}desktop/hero-bg/bg1-desktop.webp");
+    }
+
     @media screen and (min-width: $breakpoint-tablet) {
         height: 250px;
 
@@ -30,6 +38,40 @@
 
     }
 
+}
+
+.article2__hero-bg {
+    @extend .article__hero-bg;
+    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+        #fff 100%),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+        #fff 98%),
+    url("#{$public-url}/desktop/hero-bg/bg2-desktop.png");
+
+    @supports (background-image: url("#{$public-url}desktop/hero-bg/bg2-desktop.webp")) {
+        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+            #fff 100%),
+        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+            #fff 98%),
+        url("#{$public-url}desktop/hero-bg/bg2-desktop.webp");
+    }
+}
+
+.article3__hero-bg {
+    @extend .article__hero-bg;
+    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+        #fff 100%),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+        #fff 98%),
+    url("#{$public-url}/desktop/hero-bg/bg3-desktop.png");
+
+    @supports (background-image: url("#{$public-url}desktop/hero-bg/bg3-desktop.webp")) {
+        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+            #fff 100%),
+        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+            #fff 98%),
+        url("#{$public-url}desktop/hero-bg/bg3-desktop.webp");
+    }
 }
 
 .article-contet__title {
@@ -61,11 +103,7 @@
 
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        top: 30px;
 
-
-    }
 }
 
 .article-content__list-title {

@@ -26,6 +26,16 @@ export const Hero = () => {
     query: `(min-width:${breakpoints.desktop}px)`,
   });
 
+  const supportsWebP = () => {
+    const elem = document.createElement("canvas");
+    if (!!(elem.getContext && elem.getContext("2d"))) {
+      return elem.toDataURL("image/webp").indexOf("data:image/webp") === 0;
+    }
+    return false;
+  };
+
+  const backgroundImageTablet = supportsWebP() ? "webp" : "png";
+  const backgroundImageDesktop = supportsWebP() ? "webp" : "png";
   return (
     <section>
       <MediaQuery minWidth={breakpoints.tablet}>
@@ -70,8 +80,12 @@ export const Hero = () => {
                     backgroundImage: `linear-gradient(#db831f78, #39393950,#393939fd),
                     url(${
                       matchesDesktop
-                        ? `./images/desktop/hero-bg/bg${index + 1}-desktop.png`
-                        : `./images/tablet/hero-bg/bg${index + 1}-tablet.png`
+                        ? `./images/desktop/hero-bg/bg${
+                            index + 1
+                          }-desktop.${backgroundImageDesktop}`
+                        : `./images/tablet/hero-bg/bg${
+                            index + 1
+                          }-tablet.${backgroundImageTablet}`
                     }
                     
                   )`,

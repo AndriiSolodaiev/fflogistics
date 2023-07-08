@@ -5,7 +5,7 @@ export const Article2 = () => {
   const contentPath = "blogpages.article2.content.";
   return (
     <section className="article-content__section">
-      <div className="container article__hero-bg">
+      <div className="container article2__hero-bg">
         <h2 className="article-contet__title">
           {t("blogpages.article2.title")}
         </h2>

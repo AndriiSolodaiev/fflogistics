@@ -39,15 +39,10 @@ export const ClientForm = () => {
                   <picture>
                     <source
                       srcSet={`${imgSrcMaker(
-                        "desktop/logo-desktop.png"
-                      )} 1x, ${imgSrcMaker("desktop/logo-desktop@2x.png")} 2x`}
-                      media={`(min-width: ${breakpoints.desktop}px)`}
-                    />
-                    <source
-                      srcSet={`${imgSrcMaker(
-                        "tablet/logo-tablet.png"
-                      )} 1x, ${imgSrcMaker("tablet/logo-tablet@2x.png")} 2x`}
-                      media={`(min-width: ${breakpoints.tablet}px)`}
+                        "mobile/logo-mobile.webp"
+                      )} 1x, ${imgSrcMaker("mobile/logo-mobile@2x.webp")} 2x`}
+                      media={`(min-width: ${breakpoints.mobile}px)`}
+                      type="image/webp"
                     />
                     <source
                       srcSet={`${imgSrcMaker(
@@ -55,7 +50,6 @@ export const ClientForm = () => {
                       )} 1x, ${imgSrcMaker("mobile/logo-mobile@2x.png")} 2x`}
                       media={`(min-width: ${breakpoints.mobile}px)`}
                     />
-
                     <img
                       loading="lazy"
                       src={imgSrcMaker("mobile/logo-mobile.png")}

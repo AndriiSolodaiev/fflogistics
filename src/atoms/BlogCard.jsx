@@ -2,16 +2,19 @@ import { svgHrefMaker } from "helpers";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-export const BlogCard = ({ id, img, date }) => {
+export const BlogCard = ({ id, img, imgWebp, date }) => {
   const { t } = useTranslation();
   return (
     <li className="blog-page__item">
-      <img
-        loading="lazy"
-        src={img}
-        alt={`article${id}`}
-        className="blog-page__item-img"
-      />
+      <picture>
+        <source srcSet={imgWebp} type="image/webp" />
+        <img
+          loading="lazy"
+          src={img}
+          alt={`article${id}`}
+          className="blog-page__item-img"
+        />
+      </picture>
       <div className="article__descr-wrapper">
         <h3 className="blog-page__article-title">
           {t(`blogpages.article${id}.title`)}
