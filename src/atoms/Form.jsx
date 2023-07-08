@@ -44,6 +44,7 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
           buttonStyle ? buttonStyle : ""
         } form__button${background}`}
         disabled={state.submitting}
+        aria-label="send form information"
       >
         {t("form.submitbutton")}
       </button>

@@ -22,6 +22,7 @@ export const Navigation = ({ onClose }) => {
             type="button"
             className="navigation__link"
             onClick={() => handleClick("services")}
+            aria-label="move to services"
           >
             {t("header.nav.services")}
           </button>
@@ -31,6 +32,7 @@ export const Navigation = ({ onClose }) => {
             to="/transportation-requirements"
             className="navigation__link"
             onClick={onClose}
+            aria-label="move to transportation requirements"
           >
             {t("header.nav.conditions")}
           </NavLink>
@@ -53,6 +55,7 @@ export const Navigation = ({ onClose }) => {
                 className="navigation__country-link"
                 to="/delivery-from-SthKorea"
                 onClick={onClose}
+                aria-label="move to delivery from SthKorea"
               >
                 {t("header.countries.country1")}
               </NavLink>
@@ -62,6 +65,7 @@ export const Navigation = ({ onClose }) => {
                 className="navigation__country-link"
                 to="/delivery-from-Europe"
                 onClick={onClose}
+                aria-label="move to delivery from Europe"
               >
                 {t("header.countries.country2")}
               </NavLink>
@@ -74,12 +78,17 @@ export const Navigation = ({ onClose }) => {
             type="button"
             className="navigation__link"
             onClick={() => handleClick("payment")}
+            aria-label="move to payment section"
           >
             {t("header.nav.payment")}
           </button>
         </li>
         <li className="navigation-item blog--desktop" onClick={onClose}>
-          <NavLink to="/blog" className="navigation__link">
+          <NavLink
+            to="/blog"
+            className="navigation__link"
+            aria-label="move to Blog"
+          >
             {t("header.nav.blog")}
           </NavLink>
         </li>
@@ -88,6 +97,7 @@ export const Navigation = ({ onClose }) => {
             type="button"
             className="navigation__link"
             onClick={() => handleClick("partners")}
+            aria-label="move to partners section"
           >
             {t("header.nav.partners")}
           </button>
@@ -96,7 +106,8 @@ export const Navigation = ({ onClose }) => {
           <button
             type="button"
             className="navigation__link"
-            onClick={() => handleClick("partners")}
+            onClick={() => handleClick("client-form")}
+            aria-label="move to contacts section"
           >
             {t("header.nav.contacts")}
           </button>

@@ -97,7 +97,7 @@ export const Services = () => {
                     <Link
                       to={`${ref}`}
                       className="button-common service__btn"
-                      type="button"
+                      aria-label="go to the page with detailed information about this service"
                     >
                       {t(`services.card${id}.btn`)}
                     </Link>

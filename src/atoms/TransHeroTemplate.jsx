@@ -17,6 +17,7 @@ export const TransHeroTemplate = ({ title, classBg }) => {
                 className="modal__close-btn page-hero__close-btn"
                 type="button"
                 onClick={() => setFormSubmitted(false)}
+                aria-label="close modal window"
               >
                 <svg className="modal__icon-close">
                   <use href={svgHrefMaker("icon-cross")}></use>

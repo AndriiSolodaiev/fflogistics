@@ -79,7 +79,11 @@ export const PaymentHelp = () => {
                     </p>
                   </div>
                   <div className="payment__btn-wrapper">
-                    <button className="payment__button-info" type="button">
+                    <button
+                      className="payment__button-info"
+                      type="button"
+                      aria-label="payment description"
+                    >
                       {t("payment.btn-details")}
                     </button>
                   </div>

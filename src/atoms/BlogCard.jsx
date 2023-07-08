@@ -28,7 +28,11 @@ export const BlogCard = ({ id, img, imgWebp, date }) => {
         <p className="blog-article__intro">
           {t(`blogpages.article${id}.content.intro`)}
         </p>
-        <Link to={`/blog/${id}`} className="blog-article__link">
+        <Link
+          to={`/blog/${id}`}
+          className="blog-article__link"
+          aria-label="go to article"
+        >
           {t(`blogpages.readmore`)}
         </Link>
       </div>

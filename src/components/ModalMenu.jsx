@@ -14,7 +14,12 @@ export const ModalMenu = ({ isOpen, onClose }) => {
     >
       <div className="modal-container">
         <h2 className="modal__title">Меню</h2>
-        <button className="modal__close-btn" type="button" onClick={onClose}>
+        <button
+          className="modal__close-btn"
+          type="button"
+          onClick={onClose}
+          aria-label="close the menu with navigation"
+        >
           <svg className="modal__icon-close">
             <use href={svgHrefMaker("icon-cross")}></use>
           </svg>

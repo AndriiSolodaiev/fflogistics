@@ -25,6 +25,7 @@ export const ClientForm = () => {
                 className="modal__close-btn"
                 type="button"
                 onClick={() => setFormSubmitted(false)}
+                aria-label="close thanks window"
               >
                 <svg className=" space__btn-close">
                   <use href={svgHrefMaker("icon-cross")}></use>
@@ -35,7 +36,7 @@ export const ClientForm = () => {
           ) : (
             <>
               <div className="client-form__header">
-                <Link to="/" className="logo">
+                <Link to="/" className="logo" aria-label="go to home page">
                   <picture>
                     <source
                       srcSet={`${imgSrcMaker(
@@ -84,7 +85,11 @@ export const ClientForm = () => {
               <p className="schedule">{t("clientform.schedule")}</p>
             </li>
             <li>
-              <a href="tel:+380930569981" className="contact__link">
+              <a
+                href="tel:+380930569981"
+                className="contact__link"
+                aria-label="call our manager"
+              >
                 <svg className="contact__icon--phone">
                   <use href={svgHrefMaker("icon-phone")}></use>
                 </svg>
@@ -92,7 +97,11 @@ export const ClientForm = () => {
               </a>
             </li>
             <li>
-              <a href="mailto:Logistic@gmail.com" className="contact__link ">
+              <a
+                href="mailto:Logistic@gmail.com"
+                className="contact__link "
+                aria-label="write to us by e-mail"
+              >
                 <svg className="contact__icon--email">
                   <use href={svgHrefMaker("icon-email")}></use>
                 </svg>
@@ -103,6 +112,7 @@ export const ClientForm = () => {
               <a
                 href="https://www.google.com.ua/maps/place/Retroville/@50.503707,30.3974415,14z/data=!4m6!3m5!1s0x40d4cd6ec5a66665:0x7eb8d3c45222c2d5!8m2!3d50.5037077!4d30.4171677!16s%2Fg%2F11b5qqt72q?hl=ru&entry=ttu"
                 className="contact__link "
+                aria-label="our address on Google Maps"
               >
                 <svg className="contact__icon--location">
                   <use href={svgHrefMaker("icon-location")}></use>

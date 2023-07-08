@@ -22,7 +22,12 @@ export const ModalForm = ({ isOpen, onClose }) => {
       }}
     >
       <div className="modal-form__container">
-        <button className="modal__close-btn" type="button" onClick={onClose}>
+        <button
+          className="modal__close-btn"
+          type="button"
+          onClick={onClose}
+          aria-label="close thanks window"
+        >
           <svg className="modal__icon-close">
             <use href={svgHrefMaker("icon-cross")}></use>
           </svg>

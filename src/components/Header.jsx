@@ -21,6 +21,7 @@ export const Header = () => {
               <a
                 href="mailto:ffl@fflogistics@gmail.com"
                 className="header_contact__link"
+                aria-label="write to us by e-mail"
               >
                 <svg className="header__icon-email--tablet">
                   <use href={svgHrefMaker("icon-email")}></use>
@@ -29,7 +30,7 @@ export const Header = () => {
               </a>
             </div>
           </MediaQuery>
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" aria-label="go to home page">
             <picture>
               <source
                 srcSet={`${imgSrcMaker(
@@ -90,7 +91,10 @@ export const Header = () => {
               </a>
             </li>
             <li className="header__email-mobile">
-              <a href="mailto:ffl@fflogistics@gmail.com">
+              <a
+                href="mailto:ffl@fflogistics@gmail.com"
+                aria-label="call our manager"
+              >
                 <svg className="email-icon">
                   <use href={svgHrefMaker("icon-email")}></use>
                 </svg>
@@ -102,6 +106,7 @@ export const Header = () => {
               className={`language-btn
               ${i18n.resolvedLanguage === "uk" ? "language-btn--active" : ""}`}
               onClick={() => i18n.changeLanguage("uk")}
+              aria-label="change the language to Ukranian"
             >
               ua
             </button>
@@ -110,13 +115,17 @@ export const Header = () => {
               className={`language-btn
               ${i18n.resolvedLanguage === "ru" ? "language-btn--active" : ""}`}
               onClick={() => i18n.changeLanguage("ru")}
+              aria-label="change the language to russian"
             >
               ru
             </button>
           </div>
           <MediaQuery minWidth={breakpoints.tablet}>
-            <button type="button"></button>
-            <a href="tel:+380930569981" className="header_contact__link">
+            <a
+              href="tel:+380930569981"
+              className="header_contact__link"
+              aria-label="call our manager"
+            >
               <svg className="header__icon-phone--tablet">
                 <use href={svgHrefMaker("icon-phone")}></use>
               </svg>
@@ -124,7 +133,12 @@ export const Header = () => {
             </a>
           </MediaQuery>
 
-          <button type="button" className="header__burger-menu" onClick={open}>
+          <button
+            type="button"
+            className="header__burger-menu"
+            onClick={open}
+            aria-label="open menu with navigation"
+          >
             <svg className="header__menu-icon">
               <use href={svgHrefMaker("icon-menu")}></use>
             </svg>

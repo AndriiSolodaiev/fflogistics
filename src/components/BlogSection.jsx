@@ -15,7 +15,7 @@ export const BlogSection = () => {
         <ul className="blog-page__list">
           <BlogCard key={id} id={id} img={img} date={date} />
         </ul>
-        <Link to="/blog" className="blog__loadmore-btn">
+        <Link to="/blog" className="blog__loadmore-btn" aria-label="go to blog">
           {t("blog.loadmoreBtn")}
         </Link>
       </div>

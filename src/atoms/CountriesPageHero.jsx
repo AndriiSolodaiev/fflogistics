@@ -46,6 +46,7 @@ export const CountryHeroTemplate = ({
               className="countries__close-btn"
               type="button"
               onClick={() => setFormSubmitted(false)}
+              aria-label="open modal window"
             >
               <svg className="modal__icon-close contries__icon-close">
                 <use href={svgHrefMaker("icon-cross")}></use>

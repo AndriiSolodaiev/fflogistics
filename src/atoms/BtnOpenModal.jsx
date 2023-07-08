@@ -4,7 +4,12 @@ export const BtnOpenModal = ({ openModal }) => {
 
   return (
     <div className="hero__button-wrap">
-      <button type="button" className=" hero__button" onClick={openModal}>
+      <button
+        type="button"
+        className=" hero__button"
+        onClick={openModal}
+        aria-label="open connection form"
+      >
         {t("hero.button")}
       </button>
     </div>

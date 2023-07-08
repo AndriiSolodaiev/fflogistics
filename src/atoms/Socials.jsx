@@ -10,6 +10,7 @@ export const Socials = () => {
             className="socials__link"
             target="_blank"
             rel="nofollow noopener noreferrer"
+            aria-label="to social link"
           >
             <svg className="socials__icon">
               <use href={hrefIcon}></use>
