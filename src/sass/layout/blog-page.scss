@@ -85,6 +85,7 @@
 
 .blog-page__item-img {
     border-radius: 5px;
+    width: 300px;
 
     @media screen and (min-width: $breakpoint-tablet) {
         width: 213px;

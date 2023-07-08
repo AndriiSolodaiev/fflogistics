@@ -10,33 +10,35 @@ export const Article3 = () => {
           {t("blogpages.article3.title")}
         </h2>
       </div>
-      <ul className="container content__list">
-        <li>{t(`${contentPath}intro`)}</li>
-        <li>
-          <ul className="content__list">
-            {t(`${contentPath}general`)
-              .split("&")
-              .map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-          </ul>
-        </li>
-        <li className="article-content__list-title">
-          {t(`${contentPath}listTitle`)}
-        </li>
-        <li>
-          <ul className="list-sea">
-            {t(`${contentPath}listItems`)
-              .split("&")
-              .map((item, index) => (
-                <li key={index} className="list-sea__item">
-                  {item}
-                </li>
-              ))}
-          </ul>
-        </li>
-        <li>{t(`${contentPath}advice`)}</li>
-      </ul>
+      <div className="article__list-wrapper">
+        <ul className="container content__list">
+          <li>{t(`${contentPath}intro`)}</li>
+          <li>
+            <ul className="content__list">
+              {t(`${contentPath}general`)
+                .split("&")
+                .map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+            </ul>
+          </li>
+          <li className="article-content__list-title">
+            {t(`${contentPath}listTitle`)}
+          </li>
+          <li>
+            <ul className="list-sea">
+              {t(`${contentPath}listItems`)
+                .split("&")
+                .map((item, index) => (
+                  <li key={index} className="list-sea__item">
+                    {item}
+                  </li>
+                ))}
+            </ul>
+          </li>
+          <li>{t(`${contentPath}advice`)}</li>
+        </ul>
+      </div>
     </section>
   );
 };

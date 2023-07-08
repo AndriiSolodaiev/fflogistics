@@ -5,7 +5,12 @@ export const Socials = () => {
     <ul className="socials__container">
       {socialsRefs.map(({ ref, hrefIcon, id }) => (
         <li key={id}>
-          <a href={ref} className="socials__link">
+          <a
+            href={ref}
+            className="socials__link"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <svg className="socials__icon">
               <use href={hrefIcon}></use>
             </svg>

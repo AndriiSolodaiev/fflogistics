@@ -3,12 +3,12 @@ import { svgHrefMaker } from "../helpers";
 export const socialsRefs = [
   {
     id: 1,
-    ref: "",
+    ref: "https://www.instagram.com/ff.logistics/",
     hrefIcon: svgHrefMaker("icon-instagram"),
   },
   {
     id: 2,
-    ref: "",
+    ref: "https://www.facebook.com/fflogisticss/",
     hrefIcon: svgHrefMaker("icon-facebook"),
   },
   {
@@ -18,7 +18,7 @@ export const socialsRefs = [
   },
   {
     id: 4,
-    ref: "",
+    ref: "https://teleg.run/fflogisticss",
     hrefIcon: svgHrefMaker("icon-telegram"),
   },
 ];
