@@ -1,7 +1,11 @@
 import { ClientForm } from "components";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 const ReviewsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="reviews-section ">

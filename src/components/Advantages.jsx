@@ -1,6 +1,9 @@
+import { BtnOpenModal } from "atoms";
 import { breakpoints } from "../constants/breakpoints";
 import { advantagesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
+import { imgSrcMaker } from "helpers/imgSrcMaker";
+import { Link } from "react-router-dom";
 
 export const Advantages = () => {
   const { t } = useTranslation();
@@ -79,6 +82,19 @@ export const Advantages = () => {
               )
             )}
           </ul>
+          <Link
+            to="/reviews"
+            className="button-common"
+            style={{ display: "block", height: "250px", fontSize: "48px" }}
+          >
+            Не сси, все буде норм
+            <img
+              src={imgSrcMaker("sticker.webp")}
+              alt=""
+              height={200}
+              className="img-fun"
+            />
+          </Link>
         </div>
       </div>
     </section>

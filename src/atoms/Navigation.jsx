@@ -97,6 +97,7 @@ export const Navigation = ({ onClose }) => {
             to="/reviews"
             className="navigation__link"
             aria-label="move to partners section"
+            onClick={onClose}
           >
             {t("header.nav.reviews")}
           </NavLink>

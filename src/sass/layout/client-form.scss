@@ -17,13 +17,10 @@
     @media screen and (min-width: $breakpoint-tablet) {
         display: flex;
         flex-direction: row-reverse;
-
+        justify-content: space-between;
         align-items: flex-end;
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        justify-content: space-between;
-    }
 }
 
 .client-form__header {
@@ -188,16 +185,19 @@
 
 .contact__link--schedule {
     @extend .contact__link;
-    display: none;
+    display: flex;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        display: flex;
-    }
+
 }
 
 .schedule {
-    line-height: 2;
+    line-height: 1.2;
     max-width: 160px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        line-height: 2;
+    }
+
 }
 
 .contact__icon--phone {

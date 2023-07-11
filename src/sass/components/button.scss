@@ -22,3 +22,12 @@
 
     @media screen and (min-width: $breakpoint-tablet) {}
 }
+
+.img-fun {
+
+    &:hover,
+    &:focus {
+        animation: rotateAndZoom 5s infinite;
+    }
+
+}

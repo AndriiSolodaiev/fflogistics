@@ -241,7 +241,11 @@
     @extend .page-hero__form-descr;
     margin-bottom: 9px;
     color: $primary-font-color;
-    width: 457px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        width: 457px;
+    }
 }
 
 .page-hero__close-btn {
