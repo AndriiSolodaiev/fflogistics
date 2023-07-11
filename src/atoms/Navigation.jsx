@@ -93,14 +93,13 @@ export const Navigation = ({ onClose }) => {
           </NavLink>
         </li>
         <li className="navigation-item partners--tablet-m">
-          <button
-            type="button"
+          <NavLink
+            to="/reviews"
             className="navigation__link"
-            onClick={() => handleClick("partners")}
             aria-label="move to partners section"
           >
-            {t("header.nav.partners")}
-          </button>
+            {t("header.nav.reviews")}
+          </NavLink>
         </li>
         <li className="navigation-item">
           <button

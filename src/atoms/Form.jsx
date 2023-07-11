@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useForm, ValidationError } from "@formspree/react";
 
 export const Form = ({ submitHandler, buttonStyle, background }) => {
-  const [state, handleSubmit] = useForm("myyqgpnv");
+  const [state, handleSubmit] = useForm("myyqypaq");
   const { t } = useTranslation();
 
   const handleSubmitForm = async (event) => {

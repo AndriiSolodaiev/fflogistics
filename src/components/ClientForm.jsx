@@ -31,7 +31,7 @@ export const ClientForm = () => {
                   <use href={svgHrefMaker("icon-cross")}></use>
                 </svg>
               </button>
-              <FormSubmitted background="light" />
+              <FormSubmitted background="--light" />
             </div>
           ) : (
             <>

@@ -11,6 +11,8 @@ const DeliverySthKorea = lazy(() => import("./pages/DeliverySthKorea"));
 const DeliveryEurope = lazy(() => import("./pages/DeliveryEurope"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const ArticlePage = lazy(() => import("./pages/ArticlePage"));
+const ReviewsPage = lazy(() => import("./pages/ReviewsPage"));
+
 function App() {
   return (
     <Routes>
@@ -24,6 +26,7 @@ function App() {
         <Route path="/rail-transportation" element={<RailTrans />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:articleId" element={<ArticlePage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

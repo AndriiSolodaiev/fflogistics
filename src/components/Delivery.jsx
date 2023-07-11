@@ -12,6 +12,7 @@ export const Delivery = () => {
     }
     setIsExpanded(id);
   };
+
   return (
     <section className="delivery-section">
       <div className="container">
@@ -54,7 +55,7 @@ export const Delivery = () => {
                 </div>
                 <ul className="list__details">
                   {t(`delivery.card${id}.description`)
-                    .split("$")
+                    .split("&")
                     .map((item, index) => (
                       <li key={index} className="card__datails">
                         {item}

@@ -33,7 +33,7 @@ export const ModalForm = ({ isOpen, onClose }) => {
           </svg>
         </button>
         {formSubmitted ? (
-          <FormSubmitted />
+          <FormSubmitted background={""} />
         ) : (
           <div className="modal-form__container--form">
             <h2 className="modal-form__title">{t("modalform.main-title")}</h2>
