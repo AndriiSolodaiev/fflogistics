@@ -13,7 +13,7 @@ export const socialsRefs = [
   },
   {
     id: 3,
-    ref: "",
+    ref: "https://wa.me/+380930569981",
     hrefIcon: svgHrefMaker("icon-whatsapp"),
   },
   {
