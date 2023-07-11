@@ -1,4 +1,3 @@
-import { BtnOpenModal } from "atoms";
 import { breakpoints } from "../constants/breakpoints";
 import { advantagesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
