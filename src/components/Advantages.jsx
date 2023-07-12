@@ -1,7 +1,7 @@
 import { breakpoints } from "../constants/breakpoints";
 import { advantagesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
-import { imgSrcMaker } from "helpers/imgSrcMaker";
+
 import { Link } from "react-router-dom";
 
 export const Advantages = () => {
@@ -81,19 +81,11 @@ export const Advantages = () => {
               )
             )}
           </ul>
-          <Link
-            to="/reviews"
-            className="button-common"
-            style={{ display: "block", height: "250px", fontSize: "48px" }}
-          >
-            Не сси, все буде норм
-            <img
-              src={imgSrcMaker("sticker.webp")}
-              alt=""
-              height={200}
-              className="img-fun"
-            />
-          </Link>
+          <div className="advantages__reviews-btn">
+            <Link to="/reviews" className="button-common">
+              {t(`advantages.reviews-btn`)}
+            </Link>
+          </div>
         </div>
       </div>
     </section>

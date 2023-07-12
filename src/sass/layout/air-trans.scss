@@ -27,6 +27,84 @@
 
 }
 
+.content__advantage-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        justify-content: space-around;
+
+    }
+}
+
+.content__advantage-card {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    max-width: 280px;
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 250px
+    }
+
+}
+
+.content__advantage-card-wrap {
+    display: flex;
+    gap: 30px
+}
+
+@keyframes rotateY {
+
+
+    50% {
+        transform: rotateY(180deg) scale(1.1);
+        fill: $button-color;
+    }
+
+
+}
+
+.content__advantage-icon {
+    width: 80px;
+    height: 80px;
+    fill: green;
+
+    .content__advantage-card:hover &,
+    .content__advantage-card:focus & {
+        animation: rotateY 1.2s;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 100px;
+        height: 100px;
+
+    }
+}
+
+.content__advantage-descr-list {
+    align-self: flex-start;
+    padding-left: 15px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
 .info-card__list {
     display: flex;
     flex-direction: column;
@@ -47,7 +125,8 @@
 }
 
 .info-card__item {
-    width: 300px;
+    max-width: 300px;
+    flex-grow: 1;
 
     border-radius: 10px;
     box-shadow: 0px 5px 17px $primary-font-color;
@@ -60,7 +139,7 @@
 
 
     @media screen and (min-width: $breakpoint-desktop) {
-        width: 500px;
+        max-width: 500px;
         padding: 10px 20px 20px 20px;
     }
 }
@@ -69,6 +148,12 @@
     width: 100px;
     height: 100px;
     fill: $button-color;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 120px;
+        height: 120px;
+
+    }
 }
 
 .info-card__title {
@@ -88,11 +173,19 @@
     }
 }
 
-.info-card__descr {
-    font-size: 14px;
-    font-weight: 400;
+.info-card__descr-list {
+    margin-top: auto;
+    align-self: flex-start;
+    padding-left: 10px;
 
-    margin-bottom: auto;
+}
+
+.info-card__descr {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+
+
 
 
     @media screen and (min-width: $breakpoint-tablet) {
@@ -104,5 +197,9 @@
         font-size: 20px;
         font-weight: 500;
 
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
     }
 }

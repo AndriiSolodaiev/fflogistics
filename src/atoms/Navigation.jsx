@@ -92,7 +92,7 @@ export const Navigation = ({ onClose }) => {
             {t("header.nav.blog")}
           </NavLink>
         </li>
-        <li className="navigation-item partners--tablet-m">
+        <li className="navigation-item ">
           <NavLink
             to="/reviews"
             className="navigation__link"

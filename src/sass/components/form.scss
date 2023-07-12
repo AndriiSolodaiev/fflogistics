@@ -49,6 +49,7 @@
 
 .form__textarea {
     @extend .form__input;
+    font-family: inherit;
     height: 56px;
     padding-top: 7px;
     resize: none;

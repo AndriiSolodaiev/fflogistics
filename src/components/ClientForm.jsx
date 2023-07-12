@@ -98,14 +98,14 @@ export const ClientForm = () => {
             </li>
             <li>
               <a
-                href="mailto:Logistic@gmail.com"
+                href="mailto:v@fflogistics.com.ua"
                 className="contact__link "
                 aria-label="write to us by e-mail"
               >
                 <svg className="contact__icon--email">
                   <use href={svgHrefMaker("icon-email")}></use>
                 </svg>
-                <p>Logistic@gmail.com</p>
+                <p>v@fflogistics.com.ua</p>
               </a>
             </li>
           </ul>

@@ -53,6 +53,16 @@
     }
 }
 
+.contries__blocks-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        flex-direction: row;
+
+    }
+}
+
 .route-wrapper {
     display: none;
 
@@ -163,19 +173,30 @@
     padding-right: 30px;
     padding-bottom: 62px;
     position: relative;
+    height: 437px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (min-width: $breakpoint-tablet) {
         align-self: flex-end;
         padding-top: 50px;
         padding-bottom: 0;
+        height: 403px;
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {}
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 440px;
+    }
 }
 
 .countries__form-wrap {
+
+
     @media screen and (min-width: $breakpoint-tablet) {
         background-color: $card-bg-color;
+
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -214,6 +235,12 @@
 
     @media screen and (min-width: $breakpoint-tablet) {
         margin-bottom: 5px;
+        width: 343px;
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 26px;
         width: 457px;
     }
 }
@@ -240,27 +267,34 @@
 .page-hero__form-descr--countries {
     @extend .page-hero__form-descr;
     margin-bottom: 9px;
-    color: $primary-font-color;
+
 
     @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+        width: 350px;
+        text-align: center;
 
-        width: 457px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 450px;
+        font-size: 16px;
     }
 }
 
 .page-hero__close-btn {
     @extend .modal__close-btn;
-    top: 130px;
+    top: 105px;
 
     @media screen and (min-width: $breakpoint-tablet) {
         top: 120px;
-        right: 60px;
+
 
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         top: 150px;
-        right: 90px;
+        right: 0px;
 
     }
 }
@@ -270,11 +304,15 @@
 
     @media screen and (min-width: $breakpoint-tablet) {
         top: 120px;
-        right: 10px;
+        right: 40px;
 
     }
 
+    @media screen and (min-width: $breakpoint-desktop) {
+        top: 140px;
+        right: 10px;
 
+    }
 }
 
 .contries__icon-close {

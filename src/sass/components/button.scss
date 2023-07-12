@@ -20,14 +20,11 @@
         box-shadow: $box-shadow-hover;
     }
 
-    @media screen and (min-width: $breakpoint-tablet) {}
-}
-
-.img-fun {
-
-    &:hover,
-    &:focus {
-        animation: rotateAndZoom 100ms infinite;
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 18px;
     }
 
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+    }
 }

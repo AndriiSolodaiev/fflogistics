@@ -11,7 +11,15 @@ export const TransInfoCards = () => {
           <use href={svgHrefMaker("icon-turnkey")}></use>
         </svg>
         <h3 className="info-card__title"> {t("transpages.cardAllTitle")}</h3>
-        <p className="info-card__descr">{t("transpages.cardAllDescr")}</p>
+        <ul className="info-card__descr-list">
+          {t("transpages.cardAllDescr")
+            .split("&")
+            .map((item, index) => (
+              <li key={index} className="info-card__descr list-sea__item">
+                {item}
+              </li>
+            ))}
+        </ul>
       </li>
       <li className="info-card__item">
         <svg className="info-card__icon">
@@ -19,7 +27,16 @@ export const TransInfoCards = () => {
         </svg>
 
         <h3 className="info-card__title">{t("transpages.cardCompanyTitle")}</h3>
-        <p className="info-card__descr">{t("transpages.cardCompanyDescr")}</p>
+
+        <ul className="info-card__descr-list">
+          {t("transpages.cardCompanyDescr")
+            .split("&")
+            .map((item, index) => (
+              <li key={index} className="info-card__descr list-sea__item">
+                {item}
+              </li>
+            ))}
+        </ul>
       </li>
     </ul>
   );

@@ -25,7 +25,10 @@ export const ModalForm = ({ isOpen, onClose }) => {
         <button
           className="modal__close-btn"
           type="button"
-          onClick={onClose}
+          onClick={() => {
+            onClose();
+            setFormSubmitted(false);
+          }}
           aria-label="close thanks window"
         >
           <svg className="modal__icon-close">

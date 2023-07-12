@@ -19,14 +19,14 @@ export const Header = () => {
             <div className="header__socials-email-wrap">
               <Socials />
               <a
-                href="mailto:ffl@fflogistics@gmail.com"
+                href="mailto:v@fflogistics.com.ua"
                 className="header_contact__link"
                 aria-label="write to us by e-mail"
               >
                 <svg className="header__icon-email--tablet">
                   <use href={svgHrefMaker("icon-email")}></use>
                 </svg>
-                fflogistics@gmail.com
+                v@fflogistics.com.ua
               </a>
             </div>
           </MediaQuery>
@@ -92,7 +92,7 @@ export const Header = () => {
             </li>
             <li className="header__email-mobile">
               <a
-                href="mailto:ffl@fflogistics@gmail.com"
+                href="mailto:v@fflogistics.com.ua"
                 aria-label="call our manager"
               >
                 <svg className="email-icon">

@@ -44,7 +44,7 @@ const ReviewsPage = () => {
             ></a>
           </ins>
         </div>
-        <ins class="otzyvua_widget" data-item-id="62941"></ins>
+        <ins className="otzyvua_widget" data-item-id="62941"></ins>
       </section>
       <ClientForm />
     </>
