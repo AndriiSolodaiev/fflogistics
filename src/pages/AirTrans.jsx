@@ -27,9 +27,7 @@ const AirTrans = () => {
           <TransInfoCards />
           <ul className=" content__list">
             <li>{t(`${contentPath}intro`)}</li>
-            <li className="article-content__list-title">
-              {t(`${contentPath}listTitle`)}
-            </li>
+
             <li>
               <ul className="content__advantage-list">
                 {advantageIconArray.map(({ id, iconHref }) => (

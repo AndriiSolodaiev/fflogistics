@@ -16,7 +16,8 @@
     height: 28px;
     border-radius: 10px;
     padding-left: 5px;
-
+    font-family: $primary-font;
+    font-weight: 400;
     color: $textcolor;
 
 
@@ -150,9 +151,20 @@
     padding-top: 7px;
     resize: none;
 
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+
     &::-webkit-scrollbar-track {
         background: $form-space-color;
     }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $accent-color;
+        border-radius: 4px;
+    }
+
 
     @media screen and (min-width: $breakpoint-tablet) {
         padding-top: 4px;

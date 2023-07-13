@@ -64,7 +64,7 @@
 
 .content__advantage-card-wrap {
     display: flex;
-    gap: 30px
+    gap: 30px;
 }
 
 @keyframes rotateY {
@@ -72,7 +72,7 @@
 
     50% {
         transform: rotateY(180deg) scale(1.1);
-        fill: $button-color;
+        fill: $accent-color;
     }
 
 
@@ -81,7 +81,8 @@
 .content__advantage-icon {
     width: 80px;
     height: 80px;
-    fill: green;
+
+    fill: $button-color;
 
     .content__advantage-card:hover &,
     .content__advantage-card:focus & {
@@ -147,7 +148,7 @@
 .info-card__icon {
     width: 100px;
     height: 100px;
-    fill: $button-color;
+    fill: $accent-color;
 
     @media screen and (min-width: $breakpoint-desktop) {
         width: 120px;
