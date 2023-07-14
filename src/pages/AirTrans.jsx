@@ -21,6 +21,7 @@ const AirTrans = () => {
       <TransHeroTemplate
         title={t("transpages.air.title")}
         classBg="air-trans__bg"
+        disclaimer={false}
       />
       <section className=" conditions__section">
         <div className="container">

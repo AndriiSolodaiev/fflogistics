@@ -20,6 +20,7 @@ const SeaTrans = () => {
       <TransHeroTemplate
         title={t("transpages.sea.title")}
         classBg="sea-trans__bg"
+        disclaimer={false}
       />
       <section className=" conditions__section">
         <div className="container">

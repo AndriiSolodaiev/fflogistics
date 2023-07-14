@@ -3,13 +3,16 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { FormSubmitted } from "./FormSubmitted";
 import { svgHrefMaker } from "../helpers";
-export const TransHeroTemplate = ({ title, classBg }) => {
+export const TransHeroTemplate = ({ title, classBg, disclaimer }) => {
   const { t } = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
   return (
     <section className={`page-hero__wrapper ${classBg}`}>
       <div className="container page-hero__container">
         <h2 className="page-title">{title}</h2>
+        {disclaimer && (
+          <p className="page-hero__disclaimer">{t("services.disclaimer")}</p>
+        )}
         <div className="page-hero__form-wrap">
           {formSubmitted ? (
             <>

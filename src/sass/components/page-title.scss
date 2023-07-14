@@ -22,7 +22,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
+    position: relative;
 
 }
 
@@ -31,6 +31,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
     background-color: $background-color;
 
 
@@ -96,6 +97,40 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+}
+
+.page-hero__disclaimer {
+    position: absolute;
+    bottom: 0px;
+
+    padding: 10px;
+    font-size: 12px;
+    width: 180px;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid $accent-color;
+    background: rgba(254, 168, 0, 0.20);
+    color: $textcolor;
+    font-weight: 500;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+
+        padding: 10px;
+        left: 100px;
+        border: 1px solid $accent-color;
+        width: 250px;
+        font-size: 18px;
+        font-weight: 600;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        width: 300px;
+        font-size: 22px;
+        left: 200px;
+    }
+
 }
 
 .page-title {

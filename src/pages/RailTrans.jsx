@@ -14,6 +14,7 @@ const RailTrans = () => {
       <TransHeroTemplate
         title={t("transpages.rail.title")}
         classBg="rail-trans__bg"
+        disclaimer={true}
       />
       <section className=" conditions__section">
         <div className="container">
