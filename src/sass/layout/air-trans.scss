@@ -130,7 +130,7 @@
     flex-grow: 1;
 
     border-radius: 10px;
-    box-shadow: 0px 5px 17px $primary-font-color;
+
     display: flex;
     flex-direction: column;
 
@@ -182,11 +182,14 @@
 }
 
 .info-card__descr {
+    @extend .list-sea__item;
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 500;
 
-
+    &::before {
+        color: $accent-color;
+    }
 
 
     @media screen and (min-width: $breakpoint-tablet) {

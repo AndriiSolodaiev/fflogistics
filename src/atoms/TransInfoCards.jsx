@@ -15,7 +15,7 @@ export const TransInfoCards = () => {
           {t("transpages.cardAllDescr")
             .split("&")
             .map((item, index) => (
-              <li key={index} className="info-card__descr list-sea__item">
+              <li key={index} className="info-card__descr">
                 {item}
               </li>
             ))}
@@ -32,7 +32,7 @@ export const TransInfoCards = () => {
           {t("transpages.cardCompanyDescr")
             .split("&")
             .map((item, index) => (
-              <li key={index} className="info-card__descr list-sea__item">
+              <li key={index} className="info-card__descr ">
                 {item}
               </li>
             ))}

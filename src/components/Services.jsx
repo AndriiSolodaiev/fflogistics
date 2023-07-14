@@ -77,6 +77,7 @@ export const Services = () => {
                     <p className="card__descr">
                       {t(`services.card${id}.descr`)}
                     </p>
+                    <p className="card__descr">{t(`services.insurance`)}</p>
                     {id === 1 && (
                       <p className="card__descr">
                         {t(`services.card1.descr--add`)}{" "}
