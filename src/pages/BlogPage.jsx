@@ -17,15 +17,17 @@ const BlogPage = () => {
       </div>
       <div className=" blog-page__list-wrapper ">
         <ul className="container blog-page__list">
-          {blogImages.map(({ id, img, imgWebp, date }) => (
-            <BlogCard
-              id={id}
-              img={img}
-              imgWebp={imgWebp}
-              date={date}
-              key={id}
-            />
-          ))}
+          {blogImages
+            .map(({ id, img, imgWebp, date }) => (
+              <BlogCard
+                id={id}
+                img={img}
+                imgWebp={imgWebp}
+                date={date}
+                key={id}
+              />
+            ))
+            .reverse()}
         </ul>
       </div>
 

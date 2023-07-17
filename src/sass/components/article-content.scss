@@ -74,6 +74,57 @@
     }
 }
 
+.article4__hero-bg {
+    @extend .article__hero-bg;
+    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+        #fff 100%),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+        #fff 98%),
+    url("#{$public-url}mobile/blogImg/article4.jpg");
+
+    @supports (background-image: url("#{$public-url}mobile/blogImg/article4.webp")) {
+        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+            #fff 100%),
+        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+            #fff 98%),
+        url("#{$public-url}mobile/blogImg/article4.webp");
+    }
+}
+
+.article5__hero-bg {
+    @extend .article__hero-bg;
+    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+        #fff 100%),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+        #fff 98%),
+    url("#{$public-url}mobile/blogImg/article5.jpg");
+
+    @supports (background-image: url("#{$public-url}mobile/blogImg/article5.webp")) {
+        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+            #fff 100%),
+        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+            #fff 98%),
+        url("#{$public-url}mobile/blogImg/article5.webp");
+    }
+}
+
+.article6__hero-bg {
+    @extend .article__hero-bg;
+    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+        #fff 100%),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+        #fff 98%),
+    url("#{$public-url}mobile/blogImg/article6.jpg");
+
+    @supports (background-image: url("#{$public-url}mobile/blogImg/article6.webp")) {
+        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
+            #fff 100%),
+        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
+            #fff 98%),
+        url("#{$public-url}mobile/blogImg/article6.webp");
+    }
+}
+
 .article-contet__title {
     font-size: 20px;
 

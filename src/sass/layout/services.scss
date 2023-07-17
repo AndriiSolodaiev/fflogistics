@@ -75,7 +75,6 @@
       }
     }
   }
-
 }
 
 .service-card__disclaimer {
@@ -98,7 +97,7 @@
     top: 10px;
     border: 1px solid $accent-color;
     padding: 5px;
-    width: 172px;
+    width: 174px;
     font-size: 14px;
     font-weight: 400;
   }
@@ -107,8 +106,8 @@
 }
 
 .services__img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   width: 300px;
   height: 361px;
 

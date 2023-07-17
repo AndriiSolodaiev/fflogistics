@@ -1,16 +1,13 @@
-import { useTranslation } from "react-i18next";
-export const BtnOpenModal = ({ openModal }) => {
-  const { t } = useTranslation();
-
+export const BtnOpenModal = ({ openModal, title, classBtn }) => {
   return (
     <div className="hero__button-wrap">
       <button
         type="button"
-        className=" hero__button"
+        className={classBtn}
         onClick={openModal}
         aria-label="open connection form"
       >
-        {t("hero.button")}
+        {title}
       </button>
     </div>
   );

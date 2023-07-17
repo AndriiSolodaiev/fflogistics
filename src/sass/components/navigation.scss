@@ -106,7 +106,7 @@
 }
 
 .countries__list-is-expanded {
-  height: 50px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -116,6 +116,7 @@
   border-radius: 10px;
 
   @media screen and (min-width: $breakpoint-tablet) {
+
     box-sizing: border-box;
     position: absolute;
     top: 0;

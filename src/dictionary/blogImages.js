@@ -17,11 +17,24 @@ export const blogImages = [
     id: 3,
     img: imgSrcMaker("tablet/hero-bg/bg3-tablet.png"),
     imgWebp: imgSrcMaker("tablet/hero-bg/bg3-tablet.webp"),
-    date: "30.06.2023",
+    date: "05.06.2023",
   },
-  // {
-  //   id: 4,
-  //   img: imgSrcMaker("tablet/hero-bg/bg4-tablet.png"),
-  //   date: "30.06.2023",
-  // },
+  {
+    id: 4,
+    img: imgSrcMaker("mobile/blogImg/article4.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article4.webp"),
+    date: "14.06.2023",
+  },
+  {
+    id: 5,
+    img: imgSrcMaker("mobile/blogImg/article5.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article5.webp"),
+    date: "25.06.2023",
+  },
+  {
+    id: 6,
+    img: imgSrcMaker("mobile/blogImg/article6.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article6.webp"),
+    date: "03.07.2023",
+  },
 ];

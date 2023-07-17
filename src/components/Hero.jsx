@@ -12,7 +12,7 @@ export const Hero = () => {
   const { isOpen, open, close } = useToggle();
   const { t, i18n } = useTranslation();
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     arrows: false,
@@ -67,7 +67,11 @@ export const Hero = () => {
                 </ul>
               </div>
 
-              <BtnOpenModal openModal={open} />
+              <BtnOpenModal
+                openModal={open}
+                title={t("hero.button")}
+                classBtn="hero__button"
+              />
             </div>
           </div>
           {t("hero.slidertitles")
@@ -91,9 +95,13 @@ export const Hero = () => {
                   )`,
                   }}
                 >
-                  <h2 className=" slide__title">{title}</h2>
+                  <h2 className="slide__title">{title}</h2>
                   <div className="slide__social">
-                    <BtnOpenModal openModal={open} />
+                    <BtnOpenModal
+                      openModal={open}
+                      title={t("hero.button")}
+                      classBtn="hero__button"
+                    />
                     <Socials />
                   </div>
                 </div>
@@ -114,7 +122,11 @@ export const Hero = () => {
               {t("hero.title")}
             </h1>
             <span className="hero__subtitle">{t("hero.subtitle")}</span>
-            <BtnOpenModal openModal={open} />
+            <BtnOpenModal
+              openModal={open}
+              title={t("hero.button")}
+              classBtn="hero__button"
+            />
           </div>
         </div>
       </MediaQuery>

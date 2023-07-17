@@ -7,7 +7,7 @@
     background-position: center;
 
     @media screen and (min-width: $breakpoint-tablet) {
-        background-image: linear-gradient(to left, #393939 50%, #39393925),
+        background-image: linear-gradient(to right, #39393925, #393939 500px),
         url("#{$public-url}tablet/bg-sea-tablet.png");
         background-size: contain;
         background-position: left;
@@ -18,8 +18,7 @@
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-        background-image: linear-gradient(#393939 2%, #3939390a, #393939 98%),
-        linear-gradient(to left, #393939 50%, #39393925),
+        background-image: linear-gradient(to right, #39393925, #393939 730px),
         url("#{$public-url}desktop/bg-sea-desktop.png");
 
     }

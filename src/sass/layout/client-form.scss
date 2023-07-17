@@ -150,7 +150,7 @@
 .contact-list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 
     @media screen and (min-width: $breakpoint-tablet) {
         flex-direction: column-reverse;
@@ -191,8 +191,8 @@
 }
 
 .schedule {
-    line-height: 1.2;
-    max-width: 160px;
+    line-height: 1.8;
+    max-width: 168px;
 
     @media screen and (min-width: $breakpoint-tablet) {
         line-height: 2;
