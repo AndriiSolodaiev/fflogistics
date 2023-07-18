@@ -285,25 +285,7 @@
   }
 }
 
-.card__is-expanded .list__details {
-  @media screen and (min-width: $breakpoint-tablet) {
 
-    overflow: auto;
-
-    &::-webkit-scrollbar {
-      width: 4px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: $background-color;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $accent-color;
-      border-radius: 4px;
-    }
-  }
-}
 
 .card__is-expanded .card__datails {
 

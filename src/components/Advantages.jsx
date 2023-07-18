@@ -73,9 +73,13 @@ export const Advantages = () => {
                     <h3 className="advantages__item-title">
                       {t(`advantages.item${id}.title`)}
                     </h3>
-                    <p className="advantages__descr">
-                      {t(`advantages.item${id}.description`)}
-                    </p>
+                    <ul className="advantages__descr">
+                      {t(`advantages.item${id}.description`)
+                        .split("&")
+                        .map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                    </ul>
                   </div>
                 </li>
               )

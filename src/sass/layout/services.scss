@@ -92,11 +92,7 @@
   background: $disclaimer-color;
   color: $accent-color;
   font-weight: 600;
-  // transition: background $transition-props;
 
-  // .services__card:hover & {
-  //   background: $textcolor;
-  // }
 
   @media screen and (min-width: $breakpoint-tablet)and (max-width:$breakpoint-tablet-max) {
     top: 10px;

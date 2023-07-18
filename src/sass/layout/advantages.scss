@@ -109,6 +109,16 @@
     font-weight: 400;
     font-size: 14px;
 
+    & li {
+        margin-bottom: 10px;
+
+    }
+
+    & li:last-child {
+        margin-bottom: 0;
+
+    }
+
     @media screen and (min-width: $breakpoint-tablet) {
         color: $primary-font-color;
         font-size: 18px;
@@ -120,6 +130,7 @@
         font-weight: 500;
     }
 }
+
 
 .advantage__img-wrapper {
     display: flex;
