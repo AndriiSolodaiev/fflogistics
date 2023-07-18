@@ -206,9 +206,9 @@
     padding-top: 16px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 62px;
+    padding-bottom: 50px;
     position: relative;
-    height: 437px;
+    height: 370px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,6 +297,10 @@
         width: 450px;
 
     }
+}
+
+.page-hero__form-button {
+    margin-top: 10px
 }
 
 .page-hero__form-descr--countries {

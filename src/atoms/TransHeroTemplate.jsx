@@ -39,6 +39,7 @@ export const TransHeroTemplate = ({ title, classBg, disclaimer }) => {
               <Form
                 submitHandler={() => setFormSubmitted(true)}
                 background={""}
+                buttonStyle="page-hero__form-button"
               />
             </>
           )}

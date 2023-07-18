@@ -110,7 +110,6 @@
 }
 
 .delivery__card {
-  cursor: pointer;
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -238,10 +237,7 @@
     margin-right: 6px;
   }
 
-  @media screen and (min-width: $breakpoint-tablet) {
-    font-size: 14px;
-    font-weight: 400;
-  }
+  @media screen and (min-width: $breakpoint-tablet) {}
 
   @media screen and (min-width: $breakpoint-desktop) {
     font-size: 16px;
