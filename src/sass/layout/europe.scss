@@ -1,4 +1,11 @@
 .europe__bg {
+    background-image: linear-gradient(#393939, #393939ea, #393939),
+    url("#{$public-url}desktop/bg-europe-desktop.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     @media screen and (min-width: $breakpoint-tablet) {
         background-image: linear-gradient(to left, #39393962, #393939 500px),
         url("#{$public-url}desktop/bg-europe-desktop.jpg");
