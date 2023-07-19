@@ -4,10 +4,22 @@ import { useTranslation } from "react-i18next";
 import { useToggle } from "hooks/useToggle";
 import { ModalForm } from "./ModalForm";
 import { BtnOpenModal } from "atoms";
+import { useState } from "react";
 export const PaymentHelp = () => {
   const { t } = useTranslation();
   const { isOpen, open, close } = useToggle();
+  const [expandedCards, setExpandedCard] = useState([]);
 
+  const handleClick = (id) => {
+    if (expandedCards.includes(id)) {
+      setExpandedCard((state) => state.filter((cardId) => cardId !== id));
+      console.log("it is");
+      return;
+    }
+    setExpandedCard((state) => [...state, id]);
+    console.log("it isnot");
+    return;
+  };
   return (
     <>
       +
@@ -32,7 +44,17 @@ export const PaymentHelp = () => {
                 alt,
                 id,
               }) => (
-                <li key={id} className="payment__item">
+                <li
+                  key={id}
+                  className={`payment__item ${
+                    expandedCards.includes(id)
+                      ? "payment__item--is-expanded"
+                      : ""
+                  }`}
+                  onClick={() => {
+                    handleClick(id);
+                  }}
+                >
                   <div className="payment__img-wrapper">
                     <picture>
                       <source

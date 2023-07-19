@@ -2,8 +2,24 @@ import { Link } from "react-router-dom";
 import { breakpoints } from "../constants/breakpoints";
 import { servicesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
+
+import { useState } from "react";
 export const Services = () => {
   const { t } = useTranslation();
+
+  const [expandedCards, setExpandedCard] = useState([]);
+
+  const handleClick = (id) => {
+    if (expandedCards.includes(id)) {
+      setExpandedCard((state) => state.filter((cardId) => cardId !== id));
+      console.log("it is");
+      return;
+    }
+    setExpandedCard((state) => [...state, id]);
+    console.log("it isnot");
+    return;
+  };
+
   return (
     <section id="services">
       <div className="container ">
@@ -27,7 +43,17 @@ export const Services = () => {
               ref,
               id,
             }) => (
-              <li key={id} className="services__card">
+              <li
+                key={id}
+                className={`services__card ${
+                  expandedCards.includes(id)
+                    ? "services__card--is-expanded"
+                    : ""
+                }`}
+                onClick={() => {
+                  handleClick(id);
+                }}
+              >
                 {id === 3 && (
                   <p className="service-card__disclaimer">
                     {t("services.disclaimer")}
@@ -74,15 +100,16 @@ export const Services = () => {
                     <h3 className="card__title">
                       {t(`services.card${id}.title`)}
                     </h3>
+
                     <p className="card__descr">
                       {t(`services.card${id}.descr`)}
                     </p>
-                    <p className="card__descr">{t(`services.insurance`)}</p>
                     {id === 1 && (
                       <p className="card__descr">
                         {t(`services.card1.descr--add`)}{" "}
                       </p>
                     )}
+                    <p className="card__descr">{t(`services.insurance`)}</p>
 
                     <ul>
                       {t(`services.card${id}.time`)

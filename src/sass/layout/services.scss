@@ -23,38 +23,67 @@
   flex-direction: column;
   height: 510px;
   border-radius: 10px;
-
   transition: box-shadow $transition-props;
 
-  &:hover,
-  &:focus {
-    box-shadow: $box-shadow-hover;
+  @media screen and (min-width: $breakpoint-tablet)and (max-width:$breakpoint-tablet-max) {
+    height: 354px;
+  }
 
-    .card__time {
+  @media screen and (min-width: $breakpoint-desktop) {
 
-      &::before {
-        animation: pulse 1s 1s;
-        opacity: 1;
 
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow-hover;
+
+      .card__time {
+
+        &::before {
+          animation: pulse 1s 1s;
+          opacity: 1;
+
+        }
       }
+    }
+
+    &:hover .services__text-wrapper,
+    &:focus .services__text-wrapper {
+      max-height: 440px;
+      background-color: #ffffffda;
+      transform: translateY(-361px);
+      border-radius: 10px;
+      padding-top: 33px;
+
     }
   }
 
-  &:hover .services__text-wrapper,
-  &:focus .services__text-wrapper {
+}
+
+.services__card--is-expanded {
+  box-shadow: $box-shadow-hover;
+
+  .services__text-wrapper {
     max-height: 440px;
     background-color: #ffffffda;
     transform: translateY(-361px);
     border-radius: 10px;
     padding-top: 33px;
+  }
 
+  .card__time {
+
+    &::before {
+      animation: pulse 1s 1s;
+      opacity: 1;
+
+    }
   }
 
   @media screen and (min-width: $breakpoint-tablet)and (max-width:$breakpoint-tablet-max) {
     height: 354px;
 
-    &:hover .services__text-wrapper,
-    &:focus .services__text-wrapper {
+
+    .services__text-wrapper {
       transform: translateY(-220px);
       max-height: 340px;
       padding-top: 13px;
@@ -143,7 +172,7 @@
   @media screen and (min-width: $breakpoint-tablet)and (max-width:$breakpoint-tablet-max) {
     padding-right: 12px;
     padding-left: 12px;
-    padding-bottom: 68px;
+    padding-bottom: 48px;
   }
 }
 

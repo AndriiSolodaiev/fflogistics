@@ -67,26 +67,47 @@
   background-color: $textcolor;
   transition: box-shadow $transition-props;
 
-  &:hover,
-  &:focus {
-    box-shadow: $box-shadow-hover;
+  @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
+    height: 354px;
+    width: 200px;
+
+
   }
 
-  &:hover .payment__card-text-wrapper,
-  &:focus .payment__card-text-wrapper {
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 300px;
+
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow-hover;
+    }
+
+    &:hover .payment__card-text-wrapper,
+    &:focus .payment__card-text-wrapper {
+      max-height: 400px;
+      transform: translateY(-250px);
+      border-radius: 10px;
+    }
+
+  }
+}
+
+.payment__item--is-expanded {
+  box-shadow: $box-shadow-hover;
+
+  & .payment__card-text-wrapper,
+  & .payment__card-text-wrapper {
     max-height: 400px;
     transform: translateY(-250px);
     border-radius: 10px;
   }
 
-
-
   @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
     height: 354px;
     width: 200px;
 
-    &:hover .payment__card-text-wrapper,
-    &:focus .payment__card-text-wrapper {
+    & .payment__card-text-wrapper,
+    & .payment__card-text-wrapper {
       transform: translateY(-164px);
       max-height: 354px;
       padding-top: 13px;
@@ -94,12 +115,7 @@
     }
   }
 
-  @media screen and (min-width: $breakpoint-desktop) {
 
-    width: 300px;
-
-
-  }
 }
 
 .payment__img-wrapper {
@@ -193,8 +209,8 @@
   padding-left: 10px;
   font-size: 18px;
 
-  .payment__item:hover &,
-  .payment__item:focus & {
+
+  .payment__item--is-expanded & {
     &::before {
       content: "\29D7";
 
@@ -206,6 +222,7 @@
       animation: rotateAndZoom 2s 500ms;
 
     }
+
   }
 
 
@@ -213,6 +230,25 @@
   @media screen and (min-width: $breakpoint-tablet) and (max-width:$breakpoint-tablet-max) {
     font-size: 16px;
     font-weight: 500;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+
+    .payment__item:hover &,
+    .payment__item:focus & {
+      &::before {
+        content: "\29D7";
+
+        color: $accent-color;
+        position: absolute;
+        transform: scale(1.4);
+        top: 0;
+        left: 0;
+        animation: rotateAndZoom 2s 500ms;
+
+      }
+
+    }
   }
 }
 
