@@ -19,7 +19,7 @@
 
     @media screen and (min-width: $breakpoint-desktop) {
         background-image: linear-gradient(to left, #393939 40%, #39393934),
-        url("#{$public-url}desktop/bg-desktop.png");
+        url("#{$public-url}tablet/bg-plane-tablet.png");
 
     }
 
@@ -55,9 +55,13 @@
 
 
     @media screen and (min-width: $breakpoint-tablet) {
-        width: 250px
+        padding: 10px;
+        width: 300px;
     }
 
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 350px
+    }
 }
 
 .content__advantage-card-wrap {

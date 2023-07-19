@@ -170,24 +170,38 @@
     color: $textcolor;
     display: flex;
 
+    &:hover {
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            box-shadow: $box-shadow-hover;
+        }
+    }
 
     &:hover svg {
         fill: $accent-color;
-        box-shadow: $box-shadow-hover;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         font-size: 18px;
-
         line-height: 1.4;
+
+        &:hover {
+            &::before {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 }
 
 .contact__link--schedule {
     @extend .contact__link;
     display: flex;
-
-
 }
 
 .schedule {
