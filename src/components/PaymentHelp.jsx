@@ -5,19 +5,22 @@ import { useToggle } from "hooks/useToggle";
 import { ModalForm } from "./ModalForm";
 import { BtnOpenModal } from "atoms";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 export const PaymentHelp = () => {
   const { t } = useTranslation();
   const { isOpen, open, close } = useToggle();
   const [expandedCards, setExpandedCard] = useState([]);
-
+  const matchesDesktop = useMediaQuery({
+    query: `(min-width:${breakpoints.desktop}px)`,
+  });
   const handleClick = (id) => {
     if (expandedCards.includes(id)) {
       setExpandedCard((state) => state.filter((cardId) => cardId !== id));
-      
+
       return;
     }
     setExpandedCard((state) => [...state, id]);
-    
+
     return;
   };
   return (
@@ -47,7 +50,7 @@ export const PaymentHelp = () => {
                 <li
                   key={id}
                   className={`payment__item ${
-                    expandedCards.includes(id)
+                    expandedCards.includes(id) && !matchesDesktop
                       ? "payment__item--is-expanded"
                       : ""
                   }`}
