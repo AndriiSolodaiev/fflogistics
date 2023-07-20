@@ -44,11 +44,11 @@
     gap: 45px;
 
     @media screen and (min-width: $breakpoint-tablet) {
-        gap: 80px;
+        gap: 50px;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-        gap: 100px
+        gap: 70px;
     }
 
 }
