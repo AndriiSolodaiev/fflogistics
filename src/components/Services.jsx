@@ -14,11 +14,11 @@ export const Services = () => {
   const handleClick = (id) => {
     if (expandedCards.includes(id)) {
       setExpandedCard((state) => state.filter((cardId) => cardId !== id));
-      console.log("it is");
+
       return;
     }
     setExpandedCard((state) => [...state, id]);
-    console.log("it isnot");
+
     return;
   };
 
