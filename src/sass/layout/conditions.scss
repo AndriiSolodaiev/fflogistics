@@ -5,6 +5,18 @@
 
     @media screen and (min-width: $breakpoint-tablet) {
         padding-top: 35px;
+        padding-bottom: 50px;
+    }
+
+
+
+
+}
+
+.conditions__section-bg {
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 35px;
+        padding-bottom: 0;
         background-image: linear-gradient(to bottom, #ffffff 0% 80%,
             #ffffff4d),
 
@@ -34,8 +46,6 @@
             url("#{$public-url}tablet/conditions-boxes.webp")
         }
     }
-
-
 }
 
 .conditions__text-content {
