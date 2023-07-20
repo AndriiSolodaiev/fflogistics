@@ -6,18 +6,19 @@ const Conditions = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <div className="container page-hero__wrapper">
-        <h2 className="page-title">{t("conditions.title")}</h2>
+      <div className=" page-hero__wrapper conditions__bg-img">
+        <h2 className="page-title container ">{t("conditions.title")}</h2>
       </div>
       <section className=" conditions__section">
-        <div className="container">
+        <div className="container conditions__text-content">
           <p className="conditions__subtitle">{t("conditions.subtitle")}</p>
-          <img
+          {/* <div className="conditions__bg-img"></div> */}
+          {/* <img
             src={imgSrcMaker("tablet/conditions-boxes.jpg")}
             alt="packing example"
             loading="lazy"
             className="conditions__img-boxes"
-          />
+          /> */}
           <ol className="conditions__list">
             {t("conditions.list")
               .split("$")

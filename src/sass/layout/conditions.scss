@@ -5,19 +5,94 @@
 
     @media screen and (min-width: $breakpoint-tablet) {
         padding-top: 35px;
-        padding-bottom: 50px;
+        background-image: linear-gradient(to bottom, #ffffff 0% 80%,
+            #ffffff4d),
+
+        url("#{$public-url}tablet/conditions-boxes.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        @supports (background-image: url("#{$public-url}tablet/conditions-boxes.webp")) {
+            background-image: linear-gradient(to bottom, #ffffff 0% 80%,
+                #ffffff4d),
+            url("#{$public-url}tablet/conditions-boxes.webp")
+        }
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        background-size: cover;
+        background-image: linear-gradient(to bottom, #ffffff 0% 70%,
+            #ffffff4d),
+        url("#{$public-url}tablet/conditions-boxes.jpg");
+
+        @supports (background-image:url("#{$public-url}tablet/conditions-boxes.webp")) {
+            background-image: linear-gradient(to bottom, #ffffff 0% 70%,
+                #ffffff4d),
+            url("#{$public-url}tablet/conditions-boxes.webp")
+        }
     }
 
 
+}
+
+.conditions__text-content {
+    @media screen and (min-width: $breakpoint-tablet) {
+        position: relative;
+        top: -100px
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        top: -200px
+    }
+
+}
+
+.conditions__bg-img {
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 400px;
+
+        background-image: linear-gradient(to bottom, #393939ef 120px, #ffffffa8 200px 280px,
+            #fff),
+        url("#{$public-url}tablet/conditions-boxes.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @supports (background-image:url("#{$public-url}tablet/conditions-boxes.webp")) {
+            background-image: linear-gradient(to bottom, #393939ef 120px, #ffffffa8 200px 280px,
+                #fff),
+            url("#{$public-url}tablet/conditions-boxes.webp")
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 600px;
+        background-image: linear-gradient(to bottom, #393939ef 150px, #ffffffbe 250px 350px,
+            #fff),
+
+        url("#{$public-url}tablet/conditions-boxes.jpg");
+
+        @supports (background-image:url("#{$public-url}tablet/conditions-boxes.webp")) {
+            background-image: linear-gradient(to bottom, #393939ef 150px, #ffffffbe 250px 350px,
+                #fff),
+            url("#{$public-url}tablet/conditions-boxes.webp")
+        }
+    }
 }
 
 .conditions__subtitle {
     display: none;
     font-weight: 400;
 
+
     @media screen and (min-width: $breakpoint-tablet) {
         display: block;
         font-size: 16px;
+        margin-bottom: 20px;
+        font-weight: 600;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {

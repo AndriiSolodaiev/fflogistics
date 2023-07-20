@@ -25,7 +25,12 @@ const AirTrans = () => {
       />
       <section className=" conditions__section">
         <div className="container">
-          <TransInfoCards />
+          <TransInfoCards
+            tariff={t(`${contentPath}tariff`)}
+            weight={t(`${contentPath}weight`)}
+            tariffComp={t(`${contentPath}tariffComp`)}
+            weightComp={t(`${contentPath}weightComp`)}
+          />
           <ul className=" content__list">
             <li>{t(`${contentPath}intro`)}</li>
 

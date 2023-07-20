@@ -140,11 +140,11 @@
   background-position: center;
 
 
-  // @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-  //   url("#{$public-url}mobile/hero-bg-mobile.webp")) {
-  //   background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-  //   url("#{$public-url}mobile/hero-bg-mobile.webp");
-  // }
+  @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+    url("#{$public-url}mobile/hero-bg-mobile.webp")) {
+    background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+    url("#{$public-url}mobile/hero-bg-mobile.webp");
+  }
 
   @media screen and (min-width: $breakpoint-tablet) {
     background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),
@@ -161,6 +161,12 @@
   @media screen and (min-width: $breakpoint-desktop) {
     background-image: linear-gradient(#393939fd, #39393998, #393939fd),
     url("#{$public-url}desktop/bg-desktop.png");
+
+    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}desktop/bg-desktop.webp")) {
+      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}desktop/bg-desktop.webp");
+    }
   }
 }
 

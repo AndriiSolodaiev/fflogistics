@@ -2,13 +2,15 @@ import { Link } from "react-router-dom";
 import { breakpoints } from "../constants/breakpoints";
 import { servicesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
-
+import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 export const Services = () => {
-  const { t } = useTranslation();
-
   const [expandedCards, setExpandedCard] = useState([]);
 
+  const matchesDesktop = useMediaQuery({
+    query: `(min-width:${breakpoints.desktop}px)`,
+  });
+  const { t } = useTranslation();
   const handleClick = (id) => {
     if (expandedCards.includes(id)) {
       setExpandedCard((state) => state.filter((cardId) => cardId !== id));
@@ -46,7 +48,7 @@ export const Services = () => {
               <li
                 key={id}
                 className={`services__card ${
-                  expandedCards.includes(id)
+                  expandedCards.includes(id) && !matchesDesktop
                     ? "services__card--is-expanded"
                     : ""
                 }`}

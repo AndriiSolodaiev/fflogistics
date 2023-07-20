@@ -9,7 +9,7 @@
     background-position: center;
 
     @media screen and (min-width: $breakpoint-tablet) {
-        background-image: linear-gradient(to left, #393939 40%, #39393913),
+        background-image: linear-gradient(to right, #39393962, #393939 500px),
         url("#{$public-url}tablet/bg-plane-tablet.png");
         background-size: contain;
         background-position: left;
@@ -18,7 +18,7 @@
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-        background-image: linear-gradient(to left, #393939 40%, #39393934),
+        background-image: linear-gradient(to right, #39393962, #393939 700px),
         url("#{$public-url}tablet/bg-plane-tablet.png");
 
     }
@@ -166,7 +166,7 @@
 
     @media screen and (min-width: $breakpoint-tablet) {
 
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
         margin-bottom: 12px;
     }
@@ -174,13 +174,18 @@
     @media screen and (min-width: $breakpoint-desktop) {
         font-size: 26px;
         font-weight: 600;
+        margin-bottom: 20px;
     }
 }
 
 .info-card__descr-list {
-    margin-top: auto;
+
     align-self: flex-start;
     padding-left: 10px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        padding-left: 40px;
+    }
 
 }
 
