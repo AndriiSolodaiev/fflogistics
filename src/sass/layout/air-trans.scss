@@ -164,17 +164,17 @@
     margin-bottom: 10px;
     text-align: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
 
+    @media screen and (min-width: $breakpoint-tablet) {
         font-size: 20px;
         font-weight: 600;
-        margin-bottom: 12px;
+        margin-bottom: 30px;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         font-size: 26px;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 }
 

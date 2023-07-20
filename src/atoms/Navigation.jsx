@@ -1,11 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useToggle } from "../hooks/useToggle";
 import { svgHrefMaker } from "../helpers";
 
 export const Navigation = ({ onClose }) => {
   const { t } = useTranslation();
-  const { toggle, isOpen } = useToggle();
+
   const navigate = useNavigate();
 
   const handleClick = (section) => {
@@ -37,19 +36,15 @@ export const Navigation = ({ onClose }) => {
             {t("header.nav.conditions")}
           </NavLink>
         </li>
-        <li className="navigation-item" onClick={toggle}>
+        <li className="navigation-item countries-list__activator">
           <p className="countries__title">
             {t("header.nav.countries")}
             <svg className="countries__icon">
               <use href={svgHrefMaker("icon-arrow_down")}></use>
             </svg>
           </p>
-
-          <ul
-            className={`countries__list ${
-              isOpen ? "countries__list-is-expanded" : ""
-            } `}
-          >
+          <ul className="countries__list">
+            <li></li>
             <li className="countries__item">
               <NavLink
                 className="navigation__country-link"

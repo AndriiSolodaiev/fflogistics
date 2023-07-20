@@ -93,15 +93,54 @@
   cursor: pointer;
 }
 
-.countries__list {
+.countries-list__activator {
+  position: relative;
 
-  overflow: hidden;
+}
+
+.countries__list {
   height: 0px;
-  transition: height $transition-props;
+  overflow: hidden;
+
+  transition: height $transition-props, transform $transition-props;
+
+  .countries-list__activator:hover & {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+  }
 
   @media screen and (min-width: $breakpoint-tablet) {
     position: absolute;
+    top: 0;
+    z-index: 1;
+    background-image: url("#{$public-url}tablet/dropdown-bg-tablet.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(33px);
+    width: 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 11px;
+    padding-right: 11px;
 
+    .countries-list__activator:hover & {
+      height: 110px;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    .countries-list__activator:hover & {
+      transform: translateY(35px);
+
+    }
   }
 }
 
@@ -116,19 +155,11 @@
   border-radius: 10px;
 
   @media screen and (min-width: $breakpoint-tablet) {
-
-    box-sizing: border-box;
     position: absolute;
     top: 0;
     bottom: 0;
-    z-index: 1;
     transform: translateY(36px);
-    width: 200px;
     height: 110px;
-    background-image: url("#{$public-url}tablet/dropdown-bg-tablet.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 26px 11px 13px 11px;
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
