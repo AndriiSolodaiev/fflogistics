@@ -76,7 +76,7 @@
 .header__contacts-list {
   margin-right: 11px;
   display: flex;
-  gap: 7px;
+  gap: 15px;
 
   @media screen and (min-width: $breakpoint-tablet) {
     display: none;

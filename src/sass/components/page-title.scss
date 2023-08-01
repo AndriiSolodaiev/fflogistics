@@ -139,7 +139,7 @@
     -webkit-text-fill-color: transparent;
     font-size: 20px;
     font-weight: 500;
-    max-height: 53px;
+    max-height: 75px;
     overflow: hidden;
     text-align: center;
     max-width: 300px;
@@ -208,7 +208,7 @@
     padding-right: 30px;
     padding-bottom: 50px;
     position: relative;
-    height: 370px;
+    min-height: 370px;
     display: flex;
     flex-direction: column;
     align-items: center;

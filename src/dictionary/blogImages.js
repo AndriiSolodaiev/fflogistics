@@ -3,20 +3,20 @@ import { imgSrcMaker } from "helpers/imgSrcMaker";
 export const blogImages = [
   {
     id: 1,
-    img: imgSrcMaker("tablet/hero-bg/bg1-tablet.png"),
-    imgWebp: imgSrcMaker("tablet/hero-bg/bg1-tablet.webp"),
+    img: imgSrcMaker("mobile/blogImg/article1.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article1.webp"),
     date: "12.04.2023",
   },
   {
     id: 2,
-    img: imgSrcMaker("tablet/hero-bg/bg2-tablet.png"),
-    imgWebp: imgSrcMaker("tablet/hero-bg/bg2-tablet.webp"),
+    img: imgSrcMaker("mobile/blogImg/article2.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article2.webp"),
     date: "29.05.2023",
   },
   {
     id: 3,
-    img: imgSrcMaker("tablet/hero-bg/bg3-tablet.png"),
-    imgWebp: imgSrcMaker("tablet/hero-bg/bg3-tablet.webp"),
+    img: imgSrcMaker("mobile/blogImg/article3.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article3.webp"),
     date: "05.06.2023",
   },
   {

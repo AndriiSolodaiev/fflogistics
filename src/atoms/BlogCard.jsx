@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const BlogCard = ({ id, img, imgWebp, date }) => {
   const { t } = useTranslation();
   return (
-    <li className="blog-page__item">
+    <div className="blog-page__item">
       <picture>
         <source srcSet={imgWebp} type="image/webp" />
         <img
@@ -36,6 +36,6 @@ export const BlogCard = ({ id, img, imgWebp, date }) => {
           {t(`blogpages.readmore`)}
         </Link>
       </div>
-    </li>
+    </div>
   );
 };

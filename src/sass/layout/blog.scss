@@ -29,6 +29,7 @@
     color: $textcolor;
     margin-bottom: 10px;
     text-transform: uppercase;
+    text-align: center;
 
     @media screen and (min-width: $breakpoint-tablet) {
         color: $button-color;
@@ -113,5 +114,61 @@
             background-color: $accent-color;
             padding: 11px 70px;
         }
+    }
+}
+
+.slick-next {
+    display: block;
+    height: 440px;
+    border-radius: 0px;
+    border-radius: 0 50% 50% 0;
+    background-color: $slick-arrows-bg-color;
+
+
+    &:hover {
+        background-image: $gradient-color;
+        box-shadow: $box-shadow-hover;
+
+        &::before {
+            font-size: 18px;
+        }
+    }
+
+    &::before {
+        content: "⮞";
+        font-size: 18px;
+
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 210px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 240px;
+        width: 40px;
+        right: -40px;
+
+    }
+
+}
+
+.slick-prev {
+    @extend .slick-next;
+
+    border-radius: 50% 0 0 50%;
+
+
+
+
+    &::before {
+        content: "⮜";
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        left: -40px;
+
     }
 }

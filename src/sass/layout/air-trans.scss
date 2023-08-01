@@ -105,7 +105,12 @@
     margin-top: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 5px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 10px;
+
+    }
 }
 
 .info-card__list {
@@ -149,32 +154,33 @@
 }
 
 .info-card__icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     fill: $accent-color;
 
     @media screen and (min-width: $breakpoint-desktop) {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
 
     }
 }
 
 .info-card__title {
-    margin-bottom: 10px;
-    text-align: center;
+    @extend .card__title;
 
+    text-align: center;
+    text-transform: inherit;
 
     @media screen and (min-width: $breakpoint-tablet) {
         font-size: 20px;
         font-weight: 600;
-        margin-bottom: 30px;
+
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         font-size: 26px;
         font-weight: 600;
-        margin-bottom: 40px;
+
     }
 }
 
@@ -191,9 +197,9 @@
 
 .info-card__descr {
     @extend .list-sea__item;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 
     &::before {
         color: $accent-color;
@@ -208,7 +214,7 @@
     @media screen and (min-width: $breakpoint-desktop) {
         font-size: 20px;
         font-weight: 500;
-
+        margin-bottom: 10px;
     }
 
     &:last-child {

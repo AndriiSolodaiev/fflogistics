@@ -11,18 +11,19 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
     background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
         #fff 100%),
     linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
         #fff 98%),
-    url("#{$public-url}/desktop/hero-bg/bg1-desktop.png");
+    url("#{$public-url}mobile/blogImg/article1.png");
 
-    @supports (background-image: url("#{$public-url}desktop/hero-bg/bg1-desktop.webp")) {
+    @supports (background-image: url("#{$public-url}mobile/blogImg/article1.webp")) {
         background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
             #fff 100%),
         linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
             #fff 98%),
-        url("#{$public-url}desktop/hero-bg/bg1-desktop.webp");
+        url("#{$public-url}mobile/blogImg/article1.webp");
     }
 
     @media screen and (min-width: $breakpoint-tablet) {
@@ -46,14 +47,14 @@
         #fff 100%),
     linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
         #fff 98%),
-    url("#{$public-url}/desktop/hero-bg/bg2-desktop.png");
+    url("#{$public-url}mobile/blogImg/article2.jpg");
 
-    @supports (background-image: url("#{$public-url}desktop/hero-bg/bg2-desktop.webp")) {
+    @supports (background-image: url("#{$public-url}mobile/blogImg/article2.webp")) {
         background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
             #fff 100%),
         linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
             #fff 98%),
-        url("#{$public-url}desktop/hero-bg/bg2-desktop.webp");
+        url("#{$public-url}mobile/blogImg/article2.webp");
     }
 }
 
@@ -63,15 +64,16 @@
         #fff 100%),
     linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
         #fff 98%),
-    url("#{$public-url}/desktop/hero-bg/bg3-desktop.png");
+    url("#{$public-url}mobile/blogImg/article3.jpg");
 
-    @supports (background-image: url("#{$public-url}desktop/hero-bg/bg3-desktop.webp")) {
+    @supports (background-image: url("#{$public-url}mobile/blogImg/article3.webp")) {
         background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
             #fff 100%),
         linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
             #fff 98%),
-        url("#{$public-url}desktop/hero-bg/bg3-desktop.webp");
+        url("#{$public-url}mobile/blogImg/article3.webp");
     }
+
 }
 
 .article4__hero-bg {
@@ -180,6 +182,6 @@
         position: absolute;
         top: 0;
         left: -30px;
-        color: rgb(34, 168, 34);
+
     }
 }

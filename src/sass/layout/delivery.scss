@@ -235,6 +235,7 @@
   &::before {
     content: "\2713";
     margin-right: 6px;
+    color: $button-color;
   }
 
   @media screen and (min-width: $breakpoint-tablet) {}

@@ -62,20 +62,23 @@
 
 .blog-page__item {
     display: flex;
+    box-sizing: border-box;
     gap: 16px;
     flex-direction: column;
     width: 300px;
     height: auto;
     background-color: $card-bg-color;
-
+    height: 460px;
     border-radius: 10px;
     box-shadow: 0px 5px 17px $primary-font-color;
+    padding-bottom: 10px;
 
     @media screen and (min-width: $breakpoint-tablet) {
-
+        height: auto;
         flex-direction: row;
         width: 100%;
         box-shadow: none;
+        padding-bottom: 0;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
@@ -84,18 +87,18 @@
 }
 
 .blog-page__item-img {
-    border-radius: 5px;
+    border-radius: 10px;
     width: 300px;
 
     @media screen and (min-width: $breakpoint-tablet) {
-        width: 213px;
+
         height: 237px;
 
     }
 
 
     @media screen and (min-width: $breakpoint-desktop) {
-        width: 270px;
+
         height: 260px;
     }
 

@@ -40,6 +40,7 @@
 .client-form__form-space-tablet {
     position: relative;
 
+
     @media screen and (min-width: $breakpoint-tablet) {
         display: flex;
         flex-direction: column;
@@ -49,13 +50,14 @@
         background-color: $form-space-color;
         border-radius: 10px;
         width: 432px;
-        height: 300px;
+        min-height: 300px;
+
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         padding: 45px 118px;
         width: 626px;
-        height: 377px;
+        min-height: 377px;
     }
 }
 

@@ -16,15 +16,45 @@ export const Navigation = ({ onClose }) => {
   return (
     <nav>
       <ul className="navigation-list">
-        <li className="navigation-item">
-          <button
-            type="button"
-            className="navigation__link"
-            onClick={() => handleClick("services")}
-            aria-label="move to services"
-          >
+        <li className="navigation-item countries-list__activator">
+          <p className="navigation__link ">
             {t("header.nav.services")}
-          </button>
+            <svg className="countries__icon">
+              <use href={svgHrefMaker("icon-arrow_down")}></use>
+            </svg>
+          </p>
+          <ul className="countries__list ">
+            <li className="countries__item">
+              <NavLink
+                className="navigation__country-link"
+                to="/sea-transportation"
+                onClick={onClose}
+                aria-label="move to delivery from SthKorea"
+              >
+                {t("services.card1.title")}
+              </NavLink>
+            </li>
+            <li className="countries__item">
+              <NavLink
+                className="navigation__country-link"
+                to="/air-transportation"
+                onClick={onClose}
+                aria-label="move to delivery from Europe"
+              >
+                {t("services.card2.title")}
+              </NavLink>
+            </li>
+            <li className="countries__item">
+              <NavLink
+                className="navigation__country-link"
+                to="/rail-transportation"
+                onClick={onClose}
+                aria-label="move to delivery from Europe"
+              >
+                {t("services.card3.title")}
+              </NavLink>
+            </li>
+          </ul>
         </li>
         <li className="navigation-item">
           <NavLink
@@ -44,7 +74,6 @@ export const Navigation = ({ onClose }) => {
             </svg>
           </p>
           <ul className="countries__list">
-            <li></li>
             <li className="countries__item">
               <NavLink
                 className="navigation__country-link"

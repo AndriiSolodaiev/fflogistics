@@ -105,7 +105,10 @@ export const Header = () => {
             <button
               className={`language-btn
               ${i18n.resolvedLanguage === "uk" ? "language-btn--active" : ""}`}
-              onClick={() => i18n.changeLanguage("uk")}
+              onClick={() => {
+                i18n.changeLanguage("uk");
+                localStorage.setItem("language", "uk");
+              }}
               aria-label="change the language to Ukranian"
             >
               ua
@@ -114,7 +117,10 @@ export const Header = () => {
             <button
               className={`language-btn
               ${i18n.resolvedLanguage === "ru" ? "language-btn--active" : ""}`}
-              onClick={() => i18n.changeLanguage("ru")}
+              onClick={() => {
+                i18n.changeLanguage("ru");
+                localStorage.setItem("language", "ru");
+              }}
               aria-label="change the language to russian"
             >
               ru

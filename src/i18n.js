@@ -7,7 +7,7 @@ i18n
   .use(Backend)
   .init({
     debug: false,
-    fallbackLng: "uk",
+    fallbackLng: localStorage.getItem("language") || "uk",
     backend: { loadPath: "../locales/{{lng}}/translation.json" },
   });
 

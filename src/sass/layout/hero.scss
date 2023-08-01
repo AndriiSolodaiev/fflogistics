@@ -130,7 +130,6 @@
   }
 }
 
-// desktop/hero-bg/bg3-desktop
 .hero__bgimg {
   width: 100%;
   background-image: linear-gradient(#393939fd, #39393965, #393939fd),
@@ -145,6 +144,21 @@
     background-image: linear-gradient(#393939fd, #39393965, #393939fd),
     url("#{$public-url}mobile/hero-bg-mobile.webp");
   }
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+    url("#{$public-url}mobile/hero-bg-mobile@2x.png");
+
+    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}mobile/hero-bg-mobile@2x.webp")) {
+      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}mobile/hero-bg-mobile@2x.webp");
+    }
+  }
+
 
   @media screen and (min-width: $breakpoint-tablet) {
     background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),

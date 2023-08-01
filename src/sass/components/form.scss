@@ -13,50 +13,57 @@
     border: 1px solid $accent-color;
     background-color: transparent;
     width: 193px;
-    height: 28px;
+    height: 35px;
     border-radius: 10px;
     padding-left: 5px;
     font-family: $primary-font;
     font-weight: 400;
     color: $textcolor;
 
+    &:focus {
+        outline: none;
+        border-color: $card-bg-color ;
+        box-shadow: none
+    }
 
     &::placeholder {
         font-weight: 400;
-        font-size: 10px;
+        font-size: 14px;
         color: $placeholder-color;
 
     }
 
     @media screen and (min-width: $breakpoint-tablet) {
         width: 334px;
-        height: 28px;
+        height: 35px;
 
         &::placeholder {
-            font-size: 12px;
+            font-size: 14px;
 
         }
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
         width: 443px;
-        height: 39px;
+        height: 40px;
 
         &::placeholder {
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 }
 
+
+
 .form__textarea {
     @extend .form__input;
     font-family: inherit;
-    height: 56px;
+    height: 70px;
     padding-top: 7px;
     resize: none;
 
     &::-webkit-scrollbar {
-        width: 8px;
+        width: 4px;
     }
 
     &::-webkit-scrollbar-track {
@@ -67,6 +74,10 @@
         background-color: $accent-color;
         border-radius: 4px;
     }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 80px;
+    }
 }
 
 .form__button {
@@ -75,7 +86,13 @@
     font-size: 16px;
     padding: 5px 16px;
     box-shadow: $button-box-shadow;
-    margin-top: 53px;
+    margin-top: 33px;
+
+    &:disabled {
+        background: $disabled-button-color;
+        color: $disabled-button-text-color;
+        pointer-events: none;
+    }
 
     &:hover,
     &:focus {
@@ -184,6 +201,11 @@
     padding: 7px 24px;
     margin-top: 13px;
 
+    &:hover,
+    &:focus {
+        padding: 7px 30px;
+    }
+
     @media screen and (min-width: $breakpoint-tablet) {
         padding: 10px 55px;
         font-size: 16px;
@@ -199,11 +221,11 @@
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-        padding: 13px 165px;
+        padding: 13px 100px;
 
         &:hover,
         &:focus {
-            padding: 13px 149px;
+            padding: 13px 154px;
         }
     }
 }
@@ -257,4 +279,59 @@
             padding: 8px 187px;
         }
     }
+}
+
+.form__validation-message {
+
+    font-weight: 400;
+    font-size: 12px;
+    color: $validation-message-color;
+    width: 193px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+        width: 334px;
+    }
+
+
+
+    @media screen and (min-width: $breakpoint-desktop) {
+
+        width: 443px;
+
+    }
+}
+
+.form__validation-message--light {
+    @extend .form__validation-message;
+
+
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 12px;
+        width: 275px;
+        color: $validation-message-color--light;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 398px;
+        font-size: 12px;
+
+
+    }
+
+
+}
+
+.form__input-error {
+    border: 1px solid $validation-message-color;
+}
+
+.form__input-error--light {
+    border: 1px solid $validation-message-color;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        outline: 2px solid $validation-message-color--light;
+    }
+
 }

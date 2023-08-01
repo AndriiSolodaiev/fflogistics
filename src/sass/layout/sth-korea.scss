@@ -52,13 +52,16 @@
 }
 
 .list-sea__item {
+
     position: relative;
 
     &::before {
-        content: "\2714";
+        content: "\2713";
+        display: block;
         position: absolute;
         top: 0;
         left: -20px;
-        color: $button-color
+        color: $button-color;
+        fill: $button-color;
     }
 }

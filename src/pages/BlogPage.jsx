@@ -16,7 +16,7 @@ const BlogPage = () => {
         <h2 className="blog-page__title">Блог</h2>
       </div>
       <div className=" blog-page__list-wrapper ">
-        <ul className="container blog-page__list">
+        <div className="container blog-page__list">
           {blogImages
             .map(({ id, img, imgWebp, date }) => (
               <BlogCard
@@ -28,7 +28,7 @@ const BlogPage = () => {
               />
             ))
             .reverse()}
-        </ul>
+        </div>
       </div>
 
       <ClientForm />
