@@ -31,7 +31,7 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value })); 
-    console.log(name + "asd" + value)
+    
   };
 
   const handleSubmitForm = async (event) => {
