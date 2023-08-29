@@ -11,6 +11,7 @@ const DeliverySthKorea = () => {
         classBg="sth-korea__bg"
         tariff={t("countriespages.SthKorea.tariff.value")}
         terms={t("countriespages.SthKorea.terms.value")}
+        page={t("header.nav.countries")}
         unit={t("countriespages.SthKorea.unit")}
       />
       <section className=" conditions__section">

@@ -1,362 +1,350 @@
 .page-hero__wrapper {
-    padding: 20px 0 16px 0;
-    background-color: $background-color;
+  padding: 20px 0 16px 0;
+  background-color: $background-color;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-
-    }
-
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .countries-hero__wrapper {
-    @media screen and (min-width: $breakpoint-tablet) {
-        background-color: $card-bg-color;
-
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-color: $card-bg-color;
+  }
 }
 
 .page-hero__container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .page-hero__container--countries {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-    background-color: $background-color;
+  background-color: $background-color;
 
+  @media screen and (min-width: $breakpoint-tablet) {
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        align-items: flex-start;
-        width: 100%;
-        position: relative;
+    padding-top: 9px;
+    padding-bottom: 26px;
 
-        padding-top: 9px;
-        padding-bottom: 26px;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
 
-        background-size: contain;
-        background-position: right;
-        background-repeat: no-repeat;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        padding-top: 16px;
-        padding-bottom: 45px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 16px;
+    padding-bottom: 45px;
+  }
 }
 
 .contries__blocks-wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        flex-direction: row;
-
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
 }
 
 .route-wrapper {
-    display: none;
+  display: none;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        display: flex;
-        align-items: center;
-        margin-bottom: 40px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        margin-bottom: 45px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 45px;
+  }
 }
 
 .route-text {
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 12px;
-        font-weight: 400;
-        color: $textcolor;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 12px;
+    font-weight: 400;
+    color: $textcolor;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 14px;
+  }
 }
 
 .route-icon {
-    @media screen and (min-width: $breakpoint-tablet) {
-        width: 19px;
-        height: 6px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 19px;
+    height: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .page-hero__disclaimer {
-    position: absolute;
-    bottom: 0px;
+  position: absolute;
+  bottom: 20px;
 
+  padding: 10px;
+  font-size: 12px;
+  width: 180px;
+  text-align: center;
+  border-radius: 5px;
+  border: 3px solid $accent-color;
+  background: rgba(254, 168, 0, 0.2);
+  color: $textcolor;
+  font-weight: 500;
+
+  @media screen and (min-width: $breakpoint-tablet) {
     padding: 10px;
-    font-size: 12px;
-    width: 180px;
-    text-align: center;
-    border-radius: 5px;
-    border: 3px solid $accent-color;
-    background: rgba(254, 168, 0, 0.20);
-    color: $textcolor;
-    font-weight: 500;
+    left: 100px;
+    border: 1px solid $accent-color;
+    width: 250px;
+    font-size: 18px;
+    font-weight: 600;
+  }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-
-        padding: 10px;
-        left: 100px;
-        border: 1px solid $accent-color;
-        width: 250px;
-        font-size: 18px;
-        font-weight: 600;
-
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-
-        width: 300px;
-        font-size: 22px;
-        left: 200px;
-    }
-
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 300px;
+    font-size: 22px;
+    left: 200px;
+  }
 }
 
 .page-title {
-    background: $gradient-color;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 20px;
-    font-weight: 500;
-    max-height: 75px;
-    overflow: hidden;
-    text-align: center;
-    max-width: 300px;
+  background: $gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  max-height: 75px;
+  overflow: hidden;
+  text-align: center;
+  max-width: 300px;
+  align-self: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 32px;
-        max-height: 300px;
-        font-weight: 600;
-        max-width: 1200px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 32px;
+    max-height: 300px;
+    font-weight: 600;
+    max-width: 1200px;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 48px;
-        font-weight: 700;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+    font-weight: 700;
+  }
 }
 
 .page-title--countries {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        text-align: start;
-        max-width: 330px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    text-align: start;
+    max-width: 330px;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        max-width: 477px;
-        line-height: 1.4;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 490px;
+    line-height: 1.4;
+  }
 }
+.page-title--margin {
+  margin-bottom: 40px;
+  font-size: 26px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 44px;
+  }
 
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 50px;
+  }
+}
 .page-hero__info--countries {
-    color: $textcolor;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
+  color: $textcolor;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
 
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 
+  @media screen and (min-width: $breakpoint-tablet) {
+    text-align: start;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        text-align: start;
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 20px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 20px;
+  }
 }
-
 
 .page-hero__info-title--countries {
-
-    font-weight: 400;
-    padding-right: 5px;
-    color: $form-space-color;
+  font-weight: 400;
+  padding-right: 5px;
+  color: $form-space-color;
 }
 
 .page-hero__form-wrap {
-    text-align: center;
-    padding-top: 16px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    position: relative;
-    min-height: 370px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  padding-top: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  position: relative;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        align-self: flex-end;
-        padding-top: 50px;
-        padding-bottom: 0;
-        height: 403px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    align-self: flex-end;
+    padding-top: 50px;
+    padding-bottom: 0;
+    height: 403px;
+    transform: scale(0.9);
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        height: 440px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 440px;
+  }
 }
 
 .countries__form-wrap {
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-color: $card-bg-color;
 
-
-    @media screen and (min-width: $breakpoint-tablet) {
-        background-color: $card-bg-color;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        width: fit-content;
-    }
-
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+  }
 }
 
 .page-hero__form-title {
-    font-size: 18px;
-    font-weight: 400;
-    color: $button-color;
-    margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: $button-color;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 26px;
-        font-weight: 600;
-        color: $textcolor;
-        background-color: $button-color;
-        width: 350px;
-        text-align: center;
-        border-radius: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 452px
-    }
+  transition: all $transition-props;
+  width: 250px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 26px;
+    font-weight: 600;
+    width: 350px;
+    //     color: $textcolor;
+    //   background-color: $button-color;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 452px;
+  }
 }
 
 .page-hero__form-title--countries {
-    @extend .page-hero__form-title;
+  @extend .page-hero__form-title;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        margin-bottom: 5px;
-        width: 343px;
-        font-size: 20px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 5px;
+    width: 343px;
+    font-size: 20px;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 26px;
-        width: 457px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 26px;
+    width: 457px;
+  }
 }
 
 .page-hero__form-descr {
-    font-size: 12px;
-    color: $textcolor;
-    font-weight: 400;
-    margin-bottom: 25px;
+  font-size: 12px;
+  color: $textcolor;
+  font-weight: 400;
+  margin-bottom: 25px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 14px;
-        width: 350px;
-        text-align: center;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 14px;
+    width: 350px;
+    text-align: center;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 450px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 450px;
+  }
 }
 
 .page-hero__form-button {
-    margin-top: 10px
+  margin-top: 10px;
 }
 
 .page-hero__form-descr--countries {
-    @extend .page-hero__form-descr;
-    margin-bottom: 9px;
+  @extend .page-hero__form-descr;
+  margin-bottom: 9px;
 
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 14px;
+    width: 350px;
+    text-align: center;
+  }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 14px;
-        width: 350px;
-        text-align: center;
-
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 450px;
-        font-size: 16px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 450px;
+    font-size: 16px;
+  }
 }
 
 .page-hero__close-btn {
-    @extend .modal__close-btn;
-    top: 105px;
+  @extend .modal__close-btn;
+  top: 105px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        top: 120px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    top: 120px;
+  }
 
-
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        top: 150px;
-        right: 0px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    top: 150px;
+    right: 0px;
+  }
 }
 
 .countries__close-btn {
-    @extend .page-hero__close-btn;
+  @extend .page-hero__close-btn;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        top: 120px;
-        right: 40px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    top: 120px;
+    right: 40px;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        top: 140px;
-        right: 10px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    top: 140px;
+    right: 10px;
+  }
 }
 
 .contries__icon-close {
-    @media screen and (min-width: $breakpoint-tablet) {
-        fill: $primary-font-color;
-
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    fill: $primary-font-color;
+  }
 }

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { ClientForm } from "../components";
-import { TransHeroTemplate, TransInfoCards } from "../atoms";
+import { CountryHeroTemplate, TransInfoCards } from "../atoms";
 import { useEffect } from "react";
 import { svgHrefMaker } from "helpers";
 
@@ -18,10 +18,14 @@ const AirTrans = () => {
   const contentPath = "transpages.air.content.";
   return (
     <>
-      <TransHeroTemplate
+      <CountryHeroTemplate
         title={t("transpages.air.title")}
         classBg="air-trans__bg"
-        disclaimer={false}
+        tariff={t("transpages.air.tariff.value")}
+        terms={t("transpages.air.terms.value")}
+        page={t("header.nav.services")}
+        unit={t("transpages.air.title")}
+        sale={true}
       />
       <section className=" conditions__section">
         <div className="container">

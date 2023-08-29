@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { ClientForm } from "../components";
-import { TransHeroTemplate, TransInfoCards } from "../atoms";
+import { CountryHeroTemplate, TransInfoCards } from "../atoms";
 import { useEffect } from "react";
 import { svgHrefMaker } from "helpers";
 
@@ -17,10 +17,14 @@ const SeaTrans = () => {
   ];
   return (
     <>
-      <TransHeroTemplate
+      <CountryHeroTemplate
         title={t("transpages.sea.title")}
         classBg="sea-trans__bg"
-        disclaimer={false}
+        tariff={t("transpages.sea.tariff.value")}
+        terms={t("transpages.sea.terms.value")}
+        page={t("header.nav.services")}
+        unit={t("transpages.sea.title")}
+        sale={true}
       />
       <section className=" conditions__section">
         <div className="container">

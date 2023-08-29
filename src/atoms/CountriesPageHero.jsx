@@ -8,7 +8,10 @@ export const CountryHeroTemplate = ({
   classBg,
   tariff,
   terms,
+  page,
   unit,
+  disclaimer,
+  sale,
 }) => {
   const { t } = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -18,13 +21,18 @@ export const CountryHeroTemplate = ({
         <div className="container contries__blocks-wrapper">
           <div>
             <div className="route-wrapper">
-              <p className="route-text">{t("header.nav.countries")}</p>
+              <p className="route-text">{page}</p>
               <svg className="route-icon">
                 <use href={svgHrefMaker("icon-arrow")} />
               </svg>
               <p className="route-text">{unit}</p>
             </div>
             <h2 className="page-title page-title--countries">{title}</h2>
+            {disclaimer && (
+              <p className="page-hero__disclaimer">
+                {t("services.disclaimer")}
+              </p>
+            )}
             <p className="page-hero__info--countries">
               <span className="page-hero__info-title--countries">
                 {t("countriespages.SthKorea.tariff.title")}
@@ -37,6 +45,11 @@ export const CountryHeroTemplate = ({
               </span>
               {terms}
             </p>
+            {sale && (
+              <p className="page-hero__info--countries">
+                {t("transpages.air.sale")}
+              </p>
+            )}
           </div>
           <div className="page-hero__form-wrap">
             {formSubmitted ? (

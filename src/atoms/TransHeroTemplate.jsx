@@ -1,20 +1,46 @@
-import { Form } from "./Form";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { FormSubmitted } from "./FormSubmitted";
-import { svgHrefMaker } from "../helpers";
-export const TransHeroTemplate = ({ title, classBg, disclaimer }) => {
+import { BtnOpenModal } from "./BtnOpenModal";
+import { ModalForm } from "components";
+import { useToggle } from "hooks/useToggle";
+
+export const TransHeroTemplate = ({
+  title,
+  classBg,
+  disclaimer,
+  tariff,
+  terms,
+}) => {
   const { t } = useTranslation();
-  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const { isOpen, open, close } = useToggle();
   return (
     <section className={`page-hero__wrapper ${classBg}`}>
       <div className="container page-hero__container">
-        <h2 className="page-title">{title}</h2>
+        <h2 className="page-title page-title--margin">{title}</h2>
         {disclaimer && (
           <p className="page-hero__disclaimer">{t("services.disclaimer")}</p>
         )}
-        <div className="page-hero__form-wrap">
-          {formSubmitted ? (
+        <p className="page-hero__info--countries">
+          <span className="page-hero__info-title--countries">
+            {t("countriespages.SthKorea.tariff.title")}
+          </span>
+          {tariff}
+        </p>
+        <p className="page-hero__info--countries">
+          <span className="page-hero__info-title--countries">
+            {t("countriespages.SthKorea.terms.title")}
+          </span>
+          {terms}
+        </p>
+        <p className="page-hero__info--countries">{t("transpages.air.sale")}</p>
+        <BtnOpenModal
+          openModal={open}
+          title={t("transpages.formtitle")}
+          classBtn="page-hero__form-title"
+        />
+
+        {/* <div className="page-hero__form-wrap"> */}
+        {/* {formSubmitted ? (
             <>
               <button
                 className="modal__close-btn page-hero__close-btn"
@@ -42,9 +68,10 @@ export const TransHeroTemplate = ({ title, classBg, disclaimer }) => {
                 buttonStyle="page-hero__form-button"
               />
             </>
-          )}
-        </div>
+          )} */}
+        {/* </div> */}
       </div>
+      {isOpen && <ModalForm isOpen={isOpen} onClose={close} />}
     </section>
   );
 };

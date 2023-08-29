@@ -1,25 +1,40 @@
+// .rail-trans__bg {
+//   background-image: linear-gradient(#393939, #393939ea, #393939),
+//     url("#{$public-url}mobile/train-mobile@2x.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+
+//   @media screen and (min-width: $breakpoint-tablet) {
+//     background-image: linear-gradient(to right, #39393925, #393939 400px),
+//       url("#{$public-url}tablet/bg-rail-tablet.png");
+//     background-size: contain;
+//     background-position: left;
+//     background-repeat: no-repeat;
+//   }
+
+//   @media screen and (min-width: $breakpoint-desktop) {
+//     background-image: linear-gradient(to right, #39393925, #393939 550px),
+//       url("#{$public-url}desktop/bg-rail-desktop.png");
+//   }
+// }
 .rail-trans__bg {
-    background-image: linear-gradient(#393939, #393939ea, #393939),
-
+  background-image: linear-gradient(#393939, #393939ea, #393939),
     url("#{$public-url}mobile/train-mobile@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        background-image: linear-gradient(to right, #39393925, #393939 500px),
-        url("#{$public-url}tablet/bg-rail-tablet.png");
-        background-size: contain;
-        background-position: left;
-        background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-image: linear-gradient(to left, #39393962, #393939 350px),
+      url("#{$public-url}mobile/train-mobile@2x.jpg");
+    background-size: contain;
+    background-position: right;
+  }
 
-
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        background-image: linear-gradient(to right, #39393925, #393939 730px),
-        url("#{$public-url}desktop/bg-rail-desktop.png");
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    background-image: linear-gradient(to left, #39393962, #393939 420px),
+      url("#{$public-url}mobile/train-mobile@2x.jpg");
+  }
 }

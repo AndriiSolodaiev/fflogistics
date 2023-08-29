@@ -1,223 +1,217 @@
+// .air-trans__bg {
+//   background-image: linear-gradient(#393939, #393939ea, #393939),
+//     url("#{$public-url}mobile/hero-bg-mobile.png");
+
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+
+//   @media screen and (min-width: $breakpoint-tablet) {
+//     background-image: linear-gradient(to right, #39393962, #393939 500px),
+//       url("#{$public-url}tablet/bg-plane-tablet.png");
+//     background-size: contain;
+//     background-position: left;
+//     background-repeat: no-repeat;
+//   }
+
+//   @media screen and (min-width: $breakpoint-desktop) {
+//     background-image: linear-gradient(to right, #39393962, #393939 700px),
+//       url("#{$public-url}tablet/bg-plane-tablet.png");
+//   }
+// }
 .air-trans__bg {
-    background-image: linear-gradient(#393939, #393939ea, #393939),
-
-
+  background-image: linear-gradient(#393939, #393939ea, #393939),
     url("#{$public-url}mobile/hero-bg-mobile.png");
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        background-image: linear-gradient(to right, #39393962, #393939 500px),
-        url("#{$public-url}tablet/bg-plane-tablet.png");
-        background-size: contain;
-        background-position: left;
-        background-repeat: no-repeat;
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-image: linear-gradient(to left, #39393962, #393939 600px),
+      url("#{$public-url}tablet/bg-plane-tablet.png");
+    background-size: contain;
+    background-position: right;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        background-image: linear-gradient(to right, #39393962, #393939 700px),
-        url("#{$public-url}tablet/bg-plane-tablet.png");
-
-    }
-
+  @media screen and (min-width: $breakpoint-desktop) {
+    background-image: linear-gradient(to left, #39393962, #393939 750px),
+      url("#{$public-url}tablet/bg-plane-tablet.png");
+  }
 }
 
 .content__advantage-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        flex-direction: row;
-        align-items: flex-start;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        justify-content: space-around;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    justify-content: space-around;
+  }
 }
 
 .content__advantage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  max-width: 280px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    max-width: 280px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 10px;
+    width: 300px;
+  }
 
-
-    @media screen and (min-width: $breakpoint-tablet) {
-        padding: 10px;
-        width: 300px;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 350px
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 350px;
+  }
 }
 
 .content__advantage-card-wrap {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 @keyframes rotateY {
-
-
-    50% {
-        transform: rotateY(180deg) scale(1.1);
-        fill: $accent-color;
-    }
-
-
+  50% {
+    transform: rotateY(180deg) scale(1.1);
+    fill: $accent-color;
+  }
 }
 
 .content__advantage-icon {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 
-    fill: $button-color;
+  fill: $button-color;
 
-    .content__advantage-card:hover &,
-    .content__advantage-card:focus & {
-        animation: rotateY 1.2s;
+  .content__advantage-card:hover &,
+  .content__advantage-card:focus & {
+    animation: rotateY 1.2s;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 100px;
-        height: 100px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .content__advantage-descr-list {
-    align-self: flex-start;
-    padding-left: 15px;
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  align-self: flex-start;
+  padding-left: 15px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        gap: 10px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 10px;
+  }
 }
 
 .info-card__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        flex-direction: row;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
 
-        margin-bottom: 40px;
-    }
+    margin-bottom: 40px;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        gap: 60px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 60px;
+  }
 }
 
 .info-card__item {
-    max-width: 300px;
-    flex-grow: 1;
+  max-width: 300px;
+  flex-grow: 1;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    align-items: center;
-    padding: 20px;
-    padding-top: 0;
+  align-items: center;
+  padding: 20px;
+  padding-top: 0;
 
-
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        max-width: 500px;
-        padding: 10px 20px 20px 20px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 500px;
+    padding: 10px 20px 20px 20px;
+  }
 }
 
 .info-card__icon {
-    width: 80px;
-    height: 80px;
-    fill: $accent-color;
+  width: 80px;
+  height: 80px;
+  fill: $accent-color;
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 100px;
-        height: 100px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .info-card__title {
-    @extend .card__title;
+  @extend .card__title;
 
-    text-align: center;
-    text-transform: inherit;
+  text-align: center;
+  text-transform: inherit;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 20px;
-        font-weight: 600;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    font-weight: 600;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 26px;
-        font-weight: 600;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 26px;
+    font-weight: 600;
+  }
 }
 
 .info-card__descr-list {
+  align-self: flex-start;
+  padding-left: 10px;
 
-    align-self: flex-start;
-    padding-left: 10px;
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        padding-left: 40px;
-    }
-
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-left: 40px;
+  }
 }
 
 .info-card__descr {
-    @extend .list-sea__item;
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-weight: 400;
+  @extend .list-sea__item;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
 
-    &::before {
-        color: $accent-color;
-    }
+  &::before {
+    color: $accent-color;
+  }
 
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 10px;
-    }
-
-    &:last-child {
-        margin-bottom: 0px;
-    }
+  &:last-child {
+    margin-bottom: 0px;
+  }
 }

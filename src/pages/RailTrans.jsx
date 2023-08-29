@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { ClientForm } from "../components";
-import { TransHeroTemplate, TransInfoCards } from "../atoms";
+import { CountryHeroTemplate, TransInfoCards } from "../atoms";
 import { useEffect } from "react";
 
 const RailTrans = () => {
@@ -11,10 +11,15 @@ const RailTrans = () => {
   const contentPath = "transpages.rail.content.";
   return (
     <>
-      <TransHeroTemplate
+      <CountryHeroTemplate
         title={t("transpages.rail.title")}
         classBg="rail-trans__bg"
+        tariff={t("transpages.rail.tariff.value")}
+        terms={t("transpages.rail.terms.value")}
+        page={t("header.nav.services")}
+        unit={t("transpages.rail.title")}
         disclaimer={true}
+        sale={true}
       />
       <section className=" conditions__section">
         <div className="container">
