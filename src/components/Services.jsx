@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import { breakpoints } from "../constants/breakpoints";
 import { servicesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
+import { CustomLink } from "atoms/CustomLink";
 export const Services = () => {
   const [expandedCards, setExpandedCard] = useState([]);
 
@@ -124,13 +124,19 @@ export const Services = () => {
                     </ul>
                   </div>
                   <div className="services__btn-wrapper">
-                    <Link
+                    <CustomLink
+                      linkClass="button-common service__btn"
+                      to={`${ref}`}
+                      ariaLabel="go to the page with detailed information about this service"
+                      text={t(`services.card${id}.btn`)}
+                    />
+                    {/* <Link
                       to={`${ref}`}
                       className="button-common service__btn"
                       aria-label="go to the page with detailed information about this service"
                     >
                       {t(`services.card${id}.btn`)}
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </li>

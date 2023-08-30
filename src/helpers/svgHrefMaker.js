@@ -1,3 +1,3 @@
 export const svgHrefMaker = (svgName) => {
-  return `../images/sprite.svg#${svgName}`;
+  return `../../images/sprite.svg#${svgName}`;
 };

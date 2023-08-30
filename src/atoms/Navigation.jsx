@@ -1,17 +1,18 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { svgHrefMaker } from "../helpers";
+import { CustomNavLink } from "./CustomLink";
 
 export const Navigation = ({ onClose }) => {
   const { t } = useTranslation();
 
   const navigate = useNavigate();
-
+  const { lang } = useParams();
   const handleClick = (section) => {
     if (onClose) {
       onClose();
     }
-    navigate("/", { state: { section } });
+    navigate(`/${lang}`, { state: { section } });
   };
   return (
     <nav>
@@ -25,46 +26,66 @@ export const Navigation = ({ onClose }) => {
           </p>
           <ul className="countries__list ">
             <li className="countries__item">
-              <NavLink
-                className="navigation__country-link"
+              <CustomNavLink
+                linkClass="navigation__country-link"
                 to="/sea-transportation"
-                onClick={onClose}
-                aria-label="move to delivery from SthKorea"
-              >
-                {t("services.card1.title")}
-              </NavLink>
+                onClose={onClose}
+                ariaLabel="move to sea transportation"
+                text={t("services.card1.title")}
+              />
             </li>
             <li className="countries__item">
-              <NavLink
+              <CustomNavLink
+                linkClass="navigation__country-link"
+                to="/air-transportation"
+                onClose={onClose}
+                ariaLabel="move to air transportation"
+                text={t("services.card2.title")}
+              />
+              {/* <NavLink
                 className="navigation__country-link"
                 to="/air-transportation"
                 onClick={onClose}
                 aria-label="move to delivery from Europe"
               >
                 {t("services.card2.title")}
-              </NavLink>
+              </NavLink> */}
             </li>
             <li className="countries__item">
-              <NavLink
+              <CustomNavLink
+                linkClass="navigation__country-link"
+                to="/rail-transportation"
+                onClose={onClose}
+                ariaLabel="move to rail transportation"
+                text={t("services.card3.title")}
+              />
+              {/* <NavLink
                 className="navigation__country-link"
                 to="/rail-transportation"
                 onClick={onClose}
                 aria-label="move to delivery from Europe"
               >
                 {t("services.card3.title")}
-              </NavLink>
+              </NavLink> */}
             </li>
           </ul>
         </li>
         <li className="navigation-item">
-          <NavLink
+          <CustomNavLink
+            linkClass="navigation__link"
+            to="/transportation-requirements"
+            onClose={onClose}
+            ariaLabel="move to transportation requirements"
+            text={t("header.nav.conditions")}
+          />
+          {/* <NavLink
             to="/transportation-requirements"
             className="navigation__link"
             onClick={onClose}
             aria-label="move to transportation requirements"
           >
             {t("header.nav.conditions")}
-          </NavLink>
+          </NavLink> */}
         </li>
         <li className="navigation-item countries-list__activator">
           <p className="countries__title">
@@ -75,24 +96,38 @@ export const Navigation = ({ onClose }) => {
           </p>
           <ul className="countries__list">
             <li className="countries__item">
-              <NavLink
+              <CustomNavLink
+                linkClass="navigation__country-link"
+                to="/delivery-from-SthKorea"
+                onClose={onClose}
+                ariaLabel="move to delivery from SthKorea"
+                text={t("header.countries.country1")}
+              />
+              {/* <NavLink
                 className="navigation__country-link"
                 to="/delivery-from-SthKorea"
                 onClick={onClose}
                 aria-label="move to delivery from SthKorea"
               >
                 {t("header.countries.country1")}
-              </NavLink>
+              </NavLink> */}
             </li>
             <li className="countries__item">
-              <NavLink
+              <CustomNavLink
+                linkClass="navigation__country-link"
+                to="/delivery-from-Europe"
+                onClose={onClose}
+                ariaLabel="move to delivery from Europe"
+                text={t("header.countries.country2")}
+              />
+              {/* <NavLink
                 className="navigation__country-link"
                 to="/delivery-from-Europe"
                 onClick={onClose}
                 aria-label="move to delivery from Europe"
               >
                 {t("header.countries.country2")}
-              </NavLink>
+              </NavLink> */}
             </li>
           </ul>
         </li>
@@ -108,23 +143,37 @@ export const Navigation = ({ onClose }) => {
           </button>
         </li>
         <li className="navigation-item blog--desktop" onClick={onClose}>
-          <NavLink
+          <CustomNavLink
+            linkClass="navigation__link"
+            to="/blog"
+            onClose={onClose}
+            ariaLabel="move to Blog"
+            text={t("header.nav.blog")}
+          />
+          {/* <NavLink
             to="/blog"
             className="navigation__link"
             aria-label="move to Blog"
           >
             {t("header.nav.blog")}
-          </NavLink>
+          </NavLink> */}
         </li>
         <li className="navigation-item ">
-          <NavLink
+          <CustomNavLink
+            linkClass="navigation__link"
+            to="/reviews"
+            onClose={onClose}
+            ariaLabel="move to reviews section"
+            text={t("header.nav.reviews")}
+          />
+          {/* <NavLink
             to="/reviews"
             className="navigation__link"
             aria-label="move to partners section"
             onClick={onClose}
           >
             {t("header.nav.reviews")}
-          </NavLink>
+          </NavLink> */}
         </li>
         <li className="navigation-item">
           <button

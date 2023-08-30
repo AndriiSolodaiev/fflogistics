@@ -1,8 +1,7 @@
+import { CustomLink } from "atoms/CustomLink";
 import { breakpoints } from "../constants/breakpoints";
 import { advantagesCards } from "../dictionary";
 import { useTranslation } from "react-i18next";
-
-import { Link } from "react-router-dom";
 
 export const Advantages = () => {
   const { t } = useTranslation();
@@ -82,9 +81,15 @@ export const Advantages = () => {
             )}
           </ul>
           <div className="advantages__reviews-btn">
-            <Link to="/reviews" className="button-common">
+            <CustomLink
+              linkClass="button-common"
+              to="/reviews"
+              ariaLabel="go to reviews"
+              text={t(`advantages.reviews-btn`)}
+            />
+            {/* <Link to="/reviews" className="button-common">
               {t(`advantages.reviews-btn`)}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

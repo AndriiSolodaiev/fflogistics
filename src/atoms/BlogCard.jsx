@@ -1,6 +1,7 @@
 import { svgHrefMaker } from "helpers";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+
+import { CustomLink } from "./CustomLink";
 
 export const BlogCard = ({ id, img, imgWebp, date }) => {
   const { t } = useTranslation();
@@ -28,13 +29,19 @@ export const BlogCard = ({ id, img, imgWebp, date }) => {
         <p className="blog-article__intro">
           {t(`blogpages.article${id}.content.intro`)}
         </p>
-        <Link
+        <CustomLink
+          linkClass="blog-article__link"
+          to={`/blog/${id}`}
+          ariaLabel="go to article"
+          text={t(`blogpages.readmore`)}
+        />
+        {/* <Link
           to={`/blog/${id}`}
           className="blog-article__link"
           aria-label="go to article"
         >
           {t(`blogpages.readmore`)}
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

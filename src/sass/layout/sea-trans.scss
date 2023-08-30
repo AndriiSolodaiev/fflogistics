@@ -14,7 +14,7 @@
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
-    background-image: linear-gradient(to left, #39393962, #393939 730px),
+    background-image: linear-gradient(to left, #39393962, #393939 700px),
       url("#{$public-url}tablet/hero-bg/bg1-tablet.png");
   }
 }

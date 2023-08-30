@@ -6,7 +6,8 @@ import { Form, FormSubmitted, Socials } from "../atoms";
 import { imgSrcMaker } from "../helpers/imgSrcMaker";
 import MediaQuery from "react-responsive";
 import { breakpoints } from "../constants/breakpoints";
-import { Link } from "react-router-dom";
+
+import { CustomLink } from "atoms/CustomLink";
 
 export const ClientForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -36,7 +37,12 @@ export const ClientForm = () => {
           ) : (
             <>
               <div className="client-form__header">
-                <Link to="/" className="logo" aria-label="go to home page">
+                <CustomLink
+                  linkClass="logo"
+                  to=""
+                  ariaLabel="go to home page"
+                  text={false}
+                >
                   <picture>
                     <source
                       srcSet={`${imgSrcMaker(
@@ -57,7 +63,7 @@ export const ClientForm = () => {
                       alt="logo"
                     />
                   </picture>
-                </Link>
+                </CustomLink>
                 <Socials />
               </div>
 

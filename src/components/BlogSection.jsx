@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { blogImages } from "dictionary";
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 import { BlogCard } from "atoms";
+import { CustomLink } from "atoms/CustomLink";
 
 const ArrowNext = ({ style, onClick }) => {
   return (
@@ -53,13 +53,19 @@ export const BlogSection = () => {
         </Slider>
 
         <div className="blog-container">
-          <Link
+          <CustomLink
+            linkClass="blog__loadmore-btn"
+            to="/blog"
+            ariaLabel="go to blog"
+            text={t("blog.loadmoreBtn")}
+          />
+          {/* <Link
             to="/blog"
             className="blog__loadmore-btn"
             aria-label="go to blog"
           >
             {t("blog.loadmoreBtn")}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

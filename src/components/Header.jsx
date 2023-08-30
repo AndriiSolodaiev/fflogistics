@@ -6,11 +6,30 @@ import { useTranslation } from "react-i18next";
 import MediaQuery from "react-responsive";
 import { breakpoints } from "../constants/breakpoints";
 import { imgSrcMaker } from "../helpers/imgSrcMaker";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { CustomLink } from "atoms/CustomLink";
 export const Header = () => {
   const { isOpen, open, close } = useToggle();
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
+  const changeLanguage = (newLang) => {
+    const currentLocationFunc = () => {
+      if (
+        location.pathname.startsWith("/uk/") ||
+        location.pathname.startsWith("/ru/")
+      ) {
+        console.log("include");
+        return location.pathname.split("/").slice(2, 4).join("/");
+      }
+      return location.pathname;
+    };
+    const currentLocation = currentLocationFunc();
+    console.log(currentLocationFunc());
+    navigate(`/${newLang}/${currentLocation}`);
+  };
   return (
     <header>
       <div className="header__container">
@@ -30,7 +49,12 @@ export const Header = () => {
               </a>
             </div>
           </MediaQuery>
-          <Link to="/" className="logo" aria-label="go to home page">
+          <CustomLink
+            linkClass="logo"
+            to=""
+            ariaLabel="go to home page"
+            text={false}
+          >
             <picture>
               <source
                 srcSet={`${imgSrcMaker(
@@ -80,7 +104,7 @@ export const Header = () => {
                 alt="logo"
               />
             </picture>
-          </Link>
+          </CustomLink>
 
           <ul className="header__contacts-list">
             <li className="header__phone-mobile">
@@ -114,6 +138,7 @@ export const Header = () => {
               onClick={() => {
                 i18n.changeLanguage("uk");
                 localStorage.setItem("language", "uk");
+                changeLanguage("uk");
               }}
               aria-label="change the language to Ukranian"
             >
@@ -126,6 +151,7 @@ export const Header = () => {
               onClick={() => {
                 i18n.changeLanguage("ru");
                 localStorage.setItem("language", "ru");
+                changeLanguage("ru");
               }}
               aria-label="change the language to russian"
             >
