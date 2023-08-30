@@ -24,11 +24,11 @@ export const Header = () => {
         console.log("include");
         return location.pathname.split("/").slice(2, 4).join("/");
       }
-      return location.pathname;
+      return "";
     };
     const currentLocation = currentLocationFunc();
     console.log(currentLocationFunc());
-    navigate(`/${newLang}/${currentLocation}`);
+    navigate(`/${currentLocation ? newLang + "/" + currentLocation : newLang}`);
   };
   return (
     <header>
