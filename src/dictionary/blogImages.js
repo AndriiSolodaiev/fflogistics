@@ -37,4 +37,34 @@ export const blogImages = [
     imgWebp: imgSrcMaker("mobile/blogImg/article6.webp"),
     date: "03.07.2023",
   },
+  {
+    id: 7,
+    img: imgSrcMaker("mobile/blogImg/article7.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article7.webp"),
+    date: "25.07.2023",
+  },
+  {
+    id: 8,
+    img: imgSrcMaker("mobile/blogImg/article8.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article8.webp"),
+    date: "10.08.2023",
+  },
+  {
+    id: 9,
+    img: imgSrcMaker("mobile/blogImg/article9.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article9.webp"),
+    date: "25.08.2023",
+  },
+  {
+    id: 10,
+    img: imgSrcMaker("mobile/blogImg/article10.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article10.webp"),
+    date: "02.09.2023",
+  },
+  {
+    id: 11,
+    img: imgSrcMaker("mobile/blogImg/article11.jpg"),
+    imgWebp: imgSrcMaker("mobile/blogImg/article11.webp"),
+    date: "10.09.2023",
+  },
 ];

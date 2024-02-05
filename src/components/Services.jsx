@@ -126,7 +126,7 @@ export const Services = () => {
                   <div className="services__btn-wrapper">
                     <CustomLink
                       linkClass="button-common service__btn"
-                      to={`${ref}`}
+                      to={`/${ref}`}
                       ariaLabel="go to the page with detailed information about this service"
                       text={t(`services.card${id}.btn`)}
                     />

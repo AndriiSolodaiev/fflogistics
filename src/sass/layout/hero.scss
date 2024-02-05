@@ -12,7 +12,124 @@
     padding-bottom: 82px;
   }
 }
+.hero {
+  .slick-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    border-radius: 0;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    left: 255px;
+    top: 80%;
+    transform: translate(0, 0);
+    &:hover {
+      background-image: transparent;
+      box-shadow: transparent;
+
+      &::before {
+        opacity: 1;
+        font-size: 18px;
+      }
+    }
+
+    &::before {
+      content: url("#{$public-url}arrow-slick.svg");
+      color: $accent-color;
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      height: 48px;
+      width: 48px;
+      transform: scale(1.4);
+      left: 340px;
+    }
+  }
+  .slick-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 0);
+    border-radius: 0;
+    background-color: transparent;
+    z-index: 3;
+    height: 30px;
+    width: 30px;
+    left: 30px;
+    top: 80%;
+    rotate: 180deg;
+    &:hover {
+      background-image: transparent;
+      box-shadow: transparent;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: url("#{$public-url}arrow-slick.svg");
+      opacity: 0.5;
+      color: $accent-color;
+      rotate: 180deg;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      height: 48px;
+      width: 48px;
+      transform: scale(1.4);
+      left: 80px;
+    }
+  }
+  .slick-dots {
+    top: 80%;
+    left: 75px;
+    z-index: 1;
+    display: flex;
+    width: fit-content;
+    li {
+      button {
+        width: 10px;
+        height: 10px;
+        &::before {
+          content: "";
+          opacity: 1;
+          display: block;
+
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          outline: 4px solid $accent-color;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        &::before {
+          background-color: $accent-color;
+        }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      left: 150px;
+      top: 81%;
+      li {
+        button {
+          width: 10px;
+          height: 10px;
+          &::before {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}
 .hero__title {
   background: $gradient-color;
   -webkit-background-clip: text;
@@ -70,8 +187,6 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 50px;
-
-
 }
 
 .hero__advantages-list {
@@ -111,7 +226,6 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-
 }
 
 .hero__button {
@@ -133,53 +247,58 @@
 .hero__bgimg {
   width: 100%;
   background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-  url("#{$public-url}mobile/hero-bg-mobile.png");
+    url("#{$public-url}mobile/hero-bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-
-  @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile.webp")) {
+  @supports (
     background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile.webp");
+    url("#{$public-url}mobile/hero-bg-mobile.webp")
+  ) {
+    background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}mobile/hero-bg-mobile.webp");
   }
 
-
   @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile@2x.png");
+      url("#{$public-url}mobile/hero-bg-mobile@2x.png");
 
-    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile@2x.webp")) {
+    @supports (
       background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile@2x.webp");
+      url("#{$public-url}mobile/hero-bg-mobile@2x.webp")
+    ) {
+      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+        url("#{$public-url}mobile/hero-bg-mobile@2x.webp");
     }
   }
 
-
   @media screen and (min-width: $breakpoint-tablet) {
     background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),
-    linear-gradient(#393939fd, #393939a1, #393939fd),
-    url("#{$public-url}tablet/bg-plane-tablet.png");
+      linear-gradient(#393939fd, #393939a1, #393939fd),
+      url("#{$public-url}tablet/bg-plane-tablet.png");
 
-    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}tablet/bg-plane-tablet.webp")) {
+    @supports (
       background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}tablet/bg-plane-tablet.webp");
+      url("#{$public-url}tablet/bg-plane-tablet.webp")
+    ) {
+      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+        url("#{$public-url}tablet/bg-plane-tablet.webp");
     }
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
     background-image: linear-gradient(#393939fd, #39393998, #393939fd),
-    url("#{$public-url}desktop/bg-desktop.png");
+      url("#{$public-url}desktop/bg-desktop.png");
 
-    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}desktop/bg-desktop.webp")) {
+    @supports (
       background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}desktop/bg-desktop.webp");
+      url("#{$public-url}desktop/bg-desktop.webp")
+    ) {
+      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+        url("#{$public-url}desktop/bg-desktop.webp");
     }
   }
 }
@@ -214,5 +333,111 @@
   @media screen and (min-width: $breakpoint-desktop) {
     font-size: 48px;
     font-weight: 700;
+  }
+}
+
+//Promo
+.hero-promo__wrap {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 50px;
+}
+.hero-promo__title {
+  color: white;
+  text-align: center;
+  text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 14px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+  }
+}
+.hero-promo__list {
+  list-style: disc;
+  font-weight: 600;
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 50px;
+  font-size: 14px;
+  margin-top: 20px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    gap: 10px;
+    padding-left: 100px;
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 15px;
+    padding-left: 200px;
+    font-size: 26px;
+    margin-top: 40px;
+  }
+}
+
+.promo-bg {
+  background-size: cover;
+  background-color: #999999;
+  background-image: linear-gradient(#db831f78, #39393950, #393939fd),
+    url("#{$public-url}desktop/hero-bg/bg-promo-desktop.png");
+}
+
+@keyframes fill {
+  from {
+    color: #ffde00;
+  }
+  to {
+    color: #ffdd009d;
+  }
+}
+
+.hero-promo__accent {
+  text-align: center;
+  text-shadow: 0px 7px 7px rgba(255, 144, 0, 0.8);
+  font-weight: 500;
+  line-height: normal;
+  -webkit-text-stroke: 1px rgb(182, 93, 93);
+  animation: fill 1s infinite;
+  font-size: 20px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+  }
+}
+.timerPromo {
+  align-self: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+.timerPromo__wrap {
+  display: flex;
+  color: $accent-color;
+  text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+  background: $gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  gap: 10px;
+  flex-wrap: wrap;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 32px;
+    gap: 15px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 40px;
+    gap: 20px;
   }
 }

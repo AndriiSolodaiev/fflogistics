@@ -21,13 +21,12 @@ export const Header = () => {
         location.pathname.startsWith("/uk/") ||
         location.pathname.startsWith("/ru/")
       ) {
-        console.log("include");
         return location.pathname.split("/").slice(2, 4).join("/");
       }
       return "";
     };
     const currentLocation = currentLocationFunc();
-    console.log(currentLocationFunc());
+
     navigate(`/${currentLocation ? newLang + "/" + currentLocation : newLang}`);
   };
   return (

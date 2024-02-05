@@ -1,187 +1,354 @@
 .article-content__section {
-    background-color: $textcolor;
-    padding-bottom: 100px;
-
+  background-color: $textcolor;
+  padding-bottom: 100px;
 }
 
 .article__hero-bg {
-    height: 170px;
-    width: 100%;
-    padding-top: 50px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  height: 170px;
+  width: 100%;
+  padding-top: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-        #fff 100%),
-    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-        #fff 98%),
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
     url("#{$public-url}mobile/blogImg/article1.png");
 
-    @supports (background-image: url("#{$public-url}mobile/blogImg/article1.webp")) {
-        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-            #fff 100%),
-        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-            #fff 98%),
-        url("#{$public-url}mobile/blogImg/article1.webp");
-    }
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article1.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article1.webp");
+  }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        height: 250px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    height: 250px;
 
-        padding-top: 96px;
+    padding-top: 96px;
+  }
 
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        height: 400px;
-        padding-top: 130px;
-
-    }
-
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 400px;
+    padding-top: 130px;
+  }
 }
 
 .article2__hero-bg {
-    @extend .article__hero-bg;
-    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-        #fff 100%),
-    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-        #fff 98%),
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
     url("#{$public-url}mobile/blogImg/article2.jpg");
 
-    @supports (background-image: url("#{$public-url}mobile/blogImg/article2.webp")) {
-        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-            #fff 100%),
-        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-            #fff 98%),
-        url("#{$public-url}mobile/blogImg/article2.webp");
-    }
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article2.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article2.webp");
+  }
 }
 
 .article3__hero-bg {
-    @extend .article__hero-bg;
-    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-        #fff 100%),
-    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-        #fff 98%),
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
     url("#{$public-url}mobile/blogImg/article3.jpg");
 
-    @supports (background-image: url("#{$public-url}mobile/blogImg/article3.webp")) {
-        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-            #fff 100%),
-        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-            #fff 98%),
-        url("#{$public-url}mobile/blogImg/article3.webp");
-    }
-
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article3.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article3.webp");
+  }
 }
 
 .article4__hero-bg {
-    @extend .article__hero-bg;
-    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-        #fff 100%),
-    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-        #fff 98%),
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
     url("#{$public-url}mobile/blogImg/article4.jpg");
 
-    @supports (background-image: url("#{$public-url}mobile/blogImg/article4.webp")) {
-        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-            #fff 100%),
-        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-            #fff 98%),
-        url("#{$public-url}mobile/blogImg/article4.webp");
-    }
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article4.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article4.webp");
+  }
 }
 
 .article5__hero-bg {
-    @extend .article__hero-bg;
-    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-        #fff 100%),
-    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-        #fff 98%),
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
     url("#{$public-url}mobile/blogImg/article5.jpg");
 
-    @supports (background-image: url("#{$public-url}mobile/blogImg/article5.webp")) {
-        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-            #fff 100%),
-        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-            #fff 98%),
-        url("#{$public-url}mobile/blogImg/article5.webp");
-    }
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article5.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article5.webp");
+  }
 }
 
 .article6__hero-bg {
-    @extend .article__hero-bg;
-    background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-        #fff 100%),
-    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-        #fff 98%),
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
     url("#{$public-url}mobile/blogImg/article6.jpg");
 
-    @supports (background-image: url("#{$public-url}mobile/blogImg/article6.webp")) {
-        background-image: linear-gradient(to bottom, #fff 2%, #ffffff80 10% 60%,
-            #fff 100%),
-        linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%,
-            #fff 98%),
-        url("#{$public-url}mobile/blogImg/article6.webp");
-    }
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article6.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article6.webp");
+  }
+}
+
+.article7__hero-bg {
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+    url("#{$public-url}mobile/blogImg/article7.jpg");
+
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article7.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article7.webp");
+  }
+}
+.article8__hero-bg {
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+    url("#{$public-url}mobile/blogImg/article8.jpg");
+
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article8.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article8.webp");
+  }
+}
+.article9__hero-bg {
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+    url("#{$public-url}mobile/blogImg/article9.jpg");
+
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article9.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article9.webp");
+  }
+}
+.article10__hero-bg {
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+    url("#{$public-url}mobile/blogImg/article10.jpg");
+
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article10.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article10.webp");
+  }
+}
+
+.article11__hero-bg {
+  @extend .article__hero-bg;
+  background-image: linear-gradient(
+      to bottom,
+      #fff 2%,
+      #ffffff80 10% 60%,
+      #fff 100%
+    ),
+    linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+    url("#{$public-url}mobile/blogImg/article11.jpg");
+
+  @supports (
+    background-image: url("#{$public-url}mobile/blogImg/article11.webp")
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        #fff 2%,
+        #ffffff80 10% 60%,
+        #fff 100%
+      ),
+      linear-gradient(to left, #fff 2%, #ffffff4f 10% 90%, #fff 98%),
+      url("#{$public-url}mobile/blogImg/article11.webp");
+  }
 }
 
 .article-contet__title {
-    font-size: 20px;
+  font-size: 20px;
 
-    text-align: center;
+  text-align: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 32px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 32px;
+  }
 
-
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-
-        font-size: 48px;
-        font-weight: 700;
-
-    }
-
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+    font-weight: 700;
+  }
 }
 
 .article__list-wrapper {
-    position: relative;
-    top: -40px;
+  position: relative;
+  top: -40px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        top: -50px;
-
-    }
-
-
+  @media screen and (min-width: $breakpoint-tablet) {
+    top: -50px;
+  }
 }
 
 .article-content__list-title {
-    font-weight: 700;
+  font-weight: 700;
 
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 22px;
+  }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 22px;
-
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 24px;
-
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 24px;
+  }
 }
 
 .article-contet__dialog {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: "\2014";
-        position: absolute;
-        top: 0;
-        left: -30px;
-
-    }
+  &::before {
+    content: "\2014";
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
+}
+.article-content__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.article-content__img {
+  width: 300px;
+  height: auto;
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 500px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 800px;
+  }
 }

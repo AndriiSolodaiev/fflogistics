@@ -1,174 +1,156 @@
 .blog-section {
-    background-color: $secondary-background-color;
-    padding-top: 35px;
-    padding-bottom: 35px;
+  background-color: $secondary-background-color;
+  padding-top: 35px;
+  padding-bottom: 35px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        padding-top: 40px;
-        padding-bottom: 60px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        padding-top: 60px;
-        padding-bottom: 80px;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
 }
 
 .blog-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .blog__title {
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 1.23;
-    color: $textcolor;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-align: center;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.23;
+  color: $textcolor;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        color: $button-color;
-        font-size: 32px;
-        margin-bottom: 60px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    color: $button-color;
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 33px;
-    }
-
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 33px;
+  }
 }
 
 .blog__subtitle {
-    font-weight: 600;
-    font-size: 16px;
-    color: $button-color;
-    margin-bottom: 15px;
-    text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: $button-color;
+  margin-bottom: 15px;
+  text-align: center;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        display: none;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: none;
+  }
 }
 
-
-
 .article__date-wrapper {
-    display: flex;
-    gap: 4px;
-
+  display: flex;
+  gap: 4px;
 }
 
 .article__date-icon {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        width: 20px;
-        height: 20px;
-        display: flex;
-    }
-
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 20px;
+    height: 20px;
+    display: flex;
+  }
 }
 
-
 .article__date {
-    @media screen and (min-width: $breakpoint-tablet) {
-        font-size: 14px;
-    }
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 14px;
+  }
 }
 
 .blog__loadmore-btn {
+  @extend .button-common;
+  margin-top: 40px;
 
-    @extend .button-common;
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: block;
+    padding: 14px 48px;
+    color: $primary-font-color;
     margin-top: 40px;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-
-        display: block;
-        padding: 14px 48px;
-        color: $primary-font-color;
-        margin-top: 40px;
-
-        &:hover,
-        &:focus {
-            padding: 14px 70px;
-        }
+    &:hover,
+    &:focus {
+      padding: 14px 70px;
     }
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        background-color: $button-color;
-        padding: 11px 50px;
-        font-size: 16px;
-        font-weight: 600;
-        margin-top: 60px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    background-color: $button-color;
+    padding: 11px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 60px;
 
-        &:hover,
-        &:focus {
-            background-color: $accent-color;
-            padding: 11px 70px;
-        }
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      padding: 11px 70px;
     }
+  }
 }
-
-.slick-next {
+.blog-section {
+  .slick-next {
     display: block;
     height: 440px;
     border-radius: 0px;
     border-radius: 0 50% 50% 0;
     background-color: $slick-arrows-bg-color;
 
-
     &:hover {
-        background-image: $gradient-color;
-        box-shadow: $box-shadow-hover;
+      background-image: $gradient-color;
+      box-shadow: $box-shadow-hover;
 
-        &::before {
-            font-size: 18px;
-        }
+      &::before {
+        font-size: 18px;
+      }
     }
 
     &::before {
-        content: "⮞";
-        font-size: 18px;
-
+      content: "⮞";
+      font-size: 18px;
     }
 
     @media screen and (min-width: $breakpoint-tablet) {
-        height: 210px;
+      height: 210px;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-        height: 240px;
-        width: 40px;
-        right: -40px;
-
+      height: 240px;
+      width: 40px;
+      right: -40px;
     }
+  }
 
-}
-
-.slick-prev {
+  .slick-prev {
     @extend .slick-next;
 
     border-radius: 50% 0 0 50%;
 
-
-
-
     &::before {
-        content: "⮜";
-
+      content: "⮜";
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-
-        left: -40px;
-
+      left: -40px;
     }
+  }
 }

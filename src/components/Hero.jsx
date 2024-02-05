@@ -8,20 +8,25 @@ import { BtnOpenModal, Socials } from "../atoms";
 import Slider from "react-slick";
 import { useMediaQuery } from "react-responsive";
 
+import TimerPromo from "atoms/TimerPromo";
+
 export const Hero = () => {
   const { isOpen, open, close } = useToggle();
   const { t, i18n } = useTranslation();
+
   const sliderSettings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    autoplay: true,
-    arrows: false,
-    autoplaySpeed: 4000,
-    speed: 1000,
+    autoplay: true, //true
+    autoplaySpeed: 7000,
+    arrows: true,
+    fade: true,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
   };
+
   const matchesDesktop = useMediaQuery({
     query: `(min-width:${breakpoints.desktop}px)`,
   });
@@ -37,10 +42,10 @@ export const Hero = () => {
   const backgroundImageTablet = supportsWebP() ? "webp" : "png";
   const backgroundImageDesktop = supportsWebP() ? "webp" : "png";
   return (
-    <section>
+    <section className="hero">
       <MediaQuery minWidth={breakpoints.tablet}>
         <Slider {...sliderSettings}>
-          <div className=" hero__bgimg">
+          <div className=" hero__bgimg" data-slick-autoplay="10000">
             <div className="container hero__container">
               <h1
                 className={
@@ -74,6 +79,30 @@ export const Hero = () => {
               />
             </div>
           </div>
+          {/* Promo start*/}
+          {/* <div className=" hero__bgimg promo-bg">
+            <div className="container hero__container hero-promo__wrap">
+              <h2 className="hero-promo__title">{t("hero.promo.title")}</h2>
+
+              <ul className="hero-promo__list">
+                {t("hero.promo.list")
+                  .split("&")
+                  .map((item, index) => (
+                    <li className="" key={index}>
+                      {item}
+                    </li>
+                  ))}
+              </ul>
+
+              <TimerPromo />
+              <BtnOpenModal
+                openModal={open}
+                title={t("hero.promo.accent")}
+                classBtn="hero-promo__accent"
+              />
+            </div>
+          </div> */}
+          {/* Promo end */}
           {t("hero.slidertitles")
             .split("$")
             .map((title, index) => (
@@ -129,6 +158,29 @@ export const Hero = () => {
             />
           </div>
         </div>
+        {/* Promo start*/}
+        <div className=" hero__bgimg promo-bg">
+          <div className="container hero__container hero-promo__wrap">
+            <h2 className="hero-promo__title">{t("hero.promo.title")}</h2>
+
+            <ul className="hero-promo__list">
+              {t("hero.promo.list")
+                .split("&")
+                .map((item, index) => (
+                  <li className="" key={index}>
+                    {item}
+                  </li>
+                ))}
+            </ul>
+            <TimerPromo />
+            <BtnOpenModal
+              openModal={open}
+              title={t("hero.promo.accent")}
+              classBtn="hero-promo__accent"
+            />
+          </div>
+        </div>
+        {/* Promo end */}
       </MediaQuery>
 
       <ModalForm isOpen={isOpen} onClose={close} />
