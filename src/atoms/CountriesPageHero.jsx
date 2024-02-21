@@ -75,7 +75,7 @@ export const CountryHeroTemplate = ({
                   {t("transpages.formdescr")}
                 </p>
                 <Form
-                  submitHandler={() => setFormSubmitted(true)}
+                  submitHandler={(result) => setFormSubmitted(result)}
                   background={""}
                 />
               </div>

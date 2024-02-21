@@ -1,11 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { useForm, ValidationError } from "@formspree/react";
 import * as yup from "yup";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InputMask from "react-input-mask";
 
 export const Form = ({ submitHandler, buttonStyle, background }) => {
-  const [state, handleSubmit] = useForm("myyqypaq");
+  const [state, handleSubmit] = useForm("myyqypaq"); 
+  // const [state, handleSubmit] = useForm("myyqgpnv"); тест
+  useEffect (()=> {submitHandler(state.succeeded); console.log(state.succeeded)},[state.succeeded, submitHandler])
+  
+  
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -36,8 +40,7 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
 
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    await handleSubmit(event);
-    await submitHandler(true);
+    handleSubmit(event);
   };
 
   const handleBlurValidation = async (e) => {

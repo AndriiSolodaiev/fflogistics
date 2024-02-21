@@ -8,7 +8,7 @@ import { BtnOpenModal, Socials } from "../atoms";
 import Slider from "react-slick";
 import { useMediaQuery } from "react-responsive";
 
-import TimerPromo from "atoms/TimerPromo";
+// import TimerPromo from "atoms/TimerPromo";
 
 export const Hero = () => {
   const { isOpen, open, close } = useToggle();
@@ -159,7 +159,7 @@ export const Hero = () => {
           </div>
         </div>
         {/* Promo start*/}
-        <div className=" hero__bgimg promo-bg">
+        {/* <div className=" hero__bgimg promo-bg">
           <div className="container hero__container hero-promo__wrap">
             <h2 className="hero-promo__title">{t("hero.promo.title")}</h2>
 
@@ -179,7 +179,7 @@ export const Hero = () => {
               classBtn="hero-promo__accent"
             />
           </div>
-        </div>
+        </div> */}
         {/* Promo end */}
       </MediaQuery>
 
