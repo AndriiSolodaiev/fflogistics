@@ -17,6 +17,7 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
   const [errors, setErrors] = useState({});
 
   const { t } = useTranslation();
+  
 
   const validationSchema = yup.object().shape({
     name: yup
@@ -29,7 +30,14 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
       .test("len", t("form.validation.phone-pattern"), (val) => {
         const val_length_without_dashes = val.replace(/_/g, "").length;
         return val_length_without_dashes === 17;
-      }),
+      }).test(
+        "no-zeroes",
+        t("form.validation.phone-no-zero") ,
+        (val) => {
+          return val.charAt(5) !== "0" && val.charAt(6) !== "0";
+        }
+      )
+      
   });
 
   const handleChange = (e) => {
