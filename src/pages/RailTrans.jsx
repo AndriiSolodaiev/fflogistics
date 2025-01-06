@@ -62,8 +62,8 @@ const RailTrans = () => {
 
             <li>
               {t(`${contentPath}conclusions`)}
-              <b>{t(`${contentPath}warning`)}</b>
-              {t(`${contentPath}conclusions-ending`)}
+              {/* <b>{t(`${contentPath}warning`)}</b> */}
+              {/* {t(`${contentPath}conclusions-ending`)} */}
             </li>
           </ul>
         </div>

@@ -12,10 +12,18 @@
     padding-bottom: 82px;
   }
 }
+
 .hero {
-  .slick{.slick-slide {pointer-events: none ;}
-  .slick-active{pointer-events: all;}}
-  
+  .slick-slider {
+    .slick-slide {
+      pointer-events: none;
+    }
+
+    .slick-active {
+      pointer-events: all;
+    }
+  }
+
   .slick-next {
     display: flex;
     justify-content: center;
@@ -28,6 +36,7 @@
     left: 226px;
     top: 80%;
     transform: translate(0, 0);
+
     &:hover {
       background-image: transparent;
       box-shadow: transparent;
@@ -51,6 +60,7 @@
       left: 310px;
     }
   }
+
   .slick-prev {
     display: flex;
     justify-content: center;
@@ -64,6 +74,7 @@
     left: 30px;
     top: 80%;
     rotate: 180deg;
+
     &:hover {
       background-image: transparent;
       box-shadow: transparent;
@@ -87,16 +98,19 @@
       left: 80px;
     }
   }
+
   .slick-dots {
     top: 80%;
     left: 75px;
     z-index: 1;
     display: flex;
     width: fit-content;
+
     li {
       button {
         width: 10px;
         height: 10px;
+
         &::before {
           content: "";
           opacity: 1;
@@ -109,6 +123,7 @@
         }
       }
     }
+
     .slick-active {
       button {
         &::before {
@@ -120,10 +135,12 @@
     @media screen and (min-width: $breakpoint-desktop) {
       left: 150px;
       top: 81%;
+
       li {
         button {
           width: 10px;
           height: 10px;
+
           &::before {
             width: 10px;
             height: 10px;
@@ -133,6 +150,7 @@
     }
   }
 }
+
 .hero__title {
   background: $gradient-color;
   -webkit-background-clip: text;
@@ -250,58 +268,50 @@
 .hero__bgimg {
   width: 100%;
   background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile.png");
+  url("#{$public-url}mobile/hero-bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  @supports (
+  @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+    url("#{$public-url}mobile/hero-bg-mobile.webp")) {
     background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile.webp")
-  ) {
-    background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile.webp");
+    url("#{$public-url}mobile/hero-bg-mobile.webp");
   }
 
   @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
     background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile@2x.png");
+    url("#{$public-url}mobile/hero-bg-mobile@2x.png");
 
-    @supports (
+    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}mobile/hero-bg-mobile@2x.webp")) {
       background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile@2x.webp")
-    ) {
-      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-        url("#{$public-url}mobile/hero-bg-mobile@2x.webp");
+      url("#{$public-url}mobile/hero-bg-mobile@2x.webp");
     }
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
     background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),
-      linear-gradient(#393939fd, #393939a1, #393939fd),
-      url("#{$public-url}tablet/bg-plane-tablet.png");
+    linear-gradient(#393939fd, #393939a1, #393939fd),
+    url("#{$public-url}tablet/bg-plane-tablet.png");
 
-    @supports (
+    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}tablet/bg-plane-tablet.webp")) {
       background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}tablet/bg-plane-tablet.webp")
-    ) {
-      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-        url("#{$public-url}tablet/bg-plane-tablet.webp");
+      url("#{$public-url}tablet/bg-plane-tablet.webp");
     }
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
     background-image: linear-gradient(#393939fd, #39393998, #393939fd),
-      url("#{$public-url}desktop/bg-desktop.png");
+    url("#{$public-url}desktop/bg-desktop.png");
 
-    @supports (
+    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
+      url("#{$public-url}desktop/bg-desktop.webp")) {
       background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}desktop/bg-desktop.webp")
-    ) {
-      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-        url("#{$public-url}desktop/bg-desktop.webp");
+      url("#{$public-url}desktop/bg-desktop.webp");
     }
   }
 }
@@ -346,19 +356,23 @@
 
   padding-top: 50px;
 }
+
 .hero-promo__title {
   color: white;
   text-align: center;
   text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
   font-weight: 700;
   font-size: 14px;
+
   @media screen and (min-width: $breakpoint-tablet) {
     font-size: 32px;
   }
+
   @media screen and (min-width: $breakpoint-desktop) {
     font-size: 48px;
   }
 }
+
 .hero-promo__list {
   list-style: disc;
   font-weight: 600;
@@ -376,6 +390,7 @@
     font-size: 18px;
     margin-top: 40px;
   }
+
   @media screen and (min-width: $breakpoint-desktop) {
     gap: 15px;
     padding-left: 200px;
@@ -388,13 +403,14 @@
   background-size: cover;
   background-color: #999999;
   background-image: linear-gradient(#db831f78, #39393950, #393939fd),
-    url("#{$public-url}desktop/hero-bg/bg-promo-desktop.png");
+  url("#{$public-url}desktop/hero-bg/bg-promo-desktop.png");
 }
 
 @keyframes fill {
   from {
     color: #ffde00;
   }
+
   to {
     color: #ffdd009d;
   }
@@ -408,22 +424,27 @@
   -webkit-text-stroke: 1px rgb(182, 93, 93);
   animation: fill 1s infinite;
   font-size: 20px;
+
   @media screen and (min-width: $breakpoint-tablet) {
     font-size: 36px;
   }
+
   @media screen and (min-width: $breakpoint-desktop) {
     font-size: 48px;
   }
 }
+
 .timerPromo {
   align-self: center;
   margin-top: 15px;
   margin-bottom: 10px;
+
   @media screen and (min-width: $breakpoint-tablet) {
     margin-top: 30px;
     margin-bottom: 20px;
   }
 }
+
 .timerPromo__wrap {
   display: flex;
   color: $accent-color;
@@ -435,10 +456,12 @@
   font-size: 14px;
   gap: 10px;
   flex-wrap: wrap;
+
   @media screen and (min-width: $breakpoint-tablet) {
     font-size: 32px;
     gap: 15px;
   }
+
   @media screen and (min-width: $breakpoint-desktop) {
     font-size: 40px;
     gap: 20px;
