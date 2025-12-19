@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { lazy } from "react";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
+import { SEO } from "atoms";
 const Conditions = lazy(() => import("./pages/Conditions"));
 const AirTrans = lazy(() => import("./pages/AirTrans"));
 const RailTrans = lazy(() => import("./pages/RailTrans"));
@@ -17,6 +18,7 @@ const ReviewsPage = lazy(() => import("./pages/ReviewsPage"));
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
+      <SEO/>
       <Routes>
         <Route path="/:lang" element={<Layout />}>
           <Route index element={<Home />} />

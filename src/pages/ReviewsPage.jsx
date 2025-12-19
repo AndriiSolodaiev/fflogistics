@@ -12,12 +12,12 @@ const ReviewsPage = () => {
         <Helmet>
           <script
             type="text/javascript"
-            src="https://api.otzyvua.net/reviews.js"
+            src="https://api.vidhuk.ua/reviews.js"
             async
           />
           <script
             type="text/javascript"
-            src="//api.otzyvua.net/widget.js"
+            src="//api.vidhuk.ua/widget.js"
             async
           />
         </Helmet>

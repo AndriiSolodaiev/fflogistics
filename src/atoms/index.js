@@ -7,3 +7,4 @@ export { TransHeroTemplate } from "./TransHeroTemplate";
 export { CountryHeroTemplate } from "./CountriesPageHero.jsx";
 export { BlogCard } from "./BlogCard";
 export { TransInfoCards } from "./TransInfoCards";
+export { SEO } from "./SEO";
