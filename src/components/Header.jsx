@@ -9,11 +9,65 @@ import { imgSrcMaker } from "../helpers/imgSrcMaker";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { CustomLink } from "atoms/CustomLink";
+import { useEffect, useRef, useState } from "react";
+
 export const Header = () => {
   const { isOpen, open, close } = useToggle();
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
+  const headerRef = useRef(null);
+  const lastScrollYRef = useRef(0);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+
+  useEffect(() => {
+    const updateHeaderOffset = () => {
+      if (!headerRef.current) return;
+      const headerHeight = headerRef.current.offsetHeight;
+      document.documentElement.style.setProperty(
+        "--header-offset",
+        `${headerHeight}px`
+      );
+    };
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollYRef.current;
+
+      if (currentScrollY <= 10) {
+        setIsHeaderHidden(false);
+        lastScrollYRef.current = currentScrollY;
+        return;
+      }
+
+      if (Math.abs(scrollDelta) < 6) {
+        return;
+      }
+
+      if (scrollDelta > 0) {
+        setIsHeaderHidden(true);
+      } else {
+        setIsHeaderHidden(false);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    updateHeaderOffset();
+    window.addEventListener("resize", updateHeaderOffset);
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("resize", updateHeaderOffset);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsHeaderHidden(false);
+    }
+  }, [isOpen]);
 
   const changeLanguage = (newLang) => {
     const currentLocationFunc = () => {
@@ -30,7 +84,10 @@ export const Header = () => {
     navigate(`/${currentLocation ? newLang + "/" + currentLocation : newLang}`);
   };
   return (
-    <header>
+    <header
+      ref={headerRef}
+      className={`site-header ${isHeaderHidden ? "site-header--hidden" : ""}`}
+    >
       <div className="header__container">
         <div className="container header__main-wrapper ">
           <MediaQuery minWidth={breakpoints.tablet}>

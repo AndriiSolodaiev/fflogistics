@@ -5,11 +5,12 @@ import { useState, useEffect } from "react";
 import InputMask from "react-input-mask";
 
 export const Form = ({ submitHandler, buttonStyle, background }) => {
-  const [state, handleSubmit] = useForm("myyqypaq"); 
+  const [state, handleSubmit] = useForm("myyqypaq");
   // const [state, handleSubmit] = useForm("myyqgpnv"); тест
-  useEffect (()=> {submitHandler(state.succeeded); console.log(state.succeeded)},[state.succeeded, submitHandler])
-  
-  
+  useEffect(() => {
+    submitHandler(state.succeeded);
+  }, [state.succeeded, submitHandler]);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -17,7 +18,6 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
   const [errors, setErrors] = useState({});
 
   const { t } = useTranslation();
-  
 
   const validationSchema = yup.object().shape({
     name: yup
@@ -30,25 +30,53 @@ export const Form = ({ submitHandler, buttonStyle, background }) => {
       .test("len", t("form.validation.phone-pattern"), (val) => {
         const val_length_without_dashes = val.replace(/_/g, "").length;
         return val_length_without_dashes === 17;
-      }).test(
-        "no-zeroes",
-        t("form.validation.phone-no-zero") ,
-        (val) => {
-          return val.charAt(5) !== "0" && val.charAt(6) !== "0";
-        }
-      )
-      
+      })
+      .test("no-zeroes", t("form.validation.phone-no-zero"), (val) => {
+        return val.charAt(5) !== "0" && val.charAt(6) !== "0";
+      }),
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value })); 
-    
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    handleSubmit(event);
+
+    const form = event.currentTarget;
+    const formValues = new FormData(form);
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const telegramPayload = {
+      name: formValues.get("name") || "",
+      phone: formValues.get("phone") || "",
+      message: formValues.get("message") || "",
+      utm_source: urlParams.get("utm_source") || "no_utm",
+      utm_medium: urlParams.get("utm_medium") || "no_utm",
+      utm_campaign: urlParams.get("utm_campaign") || "no_utm",
+      utm_term: urlParams.get("utm_term") || "no_utm",
+      utm_content: urlParams.get("utm_content") || "no_utm",
+      clientId: urlParams.get("clientId") || "no_utm",
+      utmgclid: urlParams.get("utmgclid") || "no_utm",
+      crm_lead_utm_page: window.location.href,
+    };
+
+    const telegramApiUrl = "/send-telegram.php";
+
+    try {
+      await fetch(telegramApiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(telegramPayload),
+      });
+    } catch (error) {
+      console.error("Telegram send error:", error);
+    }
+
+    await handleSubmit(event);
   };
 
   const handleBlurValidation = async (e) => {

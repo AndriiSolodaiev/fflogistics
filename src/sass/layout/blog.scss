@@ -125,8 +125,17 @@
     }
 
     &::before {
-      content: "⮞";
+      content: "";
+      display: block;
+      transform: rotate(45deg) translateX(-50%);
+      width: 18px;
+      height: 18px;
+      border-right: 2px solid white;
+      border-top: 2px solid white;
       font-size: 18px;
+      @media screen and (min-width: $breakpoint-desktop) {
+        transform: rotate(45deg) translate(-20%, -20%);
+    }
     }
 
     @media screen and (min-width: $breakpoint-tablet) {
@@ -146,7 +155,17 @@
     border-radius: 50% 0 0 50%;
 
     &::before {
-      content: "⮜";
+      content: "";
+      display: block;
+      transform: rotate(-45deg) translateX(50%);;
+      width: 18px;
+      height: 18px;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+      border-right: none;
+      @media screen and (min-width: $breakpoint-desktop) {
+        transform: rotate(-45deg) translate(80%, 40%);
+    }
     }
 
     @media screen and (min-width: $breakpoint-desktop) {

@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 
 import { CustomLink } from "./CustomLink";
 
-export const BlogCard = ({ id, img, imgWebp, date }) => {
+export const BlogCard = ({ id, img, imgWebp, date, title, intro }) => {
   const { t } = useTranslation();
   return (
     <div className="blog-page__item">
-      <picture>
+      <picture className="blog-page__item-picture">
         <source srcSet={imgWebp} type="image/webp" />
         <img
           loading="lazy"
@@ -15,20 +15,16 @@ export const BlogCard = ({ id, img, imgWebp, date }) => {
           alt={`article${id}`}
           className="blog-page__item-img"
         />
-      </picture>
+      </picture >
       <div className="article__descr-wrapper">
-        <h3 className="blog-page__article-title">
-          {t(`blogpages.article${id}.title`)}
-        </h3>
+        <h3 className="blog-page__article-title">{title}</h3>
         <div className="blog-article__date-wrapper">
           <svg className="article__date-icon">
             <use href={svgHrefMaker("icon-calender")}> </use>
           </svg>
           <time className="blog-article__date">{date}</time>
         </div>
-        <p className="blog-article__intro">
-          {t(`blogpages.article${id}.content.intro`)}
-        </p>
+        <p className="blog-article__intro">{intro}</p>
         <CustomLink
           linkClass="blog-article__link"
           to={`/blog/${id}`}

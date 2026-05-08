@@ -1,6 +1,7 @@
 {
   "header": {
     "nav": {
+      "home": "Головна",
       "services": "Послуги",
       "conditions": "Умови прийому вантажу",
       "countries": "Країни",
@@ -153,7 +154,8 @@
   "blog": {
     "title": "Блог",
     "subtitle": "Корисна інформація та актуальні новини.",
-    "loadmoreBtn": "Всі новини",
+    "loadmoreBtn": "Завантажити ще",
+    "allBtn": "Всі новини",
     "loadmoreBtn-to-close": "Згорнути"
   },
   "clientform": {

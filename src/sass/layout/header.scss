@@ -1,3 +1,22 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background-color: $background-color;
+  transform: translateY(0);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-header--hidden {
+  transform: translateY(-100%);
+}
+
+.layout-main {
+  padding-top: var(--header-offset, 120px);
+}
+
 .header__container {
   display: flex;
   justify-content: center;
@@ -21,9 +40,7 @@
     padding-bottom: 23px;
   }
 
-  @media screen and (min-width: $breakpoint-desktop) {
-    padding-bottom: 35px;
-  }
+  
 }
 
 .header__socials-email-wrap {

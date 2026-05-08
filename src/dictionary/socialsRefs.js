@@ -18,7 +18,7 @@ export const socialsRefs = [
   },
   {
     id: 4,
-    ref: "https://teleg.run/fflogisticss",
+    ref: "https://t.me/fflogisticss",
     hrefIcon: svgHrefMaker("icon-telegram"),
   },
 ];

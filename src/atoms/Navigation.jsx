@@ -17,6 +17,23 @@ export const Navigation = ({ onClose }) => {
   return (
     <nav>
       <ul className="navigation-list">
+        <li className="navigation-item ">
+          <CustomNavLink
+            linkClass="navigation__link"
+            to="/"
+            onClose={onClose}
+            ariaLabel="move to home section"
+            text={t("header.nav.home")}
+          />
+          {/* <NavLink
+            to="/blog"
+            className="navigation__link"
+            aria-label="move to partners section"
+            onClick={onClose}
+          >
+            {t("header.nav.reviews")}
+          </NavLink> */}
+        </li>
         <li className="navigation-item countries-list__activator">
           <p className="navigation__link ">
             {t("header.nav.services")}
@@ -25,6 +42,7 @@ export const Navigation = ({ onClose }) => {
             </svg>
           </p>
           <ul className="countries__list ">
+
             <li className="countries__item">
               <CustomNavLink
                 linkClass="navigation__country-link"
@@ -142,7 +160,7 @@ export const Navigation = ({ onClose }) => {
             {t("header.nav.payment")}
           </button>
         </li>
-        <li className="navigation-item blog--desktop" onClick={onClose}>
+        {/* <li className="navigation-item blog--desktop" onClick={onClose}>
           <CustomNavLink
             linkClass="navigation__link"
             to="/blog"
@@ -150,14 +168,8 @@ export const Navigation = ({ onClose }) => {
             ariaLabel="move to Blog"
             text={t("header.nav.blog")}
           />
-          {/* <NavLink
-            to="/blog"
-            className="navigation__link"
-            aria-label="move to Blog"
-          >
-            {t("header.nav.blog")}
-          </NavLink> */}
-        </li>
+          
+        </li> */}
         <li className="navigation-item ">
           <CustomNavLink
             linkClass="navigation__link"
@@ -168,6 +180,23 @@ export const Navigation = ({ onClose }) => {
           />
           {/* <NavLink
             to="/reviews"
+            className="navigation__link"
+            aria-label="move to partners section"
+            onClick={onClose}
+          >
+            {t("header.nav.reviews")}
+          </NavLink> */}
+        </li>
+         <li className="navigation-item ">
+          <CustomNavLink
+            linkClass="navigation__link"
+            to="/blog"
+            onClose={onClose}
+            ariaLabel="move to blog section"
+            text={t("header.nav.blog")}
+          />
+          {/* <NavLink
+            to="/blog"
             className="navigation__link"
             aria-label="move to partners section"
             onClick={onClose}

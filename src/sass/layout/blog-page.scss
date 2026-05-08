@@ -68,7 +68,7 @@
     width: 300px;
     height: auto;
     background-color: $card-bg-color;
-    height: 460px;
+    height: 480px;
     border-radius: 10px;
     box-shadow: 0px 5px 17px $primary-font-color;
     padding-bottom: 10px;
@@ -85,13 +85,23 @@
         gap: 20px;
     }
 }
+.blog-page__item-picture {
+   aspect-ratio: 300 / 200;
+   width: 100%;
+   height: auto;
+   @media screen and (min-width: $breakpoint-tablet) {
+        width: 300px;
+        height: 237px;
 
+    }
+}
 .blog-page__item-img {
     border-radius: 10px;
-    width: 300px;
-
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     @media screen and (min-width: $breakpoint-tablet) {
-
+        width: 300px;
         height: 237px;
 
     }
@@ -164,7 +174,22 @@
     max-height: 120px;
     margin-bottom: auto;
     overflow: hidden;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 100%;
+        background: linear-gradient(transparent, $card-bg-color);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 
+     @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 16px;
+        font-weight: 400;
+    }
     @media screen and (min-width: $breakpoint-tablet) {
         font-size: 16px;
 
@@ -191,7 +216,7 @@
     transition: color $transition-props;
     position: relative;
     width: fit-content;
-
+    margin-top: 12px;
     &:hover,
     &:focus {
         color: rgb(17, 85, 173);
@@ -217,4 +242,126 @@
     @media screen and (min-width: $breakpoint-desktop) {
         font-size: 24px;
     }
+}
+
+.blog-page__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 10px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        margin-top: 20px;
+        gap: 24px;
+    }
+}
+
+.blog-page__pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-page__arrow-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background-color: $button-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all $transition-props;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        box-shadow: $box-shadow-hover;
+    }
+
+    &:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+}
+
+.blog-page__arrow-icon {
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid $primary-font-color;
+    border-right: 2px solid $primary-font-color;
+}
+
+.blog-page__arrow-btn--prev .blog-page__arrow-icon {
+    transform: rotate(-135deg);
+}
+
+.blog-page__arrow-btn--next .blog-page__arrow-icon {
+    transform: rotate(45deg);
+}
+
+.blog-page__page-indicator {
+    min-width: 72px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $textcolor;
+}
+
+.blog-page__pages-total {
+    font-size: 14px;
+    font-weight: 600;
+    color: $textcolor;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 16px;
+    }
+}
+
+.blog-page__page-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blog-page__page-btn {
+    min-width: 34px;
+    height: 34px;
+    border: 1px solid $button-color;
+    border-radius: 8px;
+    background-color: transparent;
+    color: $primary-font-color;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all $transition-props;
+
+    &:hover,
+    &:focus {
+        background-color: $button-color;
+        color: $primary-font-color;
+    }
+}
+
+.blog-page__page-btn--active {
+    background-color: $button-color;
+    color: $primary-font-color;
+    box-shadow: $box-shadow-hover;
+}
+
+.blog-page__page-dots {
+    color: $primary-font-color;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 2px;
+}
+
+.blog-page__loadmore-btn {
+    @extend .button-common;
+    
+
+    
 }

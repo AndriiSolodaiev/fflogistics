@@ -1,8 +1,8 @@
-import { blogImages } from "dictionary";
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 import { BlogCard } from "atoms";
 import { CustomLink } from "atoms/CustomLink";
+import { getBlogCards } from "../content/blogPosts";
 
 const ArrowNext = ({ style, onClick }) => {
   return (
@@ -23,7 +23,9 @@ const ArrowPrev = ({ style, onClick }) => {
   );
 };
 export const BlogSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const cards = getBlogCards(i18n.language);
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -39,17 +41,26 @@ export const BlogSection = () => {
         <p className="blog__subtitle">{t("blog.subtitle")}</p>
 
         <Slider {...settings}>
-          {blogImages
-            .map(({ id, img, imgWebp, date }) => (
+          {cards.map(({ id, img, imgWebp, date, title, intro }) => {
+            const i18nTitle = t(`blogpages.article${id}.title`, {
+              defaultValue: title,
+            });
+            const i18nIntro = t(`blogpages.article${id}.content.intro`, {
+              defaultValue: intro,
+            });
+
+            return (
               <BlogCard
                 id={id}
                 img={img}
                 imgWebp={imgWebp}
                 date={date}
+                title={i18nTitle}
+                intro={i18nIntro}
                 key={id}
               />
-            ))
-            .reverse()}
+            );
+          })}
         </Slider>
 
         <div className="blog-container">
@@ -57,7 +68,7 @@ export const BlogSection = () => {
             linkClass="blog__loadmore-btn"
             to="/blog"
             ariaLabel="go to blog"
-            text={t("blog.loadmoreBtn")}
+            text={t("blog.allBtn")}
           />
           {/* <Link
             to="/blog"
