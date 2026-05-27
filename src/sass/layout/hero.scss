@@ -1,19 +1,75 @@
 .hero__container {
-  padding-top: 68px;
+  padding-top: 50px;
   padding-bottom: 71px;
 
   @media screen and (min-width: $breakpoint-tablet) {
-    padding-top: 110px;
+   
     padding-bottom: 84px;
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
-    padding-top: 118px;
-    padding-bottom: 82px;
+    
+    padding:50px 0 82px;
   }
 }
 
+.hero__slider-wrap {
+  position: relative;
+}
+
 .hero {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #393939;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: linear-gradient(rgba(57, 57, 57, 0.992), #39393965, #393939fd);
+    pointer-events: none;
+    height: calc(100% - 100px);
+     @media screen and (min-width: $breakpoint-desktop) {
+    height: 100%
+  }
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero__video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    @media screen and (min-width: $breakpoint-desktop) {
+    height: 100%
+  }
+  }
+
+  .hero__bgimg,
+  .slide__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero__bgimg {
+    width: 100%;
+  }
+
+  .slide__container {
+    width: 100%;
+  }
+
   .slick-slider {
     .slick-slide {
       pointer-events: none;
@@ -149,8 +205,6 @@
       }
     }
   }
-}
-
 .hero__title {
   background: $gradient-color;
   -webkit-background-clip: text;
@@ -208,13 +262,19 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 50px;
+ 
 }
 
 .hero__advantages-list {
   display: flex;
-
+   padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(57, 57, 57, 0.297);
   flex-direction: column;
   gap: 17px;
+  
 }
 
 .hero__advantages-item {
@@ -238,7 +298,7 @@
   @media screen and (min-width: $breakpoint-desktop) {
     font-size: 20px;
     font-weight: 500;
-    width: 520px;
+    width: 320px;
   }
 }
 
@@ -265,55 +325,6 @@
   }
 }
 
-.hero__bgimg {
-  width: 100%;
-  background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-  url("#{$public-url}mobile/hero-bg-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile.webp")) {
-    background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile.webp");
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-    url("#{$public-url}mobile/hero-bg-mobile@2x.png");
-
-    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile@2x.webp")) {
-      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}mobile/hero-bg-mobile@2x.webp");
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-tablet) {
-    background-image: url("#{$public-url}tablet/bg-lines-tablet.png"),
-    linear-gradient(#393939fd, #393939a1, #393939fd),
-    url("#{$public-url}tablet/bg-plane-tablet.png");
-
-    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}tablet/bg-plane-tablet.webp")) {
-      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}tablet/bg-plane-tablet.webp");
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-desktop) {
-    background-image: linear-gradient(#393939fd, #39393998, #393939fd),
-    url("#{$public-url}desktop/bg-desktop.png");
-
-    @supports (background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}desktop/bg-desktop.webp")) {
-      background-image: linear-gradient(#393939fd, #39393965, #393939fd),
-      url("#{$public-url}desktop/bg-desktop.webp");
-    }
-  }
 }
 
 .slide__container {
@@ -322,20 +333,27 @@
   text-align: center;
 
   @media screen and (min-width: $breakpoint-desktop) {
-    height: 634px;
+    height: calc(100svh - var(--header-offset));
   }
 }
 
-.slide__social {
+.hero__floating-social {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  z-index: 4;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   gap: 35px;
-  margin-top: 250px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    bottom: 42px;
+  }
 
   @media screen and (min-width: $breakpoint-desktop) {
-    margin-top: 270px;
+    bottom: 48px;
   }
 }
 

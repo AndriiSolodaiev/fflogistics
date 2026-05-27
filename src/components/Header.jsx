@@ -69,6 +69,21 @@ export const Header = () => {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    const { body } = document;
+    const previousOverflow = body.style.overflow;
+
+    if (isOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = previousOverflow || "";
+    }
+
+    return () => {
+      body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
+
   const changeLanguage = (newLang) => {
     const currentLocationFunc = () => {
       if (

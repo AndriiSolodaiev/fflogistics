@@ -9,6 +9,8 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: all $transition-props;
 
 }
