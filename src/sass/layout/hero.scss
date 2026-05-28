@@ -1,9 +1,9 @@
 .hero__container {
-  padding-top: 50px;
-  padding-bottom: 71px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
   @media screen and (min-width: $breakpoint-tablet) {
-   
+    padding-top: 50px;
     padding-bottom: 84px;
   }
 
@@ -27,14 +27,17 @@
   &::before {
     content: "";
     position: absolute;
+    margin-top: auto;
+    margin-bottom: 50px;
     inset: 0;
     z-index: 1;
     background-image: linear-gradient(rgba(57, 57, 57, 0.992), #39393965, #393939fd);
     pointer-events: none;
-    height: calc(100% - 100px);
+    height: calc(100% - 150px);
      @media screen and (min-width: $breakpoint-desktop) {
-    height: 100%
-  }
+      margin:0;
+      height: 100%
+    }
   }
 
   .hero__content {
@@ -44,14 +47,17 @@
 
   .hero__video {
     position: absolute;
+    margin-top: auto;
     inset: 0;
     z-index: 0;
     width: 100%;
-    height: calc(100% - 100px);
+    margin-bottom: 50px;
+    height: calc(100% - 150px);
     object-fit: cover;
     object-position: center;
     pointer-events: none;
     @media screen and (min-width: $breakpoint-desktop) {
+      margin: 0;
     height: 100%
   }
   }
@@ -244,7 +250,7 @@
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 153px;
+  margin-bottom: 250px;
 
   @media screen and (min-width: $breakpoint-tablet) {
     font-size: 26px;
@@ -267,14 +273,13 @@
 
 .hero__advantages-list {
   display: flex;
-   padding: 20px;
+  padding: 20px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
   border: 1px solid rgba(57, 57, 57, 0.297);
   flex-direction: column;
   gap: 17px;
-  
 }
 
 .hero__advantages-item {
